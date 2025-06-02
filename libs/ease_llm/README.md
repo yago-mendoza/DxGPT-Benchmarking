@@ -1,6 +1,131 @@
-# Guía YAML Completa - Sistema de Análisis de Documentos Técnicos
+# EaseLLM: Unified LLM Client
 
-Este ejemplo incluye TODAS las capacidades posibles del sistema de configuración YAML.
+EaseLLM offers a streamlined way to interact with various LLM providers using a single interface. It emphasizes clear YAML-based prompt configuration and secure environment variable management.
+
+**Design Philosophy:**
+*   **Simplicity:** One client, multiple providers. The `model` parameter in `EaseLLM(provider, model)` directly maps to environment variable prefixes.
+*   **Configuration over Code:** Prompts and parameters defined in YAML, not hardcoded.
+*   **Security & Flexibility:** API credentials and endpoints managed via `.env` files.
+*   **Structured Output Focus:** Designed for LLMs supporting JSON schema responses (e.g., OpenAI's JSON mode).
+
+## Use
+```python
+from ease_llm_client import EaseLLM
+llm = EaseLLM(provider="azure", model="o1")  # o "huggingface"
+result = llm.call("prompt_config.yaml")
+
+# Con prompt específico
+result = llm.call("doc_analyzer.yaml", 
+                                                  # SUB-PROMPT SELECTION
+                  prompt_id="quick_analysis",
+                                                  # PROMPT PLACEHOLDERS
+                  specialty="documentación API",
+                  topic="REST endpoints")
+```
+
+The argument `model` determines which environment variables to look for: `{PROVIDER}_{MODEL}_*`
+
+## YAML Config
+
+* **Format**: See `yaml_config_guide/YAML_CONFIG_GUIDE.md`
+* **Processing**: `llm_call_config_loader.py` extracts fields from the YAML and converts them into an attribute-based object ready for OpenAI calls
+
+## 1. Supported Integrations
+
+### Providers
+*   **`azure`**: Azure OpenAI Service.
+*   **`huggingface`**: Hugging Face Inference Endpoints (or any other OpenAI-compatible API that only requires an API Key and Endpoint URL).
+
+### Models & Endpoints (`model` slug)
+The `model` slug you provide to `EaseLLM(provider="...", model="<slug>")` is directly used to find the corresponding environment variables.
+
+*   **Azure OpenAI (`provider="azure"`):**
+    *   The `model` slug (e.g., `"o1"`, `"gpt-4o"`) defines the prefix for environment variables.
+    *   Required Env Vars:
+        *   `AZURE_<MODEL_SLUG_UPPERCASE>_API_KEY`
+        *   `AZURE_<MODEL_SLUG_UPPERCASE>_ENDPOINT`
+        *   `AZURE_<MODEL_SLUG_UPPERCASE>_API_VERSION`
+        *   `AZURE_<MODEL_SLUG_UPPERCASE>_DEPLOYMENT` (This is the actual model deployment name on Azure).
+
+*   **Hugging Face Endpoints & OpenAI-compatible APIs (`provider="huggingface"`):**
+    *   The `model` slug (e.g., `"jsl"`, `"gpt-4o"`, `"mixtral_inference"`) defines the prefix.
+    *   Required Env Vars:
+        *   `HF_<MODEL_SLUG_UPPERCASE>_API_KEY`
+        *   `HF_<MODEL_SLUG_UPPERCASE>_ENDPOINT`
+    *   Optional Env Var:
+        *   `HF_<MODEL_SLUG_UPPERCASE>_MODEL`: If the endpoint requires a specific model name to be passed in the API call (beyond what's implied by the endpoint URL itself). If not set, `EaseLLM` uses a sensible default (like "default" or the slug itself, but it's best to set it if the API needs it).
+    *   **Note for OpenAI API:** To use the official OpenAI API, set `provider="huggingface"`, use a slug like `"gpt-4o"`, and configure:
+        *   `HF_GPT_4O_API_KEY="sk-your_openai_api_key"`
+        *   `HF_GPT_4O_ENDPOINT="https://api.openai.com/v1"`
+        *   `HF_GPT_4O_MODEL="gpt-4o"` (or other OpenAI model ID like "gpt-3.5-turbo")
+
+#### Add New Endpoint
+
+1. **Environment Variables**: `{PROVIDER}_{MODEL}_API_KEY`, `{PROVIDER}_{MODEL}_ENDPOINT`, etc.
+2. **Clause in `ease_llm_client.py`**: Implement `_init_{provider}()` method to configure the client.
+3. **OpenAI Schema Compatibility**: Endpoints must follow the OpenAI API schema (otherwise, refactor `ease_llm_client.py` and `llm_call_config_loader.py`).
+
+The OpenAIConfig class at `llm_call_config_loader.py` and the YAML structure it expects are designed with OpenAI's API capabilities in mind, particularly the response_format for JSON schema enforcement. If a provider has a different way of handling structured output or its API call parameters differ significantly, adjustments in the EaseLLM.call() method will be necessary for that provider.
+
+## 2. Getting Started
+
+### Installation
+1.  Create and activate a virtual environment.
+2.  Install:
+    ```bash
+    pip install openai pyyaml python-dotenv
+    ```
+
+### `.env` Configuration
+Create a `.env` file in your project root. `EaseLLM` loads this automatically.
+
+**Example `.env` file:**
+```env
+# --- Azure OpenAI Deployments (provider="azure") ---
+# Model slug: "o1"
+AZURE_O1_API_KEY="your_azure_api_key_for_o1_deployment"
+AZURE_O1_ENDPOINT="https://your-o1-instance.openai.azure.com/"
+AZURE_O1_API_VERSION="2024-02-01" # Or your API version
+AZURE_O1_DEPLOYMENT="o1-deployment-name" # Actual deployment name for "o1"
+
+# Model slug: "gpt-4o" (for an Azure deployment of GPT-4o)
+AZURE_GPT_4O_API_KEY="your_azure_api_key_for_gpt4o_deployment"
+AZURE_GPT_4O_ENDPOINT="https://your-gpt4o-instance.openai.azure.com/"
+AZURE_GPT_4O_API_VERSION="2024-02-01"
+AZURE_GPT_4O_DEPLOYMENT="gpt-4o" # Actual deployment name for "gpt-4o"
+
+# --- Hugging Face Endpoints & OpenAI-compatible APIs (provider="huggingface") ---
+# Model slug: "jsl" (for a Hugging Face Inference Endpoint)
+HF_JSL_API_KEY="hf_your_hugging_face_token_for_jsl_endpoint"
+HF_JSL_ENDPOINT="https://jsl-endpoint.huggingface.cloud"
+# HF_JSL_MODEL: Optional, e.g., "meta-llama/Llama-2-7b-chat-hf" if needed by the endpoint
+
+# Model slug: "gpt-4o" (for official OpenAI API)
+HF_GPT_4O_API_KEY="sk-your_openai_api_key"
+HF_GPT_4O_ENDPOINT="https://api.openai.com/v1"
+HF_GPT_4O_MODEL="gpt-4o" # OpenAI model ID
+
+# Model slug: "claude3opus" (example for an Anthropic API via compatible gateway)
+# HF_CLAUDE3OPUS_API_KEY="your_anthropic_or_gateway_key"
+# HF_CLAUDE3OPUS_ENDPOINT="https://your-anthropic-compatible-gateway.com/v1"
+# HF_CLAUDE3OPUS_MODEL="claude-3-opus-20240229"
+```
+
+## 3. How to write the YAML?
+
+Define prompts in YAML files.
+
+The `OpenAIConfig` class (used internally by `EaseLLM`) parses these. The YAML structure leverages OpenAI's `response_format` with `json_schema` for structured output. This format is compatible with Azure OpenAI, official OpenAI, and many Hugging Face endpoints.
+
+**Key YAML Sections:**
+*   `schema_info`: Metadata for the JSON schema (`name`, `description`).
+*   `json_schema`: The JSON Schema definition for the LLM's output (see [json-schema.org](https://json-schema.org/)).
+*   `prompts`: A list of prompt templates. Each entry has:
+    *   `id`: Unique identifier for the prompt.
+    *   `system`: System message to guide the LLM.
+    *   `user`: User message template (can include `{placeholders}`).
+*   `generation_params`: Default LLM generation settings (e.g., `temperature`, `max_tokens`, `top_p`).
+
 
 ```yaml
 # ========================================
@@ -348,33 +473,7 @@ generation_params:                   # OPCIONAL: todo el bloque
   logprobs: false                    # OPCIONAL: log probabilities
   echo: false                        # OPCIONAL: eco del prompt
 
-# ----------------------------------------
-# EJEMPLOS DE USO
-# ----------------------------------------
-# Llamada básica (usa prompt "default"):
-# result = llm.call("doc_analyzer.yaml")
-#
-# Con prompt específico:
-# result = llm.call("doc_analyzer.yaml", 
-#                   prompt_id="quick_analysis",
-#                   specialty="documentación API", # a partir de aquí ya son placeholders
-#                   topic="REST endpoints")
-#
-# Con todas las variables:
-# result = llm.call("doc_analyzer.yaml",
-#                   prompt_id="custom_analysis",
-#                   doc_type="técnico", # a partir de aquí ya son placegolders
-#                   industry="fintech",
-#                   detail_level="exhaustivo",
-#                   context="auditoría Q4 2024",
-#                   title=doc_title,
-#                   content=doc_content,
-#                   output_language="español",
-#                   focus_areas="seguridad, performance",
-#                   exclude_topics="UI/UX",
-#                   additional_notes="Énfasis en compliance GDPR")
-
-# REGLAS CLAVE:
+# REGLAS CLAVE (knowledge as a context for LLMs):
 # - required fields no pueden tener "default"
 # - si type="array" entonces "items" es OBLIGATORIO
 # - enum nunca puede estar vacío
@@ -383,3 +482,4 @@ generation_params:                   # OPCIONAL: todo el bloque
 # - minX debe ser <= maxX siempre
 # - multipleOf solo aplica a number/integer
 # - format solo aplica a strings
+```
