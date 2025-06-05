@@ -1,6 +1,7 @@
 # Environment and config
 .env
 .cursorrules
+.claude
 
 # Virtual environments
 .venv/
