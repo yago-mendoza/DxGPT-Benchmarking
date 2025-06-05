@@ -1,0 +1,110 @@
+{
+    "type": "object",
+    "properties": {
+        "document_id": {
+            "type": "string",
+            "description": "Identificador único del documento analizado.",
+            "pattern": "^[a-zA-Z0-9_-]{5,50}$"
+        },
+        "analysis_timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Fecha y hora en que se realizó el análisis."
+        },
+        "overall_sentiment": {
+            "type": "object",
+            "description": "Sentimiento general detectado en el documento.",
+            "properties": {
+                "label": {
+                    "type": "string",
+                    "enum": ["POSITIVE", "NEGATIVE", "NEUTRAL", "MIXED"],
+                    "description": "Etiqueta del sentimiento general."
+                },
+                "score": {
+                    "type": "number",
+                    "minimum": 0.0,
+                    "maximum": 1.0,
+                    "description": "Puntuación de confianza del sentimiento (0.0 a 1.0)."
+                },
+                "confidence_level": {
+                    "type": "string",
+                    "enum": ["HIGH", "MEDIUM", "LOW"],
+                    "description": "Nivel de confianza cualitativo (opcional)."
+                }
+            },
+            "required": ["label", "score"]
+        },
+        "key_phrases": {
+            "type": "array",
+            "description": "Lista de frases clave extraídas del texto.",
+            "items": {
+                "type": "string",
+                "minLength": 3,
+                "maxLength": 100
+            },
+            "minItems": 0,
+            "maxItems": 10,
+            "uniqueItems": true
+        },
+        "entities": {
+            "type": "array",
+            "description": "Entidades nombradas detectadas (personas, organizaciones, lugares, etc.).",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string",
+                        "description": "El texto de la entidad tal como aparece en el documento."
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": ["PERSON", "ORGANIZATION", "LOCATION", "DATE", "PRODUCT", "EVENT", "OTHER"],
+                        "description": "El tipo de entidad."
+                    },
+                    "relevance_score": {
+                        "type": "number",
+                        "minimum": 0.0,
+                        "maximum": 1.0,
+                        "description": "Puntuación de relevancia de la entidad en el texto."
+                    },
+                    "mentions": {
+                        "type": "array",
+                        "description": "Instancias específicas donde la entidad es mencionada.",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "offset": {"type": "integer", "minimum": 0, "description": "Posición inicial de la mención."},
+                                "length": {"type": "integer", "minimum": 1, "description": "Longitud de la mención."}
+                            },
+                            "required": ["offset", "length"]
+                        },
+                        "minItems": 1
+                    }
+                },
+                "required": ["text", "type", "relevance_score", "mentions"]
+            },
+            "minItems": 0,
+            "maxItems": 20
+        },
+        "language_code": {
+            "type": "string",
+            "description": "Código de idioma detectado (e.g., 'en', 'es').",
+            "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+        },
+        "warnings": {
+            "type": ["array", "null"],
+            "description": "Lista de advertencias generadas durante el análisis, o null si no hay ninguna.",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": [
+        "document_id",
+        "analysis_timestamp",
+        "overall_sentiment",
+        "key_phrases",
+        "entities",
+        "language_code"
+    ]
+}

@@ -1,0 +1,72 @@
+# Build configuration
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Core project metadata
+[project]
+name = "dxgpt-latitude-bench"
+version = "0.1.0"
+description = "Data analysis and machine learning project with ICD10 support"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+
+# Core dependencies - ML/NLP stack
+dependencies = [
+    # ML & Data Processing
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    
+    # Deep Learning
+    "torch",         # Neural network backend
+    "transformers",  # BERT and other models
+    
+    # API & Configuration
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "PyYAML>=6.0.1",
+    "requests",
+    "jsonschema>=4.0.0",  # Schema validation for structured outputs
+]
+
+# Development tools and testing dependencies
+[project.optional-dependencies]
+dev = [
+    # Testing
+    "pytest>=7.0",
+    "pytest-cov",
+    
+    # Code Quality
+    "black",     # Formatting
+    "flake8",    # Linting
+    "mypy",      # Type checking
+    "isort",     # Import sorting
+]
+
+# Package discovery and data files
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["utils*"]  # Includes utils and all its subpackages
+
+[tool.setuptools.package-data]
+"utils.icd10" = ["data/*.json"]  # Static data files for ICD10 taxonomy
+
+# Code style and quality configurations
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.isort]
+profile = "black"  # Compatibility with black
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true 

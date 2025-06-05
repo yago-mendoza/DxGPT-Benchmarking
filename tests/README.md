@@ -1,0 +1,1 @@
+Tests can be run from any location as they import packages installed project-wide through the utils package

@@ -1,4 +1,62 @@
+# Environment and config
 .env
-latitude_env/
-myREADME.md
-local-scripts/
+.cursorrules
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Project specific
+_etc/
+_PRMT_REF/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
