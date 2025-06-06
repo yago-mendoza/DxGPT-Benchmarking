@@ -1,0 +1,174 @@
+{
+  "session_id": "20250606_140826_8a458167",
+  "start_time": "2025-06-06T14:08:26.278557",
+  "end_time": "2025-06-06T14:08:28.620578",
+  "status": "completed",
+  "evaluators": {},
+  "datasets": {},
+  "config": {
+    "general": {
+      "output_dir": "src/results",
+      "log_level": "INFO",
+      "save_intermediate_results": true
+    },
+    "evaluators": {
+      "semantic": {
+        "enabled": true,
+        "config": {
+          "batch_size": 5,
+          "n_diagnoses": 5,
+          "llm_model": "gpt-4o",
+          "temperature": 0.3,
+          "prompt_path": "src/dxgpt-prompt/dxgpt-prompt.txt"
+        }
+      },
+      "severity": {
+        "enabled": false,
+        "config": {
+          "severity_mapping_file": null,
+          "weight_by_severity": true,
+          "critical_boost": 2.0
+        }
+      }
+    },
+    "visualizations": {
+      "enabled": true,
+      "output_format": [
+        "png"
+      ],
+      "semantic": [
+        {
+          "type": "score_distribution",
+          "enabled": true
+        },
+        {
+          "type": "confusion_matrix",
+          "enabled": true
+        },
+        {
+          "type": "top_errors",
+          "enabled": true
+        }
+      ],
+      "combined": [
+        {
+          "type": "2d_scatter",
+          "enabled": false,
+          "x_axis": "semantic_score",
+          "y_axis": "severity_score"
+        }
+      ]
+    },
+    "experiment": {
+      "track_git_status": true,
+      "save_config_snapshot": true,
+      "compress_results": false
+    }
+  },
+  "results": {},
+  "git_info": {
+    "commit_hash": "f842c46cb072ae34266b951ccc35758af64375a1",
+    "commit_message": "Finished ETL",
+    "commit_author": "F29 Developer <developer@f29.com>",
+    "commit_date": "2025-06-06 01:06:29 +0200",
+    "branch": "main",
+    "is_clean": false,
+    "status": "A  \"data29/urg_torre & ramedis_bench/current-data/ramedis.csv\"\nR  \"data29/urg_torre & ramedis_bench/data/urg_torre.csv\" -> \"data29/urg_torre & ramedis_bench/current-data/urg_torre.csv\"\nD  \"data29/urg_torre & ramedis_bench/data/ramebench.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_1000.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_1000.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_1000_pediatric.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_1000_pediatric.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_HMS.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_HMS.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_LIRICAL.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_LIRICAL.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_MME.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_MME.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_PUMCH_ADM.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_PUMCH_ADM.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_RAMEDIS.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_RAMEDIS.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_RAMEDIS_SPLIT.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_RAMEDIS_SPLIT.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_all.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_all.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_critical.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_critical.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_death.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_death.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_pediatric.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_pediatric.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_ramebench.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_ramebench.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_severe.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_severe.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/after.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/changes.txt\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/run.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/run.py\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_HMS.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_LIRICAL.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_MME.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_PUMCH_ADM.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_RAMEDIS.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v3-formatting-diagnosis-names/after.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v3-formatting-diagnosis-names/before.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v3-formatting-diagnosis-names/run.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v3-formatting-diagnosis-names/run.py\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/after.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/before.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/changes.txt\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/run.py.py\"\nD  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/after.csv\"\nD  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v3-formatting-diagnosis-names/after.csv\"\nD  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v3-formatting-diagnosis-names/before.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/after.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/after.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/before.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/changes.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/changes.py\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/changes.txt\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/after.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/after.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/before.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/changes.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/changes.py\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/changes.txt\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/after.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v4-native-batch-prcoessing-for-diagnose/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/before.csv\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v4-native-batch-prcoessing-for-diagnose/changes.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/changes.py\"\nR  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v4-native-batch-prcoessing-for-diagnose/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/changes.txt\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/after.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/before.csv\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/changes.txt\"\nA  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/run.py.py\"\nM  pyproject.toml\nA  src/EVALUATION_README.md\nD  src/all.csv\nA  src/configs/default_config.yaml\nA  src/core/__init__.py\nA  src/core/config.py\nA  src/core/registry.py\nA  src/core/session.py\nA  src/datasets/mini-test.csv\nA  src/dxgpt-prompt/dxgpt-prompt.txt\nA  src/evaluate.py\nA  src/evaluators/__init__.py\nA  src/evaluators/semantic.py\nA  src/evaluators/severity.py\nD  src/mini-test.csv\nA  src/results/20250606_132723_2db0bd6e/semantic_mini-test_details.json\nA  src/results/20250606_132723_2db0bd6e/session_metadata.json\nA  src/results/20250606_132723_2db0bd6e/visualizations/semantic_mini-test_confusion_matrix.png\nA  src/results/20250606_132723_2db0bd6e/visualizations/semantic_mini-test_score_distribution.png\nA  src/results/20250606_132723_2db0bd6e/visualizations/semantic_mini-test_top_errors.png\nA  src/results/20250606_132723_2db0bd6e/visualizations/visualization_metadata.json\nA  src/results/20250606_135036_b55023da/session_metadata.json\nA  src/results/20250606_135356_55925ee6/semantic_mini-test_details.json\nA  src/results/20250606_135356_55925ee6/session_metadata.json\nA  src/results/20250606_135356_55925ee6/visualizations/semantic_mini-test_confusion_matrix.png\nA  src/results/20250606_135356_55925ee6/visualizations/semantic_mini-test_score_distribution.png\nA  src/results/20250606_135356_55925ee6/visualizations/semantic_mini-test_top_errors.png\nA  src/results/20250606_135356_55925ee6/visualizations/visualization_metadata.json\nA  src/visualizations/__init__.py\nA  src/visualizations/combined_viz.py\nAM src/visualizations/semantic_viz.py\nAM src/visualizations/visualizer.py\nM  utils/README.md\n?? src/evaluate_optimized.py\n?? src/evaluators/semantic_optimized.py\n?? src/results/20250606_140019_d62d0728/",
+    "uncommitted_files": [
+      "A  \"data29/urg_torre & ramedis_bench/current-data/ramedis.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/data/urg_torre.csv\" -> \"data29/urg_torre & ramedis_bench/current-data/urg_torre.csv\"",
+      "D  \"data29/urg_torre & ramedis_bench/data/ramebench.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_1000.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_1000.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_1000_pediatric.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_1000_pediatric.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_HMS.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_HMS.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_LIRICAL.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_LIRICAL.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_MME.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_MME.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_PUMCH_ADM.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_PUMCH_ADM.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_RAMEDIS.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_RAMEDIS.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_RAMEDIS_SPLIT.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_RAMEDIS_SPLIT.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_all.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_all.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_critical.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_critical.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_death.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_death.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_pediatric.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_pediatric.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_ramebench.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_ramebench.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.05/csvs/test_severe.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.05/original-csvs/test_severe.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/after.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/changes.txt\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/run.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/run.py\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_HMS.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_LIRICAL.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_MME.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_PUMCH_ADM.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v2-added-origin-column/test_RAMEDIS.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v3-formatting-diagnosis-names/after.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v3-formatting-diagnosis-names/before.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v3-formatting-diagnosis-names/run.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v3-formatting-diagnosis-names/run.py\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/after.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/before.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/changes.txt\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis-v4-setting-complexity/run.py.py\"",
+      "D  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v2-added-origin-column/after.csv\"",
+      "D  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v3-formatting-diagnosis-names/after.csv\"",
+      "D  \"data29/urg_torre & ramedis_bench/etl/25.06/ramedis_bench/v3-formatting-diagnosis-names/before.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/after.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/after.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/before.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/changes.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/changes.py\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v2-criticalities-aggregation-variant-removal/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v2-criticalities-aggregation-variant-removal/changes.txt\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/after.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/after.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/before.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/changes.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/changes.py\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v3-refactored-name-columns-unified-code/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v3-refactored-name-columns-unified-code/changes.txt\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/after.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v4-native-batch-prcoessing-for-diagnose/before.csv\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/before.csv\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v4-native-batch-prcoessing-for-diagnose/changes.py\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/changes.py\"",
+      "R  \"data29/urg_torre & ramedis_bench/etl/25.06/urg_torre/v4-native-batch-prcoessing-for-diagnose/changes.txt\" -> \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v4-native-batch-prcoessing-for-diagnose/changes.txt\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/after.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/before.csv\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/changes.txt\"",
+      "A  \"data29/urg_torre & ramedis_bench/etl/25.06/urg-v5-setting-complexity/run.py.py\"",
+      "M  pyproject.toml",
+      "A  src/EVALUATION_README.md",
+      "D  src/all.csv",
+      "A  src/configs/default_config.yaml",
+      "A  src/core/__init__.py",
+      "A  src/core/config.py",
+      "A  src/core/registry.py",
+      "A  src/core/session.py",
+      "A  src/datasets/mini-test.csv",
+      "A  src/dxgpt-prompt/dxgpt-prompt.txt",
+      "A  src/evaluate.py",
+      "A  src/evaluators/__init__.py",
+      "A  src/evaluators/semantic.py",
+      "A  src/evaluators/severity.py",
+      "D  src/mini-test.csv",
+      "A  src/results/20250606_132723_2db0bd6e/semantic_mini-test_details.json",
+      "A  src/results/20250606_132723_2db0bd6e/session_metadata.json",
+      "A  src/results/20250606_132723_2db0bd6e/visualizations/semantic_mini-test_confusion_matrix.png",
+      "A  src/results/20250606_132723_2db0bd6e/visualizations/semantic_mini-test_score_distribution.png",
+      "A  src/results/20250606_132723_2db0bd6e/visualizations/semantic_mini-test_top_errors.png",
+      "A  src/results/20250606_132723_2db0bd6e/visualizations/visualization_metadata.json",
+      "A  src/results/20250606_135036_b55023da/session_metadata.json",
+      "A  src/results/20250606_135356_55925ee6/semantic_mini-test_details.json",
+      "A  src/results/20250606_135356_55925ee6/session_metadata.json",
+      "A  src/results/20250606_135356_55925ee6/visualizations/semantic_mini-test_confusion_matrix.png",
+      "A  src/results/20250606_135356_55925ee6/visualizations/semantic_mini-test_score_distribution.png",
+      "A  src/results/20250606_135356_55925ee6/visualizations/semantic_mini-test_top_errors.png",
+      "A  src/results/20250606_135356_55925ee6/visualizations/visualization_metadata.json",
+      "A  src/visualizations/__init__.py",
+      "A  src/visualizations/combined_viz.py",
+      "AM src/visualizations/semantic_viz.py",
+      "AM src/visualizations/visualizer.py",
+      "M  utils/README.md",
+      "?? src/evaluate_optimized.py",
+      "?? src/evaluators/semantic_optimized.py",
+      "?? src/results/20250606_140019_d62d0728/"
+    ]
+  },
+  "environment": {
+    "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26100-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel"
+  },
+  "duration_seconds": 2.34203
+}

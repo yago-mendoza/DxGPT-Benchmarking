@@ -1,0 +1,634 @@
+{
+  "evaluator": "semantic",
+  "dataset": ".\\src\\golden-dataset\\mini-test.csv",
+  "config": {
+    "batch_size": 5,
+    "n_diagnoses": 5,
+    "llm_model": "gpt-4o",
+    "temperature": 0.3,
+    "prompt_path": "src/dxgpt-prompt/dxgpt-prompt.txt"
+  },
+  "summary": {
+    "total_cases": 17,
+    "avg_score": 0.22204016412005706,
+    "min_score": 0.0,
+    "max_score": 0.9384472370147705,
+    "perfect_matches": 0,
+    "score_distribution": {
+      "0.0-0.2": 10,
+      "0.2-0.4": 0,
+      "0.4-0.6": 5,
+      "0.6-0.8": 1,
+      "0.8-1.0": 1
+    }
+  },
+  "detailed_results": [
+    {
+      "uid": "0",
+      "score": 0.0,
+      "diagnosis": "Methylmalonic acidemia; Methylmalonic aciduria; Vitamin B12-unresponsive methylmalonic acidemia; methylmalonyl-coa mutase deficiency",
+      "details": {
+        "ddx": [
+          "Methylmalonic Acidemia",
+          "Propionic Acidemia",
+          "Organic Aciduria",
+          "Neonatal Metabolic Crisis",
+          "Inborn Error of Metabolism"
+        ],
+        "similarity_matrix": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "1",
+      "score": 0.0,
+      "diagnosis": "Succinic semialdehyde dehydrogenase deficiency",
+      "details": {
+        "ddx": [
+          "Propionic Acidemia",
+          "Methylmalonic Acidemia",
+          "Organic Aciduria",
+          "Neonatal Sepsis",
+          "Inborn Error of Metabolism"
+        ],
+        "similarity_matrix": [
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "2",
+      "score": 0.0,
+      "diagnosis": "Phenylketonuria",
+      "details": {
+        "ddx": [
+          "Tyrosinemia Type I",
+          "Phenylketonuria",
+          "Maple Syrup Urine Disease",
+          "Inborn Error of Metabolism",
+          "Neonatal Metabolic Crisis"
+        ],
+        "similarity_matrix": [
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "3",
+      "score": 0.0,
+      "diagnosis": "Congenital disorder of glycosylation, type Ia",
+      "details": {
+        "ddx": [
+          "Congenital Diaphragmatic Hernia",
+          "Cerebellar Agenesis",
+          "Lipodystrophy Syndrome",
+          "Hiatus Hernia",
+          "Abnormal Muscle Physiology Syndrome"
+        ],
+        "similarity_matrix": [
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "4",
+      "score": 0.0,
+      "diagnosis": "Maple syrup urine disease",
+      "details": {
+        "ddx": [
+          "Maple Syrup Urine Disease",
+          "Tyrosinemia Type I",
+          "Phenylketonuria",
+          "Congenital Abnormality Syndrome",
+          "Neonatal Metabolic Crisis"
+        ],
+        "similarity_matrix": [
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "5",
+      "score": 0.0,
+      "diagnosis": "Phenylketonuria",
+      "details": {
+        "ddx": [
+          "Tyrosinemia Type I",
+          "Phenylketonuria",
+          "Congenital Hernia",
+          "Viral Gastroenteritis",
+          "Erythematous Dermatitis"
+        ],
+        "similarity_matrix": [
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "6",
+      "score": 0.0,
+      "diagnosis": "Biotinidase deficiency; Biotinidase deficiencymultiple carboxylase deficiency",
+      "details": {
+        "ddx": [
+          "Lactic Acidosis",
+          "Eczema",
+          "Alopecia Areata",
+          "Infant Mortality Syndrome",
+          "Dermatitis Syndrome"
+        ],
+        "similarity_matrix": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "7",
+      "score": 0.0,
+      "diagnosis": "Congenital disorder of glycosylation, type Ia",
+      "details": {
+        "ddx": [
+          "Rod-Cone Dystrophy",
+          "Cerebellar Agenesis",
+          "Lipodystrophy Syndrome",
+          "Thromboembolic Disorder",
+          "Hepatitis"
+        ],
+        "similarity_matrix": [
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ],
+          [
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "8",
+      "score": 0.0,
+      "diagnosis": "Glutaric acidemia I; Glutaric acidemia type I; Glutaryl-CoA dehydrogenase deficiency",
+      "details": {
+        "ddx": [
+          "Glutaric Aciduria Type I",
+          "Carnitine Deficiency",
+          "Neonatal Sepsis",
+          "Sleep Disorder",
+          "Dystonia Syndrome"
+        ],
+        "similarity_matrix": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "9",
+      "score": 0.0,
+      "diagnosis": "Isovaleric acidemia; Isovaleric acedemia",
+      "details": {
+        "ddx": [
+          "Hyperammonemia Syndrome",
+          "Glycine Encephalopathy",
+          "Carnitine Deficiency",
+          "Neonatal Mortality Syndrome",
+          "Prenatal Development Disorder"
+        ],
+        "similarity_matrix": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "10",
+      "score": 0.4534003734588623,
+      "diagnosis": "Congenital disorder of glycosylation, type Ia",
+      "details": {
+        "ddx": [
+          "Disease A",
+          "Disease B",
+          "Disease C",
+          "Disease D",
+          "Disease E"
+        ],
+        "similarity_matrix": [
+          [
+            0.4011548161506653
+          ],
+          [
+            0.3556228280067444
+          ],
+          [
+            0.4534003734588623
+          ],
+          [
+            0.4362751245498657
+          ],
+          [
+            0.4237060546875
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "11",
+      "score": 0.44143152236938477,
+      "diagnosis": "Methylmalonic aciduria; Methylmalonic aciduria and homocystinuria, Cblc type; Methylmalonic acidemia; Methylmalonic acidemia; Homocystinuria, type cblC",
+      "details": {
+        "ddx": [
+          "Disease F",
+          "Disease G",
+          "Disease H",
+          "Disease I",
+          "Disease J"
+        ],
+        "similarity_matrix": [
+          [
+            0.3964264392852783,
+            0.3792566657066345,
+            0.4154227674007416,
+            0.4154227674007416,
+            0.43366730213165283
+          ],
+          [
+            0.4159563183784485,
+            0.36177122592926025,
+            0.44143152236938477,
+            0.44143152236938477,
+            0.39227622747421265
+          ],
+          [
+            0.3580169081687927,
+            0.37092113494873047,
+            0.38430002331733704,
+            0.38430002331733704,
+            0.4398510456085205
+          ],
+          [
+            0.35038521885871887,
+            0.2858467698097229,
+            0.3623616099357605,
+            0.3623616099357605,
+            0.31971824169158936
+          ],
+          [
+            0.3424202799797058,
+            0.3094264566898346,
+            0.3671422302722931,
+            0.3671422302722931,
+            0.3153791129589081
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "12",
+      "score": 0.4422948956489563,
+      "diagnosis": "Medium chain acyl-CoA dehydrogenase deficiency; Acyl-Coa dehydrogenase, medium-chain, deficiency of",
+      "details": {
+        "ddx": [
+          "Disease K",
+          "Disease L",
+          "Disease M",
+          "Disease N",
+          "Disease O"
+        ],
+        "similarity_matrix": [
+          [
+            0.41880857944488525,
+            0.40681663155555725
+          ],
+          [
+            0.426690012216568,
+            0.40750354528427124
+          ],
+          [
+            0.4422948956489563,
+            0.43305087089538574
+          ],
+          [
+            0.37213677167892456,
+            0.3603755235671997
+          ],
+          [
+            0.3416469097137451,
+            0.32468628883361816
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "13",
+      "score": 0.43868446350097656,
+      "diagnosis": "Succinic semialdehyde dehydrogenase deficiency",
+      "details": {
+        "ddx": [
+          "Disease P",
+          "Disease Q",
+          "Disease R",
+          "Disease S",
+          "Disease T"
+        ],
+        "similarity_matrix": [
+          [
+            0.4311356544494629
+          ],
+          [
+            0.42593613266944885
+          ],
+          [
+            0.4034765958786011
+          ],
+          [
+            0.43868446350097656
+          ],
+          [
+            0.29231971502304077
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "14",
+      "score": 0.4203192889690399,
+      "diagnosis": "Homocystinuria; cystathionine beta-synthase deficiency; Classic homocystinuria; Homocysteinemia",
+      "details": {
+        "ddx": [
+          "Disease U",
+          "Disease V",
+          "Disease W",
+          "Disease X",
+          "Disease Y"
+        ],
+        "similarity_matrix": [
+          [
+            0.4203192889690399,
+            0.36384958028793335,
+            0.39504656195640564,
+            0.38878801465034485
+          ],
+          [
+            0.31398865580558777,
+            0.37198781967163086,
+            0.3470369577407837,
+            0.31768789887428284
+          ],
+          [
+            0.3460889458656311,
+            0.3497273921966553,
+            0.3534685969352722,
+            0.3514348268508911
+          ],
+          [
+            0.3684219717979431,
+            0.4131072163581848,
+            0.3994046747684479,
+            0.3610578775405884
+          ],
+          [
+            0.32814717292785645,
+            0.35946574807167053,
+            0.3189086318016052,
+            0.3647303581237793
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "15",
+      "score": 0.9384472370147705,
+      "diagnosis": "Hyperinsulinemic hypoglycemia, familial, 2; Congenital hyperinsulinemic hypoglycemia",
+      "details": {
+        "ddx": [
+          "Williams Syndrome",
+          "Congenital Hyperinsulinism",
+          "Epileptic Encephalopathy",
+          "Neonatal Hemochromatosis",
+          "Rett Syndrome"
+        ],
+        "similarity_matrix": [
+          [
+            0.3648556172847748,
+            0.3774809241294861
+          ],
+          [
+            0.7876638174057007,
+            0.9384472370147705
+          ],
+          [
+            0.31801873445510864,
+            0.3586118221282959
+          ],
+          [
+            0.5149236917495728,
+            0.54544597864151
+          ],
+          [
+            0.4218990206718445,
+            0.3939396142959595
+          ]
+        ]
+      }
+    },
+    {
+      "uid": "16",
+      "score": 0.6401050090789795,
+      "diagnosis": "Propionic acidemia",
+      "details": {
+        "ddx": [
+          "Urea Cycle Disorder",
+          "Nonketotic Hyperglycinemia",
+          "Carnitine Transport Defect",
+          "Congenital Anemia",
+          "Neonatal Hypoglycemia"
+        ],
+        "similarity_matrix": [
+          [
+            0.4605600833892822
+          ],
+          [
+            0.6401050090789795
+          ],
+          [
+            0.4825245141983032
+          ],
+          [
+            0.23838429152965546
+          ],
+          [
+            0.3984256684780121
+          ]
+        ]
+      }
+    }
+  ]
+}

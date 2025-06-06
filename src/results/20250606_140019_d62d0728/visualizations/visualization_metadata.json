@@ -1,0 +1,28 @@
+{
+  "generated_visualizations": [
+    "src\\results\\20250606_140019_d62d0728\\visualizations\\semantic_mini-test_confusion_matrix.png",
+    "src\\results\\20250606_140019_d62d0728\\visualizations\\semantic_mini-test_score_distribution.png",
+    "src\\results\\20250606_140019_d62d0728\\visualizations\\semantic_mini-test_score_distribution_ranges.png",
+    "src\\results\\20250606_140019_d62d0728\\visualizations\\semantic_mini-test_top_errors.png"
+  ],
+  "config": {
+    "output_formats": [
+      "png"
+    ],
+    "semantic_configs": [
+      {
+        "type": "score_distribution",
+        "enabled": true
+      },
+      {
+        "type": "confusion_matrix",
+        "enabled": true
+      },
+      {
+        "type": "top_errors",
+        "enabled": true
+      }
+    ],
+    "combined_configs": []
+  }
+}

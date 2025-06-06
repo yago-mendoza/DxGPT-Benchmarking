@@ -1,2 +1,0 @@
-+ Added +death, +critical, +pediatric, +severity columns (from csv seggregation in the 25.05.01 version)
-- Removed the "icd10_disease_variant_name" column.

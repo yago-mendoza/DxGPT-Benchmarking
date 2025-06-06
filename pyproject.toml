@@ -32,6 +32,10 @@ dependencies = [
     "PyYAML>=6.0.1",
     "requests",
     "jsonschema>=4.0.0",  # Schema validation for structured outputs
+    
+    # Visualization
+    "matplotlib>=3.5.0",
+    "seaborn>=0.12.0",
 ]
 
 # Development tools and testing dependencies
