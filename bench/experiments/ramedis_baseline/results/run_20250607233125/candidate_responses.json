@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "llm_config_alias": "candidate_dx_gpt",
+    "model_used": "gpt-4o",
+    "prompt_path": "experiments/ramedis_baseline/eval-prompts/candidate_prompt.txt",
+    "dataset_path": "bench/datasets/ramedis-45.json",
+    "timestamp": "2025-06-07T23:32:39.076005"
+  },
+  "responses": [
+    {
+      "case_id": 1,
+      "ddxs": [
+        "Methylmalonic acidemia",
+        "Propionic acidemia",
+        "Isovaleric acidemia",
+        "Glutaric acidemia type I",
+        "Ornithine transcarbamylase deficiency"
+      ]
+    },
+    {
+      "case_id": 2,
+      "ddxs": [
+        "Spinal Muscular Atrophy Type 1 (SMA1)",
+        "Mitochondrial DNA Depletion Syndrome",
+        "Pompe Disease",
+        "Urea Cycle Disorders",
+        "Nonketotic Hyperglycinemia"
+      ]
+    },
+    {
+      "case_id": 3,
+      "ddxs": [
+        "Tyrosinemia Type I",
+        "Phenylketonuria",
+        "Maple Syrup Urine Disease",
+        "Homocystinuria",
+        "Glycogen Storage Disease Type II (Pompe disease)"
+      ]
+    },
+    {
+      "case_id": 4,
+      "ddxs": [
+        "Congenital Myotonic Dystrophy",
+        "Cerebrocostomandibular Syndrome",
+        "Congenital Disorders of Glycosylation",
+        "Zellweger Spectrum Disorder",
+        "Congenital Muscular Dystrophy"
+      ]
+    },
+    {
+      "case_id": 5,
+      "ddxs": [
+        "Maple Syrup Urine Disease (MSUD)",
+        "Leigh Syndrome",
+        "Zellweger Spectrum Disorder",
+        "Menkes Disease",
+        "Biotinidase Deficiency"
+      ]
+    },
+    {
+      "case_id": 6,
+      "ddxs": [
+        "Tyrosinemia Type I",
+        "Phenylketonuria",
+        "DiGeorge Syndrome",
+        "Hurler Syndrome",
+        "Cystic Fibrosis"
+      ]
+    },
+    {
+      "case_id": 7,
+      "ddxs": [
+        "Pyruvate dehydrogenase deficiency",
+        "Leigh syndrome",
+        "Biotinidase deficiency",
+        "Mitochondrial encephalomyopathy",
+        "Congenital lactic acidosis"
+      ]
+    },
+    {
+      "case_id": 8,
+      "ddxs": [
+        "Cockayne Syndrome",
+        "Alagille Syndrome",
+        "Smith-Lemli-Opitz Syndrome",
+        "Aicardi-Goutières Syndrome",
+        "Zellweger Spectrum Disorder"
+      ]
+    },
+    {
+      "case_id": 9,
+      "ddxs": [
+        "Glutaric Aciduria Type I",
+        "Carnitine Transporter Deficiency",
+        "Maple Syrup Urine Disease",
+        "Mitochondrial Disorders",
+        "Organic Acidurias"
+      ]
+    },
+    {
+      "case_id": 10,
+      "ddxs": [
+        "Urea Cycle Disorder",
+        "Nonketotic Hyperglycinemia",
+        "Carnitine Transport Defect",
+        "Maple Syrup Urine Disease",
+        "Organic Aciduria"
+      ]
+    },
+    {
+      "case_id": 11,
+      "ddxs": [
+        "Pontocerebellar Hypoplasia Type 2",
+        "Joubert Syndrome",
+        "Walker-Warburg Syndrome",
+        "Congenital Disorder of Glycosylation Type 1A",
+        "Aicardi Syndrome"
+      ]
+    },
+    {
+      "case_id": 12,
+      "ddxs": [
+        "Methylmalonic acidemia",
+        "Carnitine deficiency syndrome",
+        "Urea cycle disorder",
+        "Congenital heart defect",
+        "Leigh syndrome"
+      ]
+    },
+    {
+      "case_id": 13,
+      "ddxs": [
+        "Medium-chain acyl-CoA dehydrogenase (MCAD) deficiency",
+        "Carnitine transporter defect (Primary carnitine deficiency)",
+        "Glutaric acidemia type II",
+        "Mitochondrial trifunctional protein deficiency",
+        "Fatty acid oxidation disorder unspecified"
+      ]
+    },
+    {
+      "case_id": 14,
+      "ddxs": [
+        "Congenital adrenal hyperplasia due to 21-hydroxylase deficiency",
+        "Primary hyperaldosteronism",
+        "Organic acidemia",
+        "Bartter syndrome",
+        "Neonatal sepsis"
+      ]
+    },
+    {
+      "case_id": 15,
+      "ddxs": [
+        "Homocystinuria",
+        "Marfan Syndrome",
+        "Ehlers-Danlos Syndrome",
+        "Smith-Lemli-Opitz Syndrome",
+        "Fragile X Syndrome"
+      ]
+    },
+    {
+      "case_id": 16,
+      "ddxs": [
+        "Wiedemann-Steiner syndrome",
+        "Beckwith-Wiedemann syndrome",
+        "Wolf-Hirschhorn syndrome",
+        "Congenital hyperinsulinism",
+        "Menkes disease"
+      ]
+    },
+    {
+      "case_id": 17,
+      "ddxs": [
+        "Non-ketotic hyperglycinemia",
+        "Urea cycle disorder",
+        "Carnitine uptake defect",
+        "Organic acidemia",
+        "Glycogen storage disease type IV"
+      ]
+    },
+    {
+      "case_id": 18,
+      "ddxs": [
+        "Methylmalonic acidemia",
+        "Propionic acidemia",
+        "Isovaleric acidemia",
+        "Glutaric acidemia type I",
+        "Multiple carboxylase deficiency"
+      ]
+    },
+    {
+      "case_id": 19,
+      "ddxs": [
+        "Medium-chain acyl-CoA dehydrogenase deficiency (MCAD)",
+        "Propionic acidemia",
+        "Methylmalonic acidemia",
+        "Carnitine palmitoyltransferase I deficiency",
+        "Pyruvate carboxylase deficiency"
+      ]
+    },
+    {
+      "case_id": 20,
+      "ddxs": [
+        "Primary Carnitine Deficiency",
+        "Mitochondrial Encephalomyopathy",
+        "Propionic Acidemia",
+        "Urea Cycle Disorder",
+        "Congenital Hypothyroidism"
+      ]
+    },
+    {
+      "case_id": 21,
+      "ddxs": [
+        "Mitochondrial Encephalomyopathy, Lactic Acidosis, and Stroke-like episodes (MELAS)",
+        "Leigh Syndrome",
+        "Smith-Lemli-Opitz Syndrome",
+        "Krabbe Disease",
+        "Canavan Disease"
+      ]
+    },
+    {
+      "case_id": 22,
+      "ddxs": [
+        "Primary Carnitine Deficiency",
+        "Medium-Chain Acyl-CoA Dehydrogenase Deficiency (MCAD)",
+        "Carnitine Palmitoyltransferase II Deficiency",
+        "Glutaric Acidemia Type II",
+        "Long-Chain 3-Hydroxyacyl-CoA Dehydrogenase Deficiency"
+      ]
+    },
+    {
+      "case_id": 23,
+      "ddxs": [
+        "Glutaric acidemia type I",
+        "Carnitine palmitoyltransferase II deficiency",
+        "Maple syrup urine disease",
+        "Organic acidemia",
+        "Mitochondrial encephalomyopathy"
+      ]
+    },
+    {
+      "case_id": 24,
+      "ddxs": [
+        "Tyrosinemia Type I",
+        "Phenylketonuria",
+        "Maple Syrup Urine Disease",
+        "Galactosemia",
+        "Methylmalonic Acidemia"
+      ]
+    },
+    {
+      "case_id": 25,
+      "ddxs": [
+        "Pelizaeus-Merzbacher disease",
+        "Leigh syndrome",
+        "Krabbe disease",
+        "Canavan disease",
+        "Alexander disease"
+      ]
+    },
+    {
+      "case_id": 26,
+      "ddxs": [
+        "Maple Syrup Urine Disease (MSUD)",
+        "Congenital adrenal hyperplasia (CAH)",
+        "Leigh syndrome",
+        "Zellweger spectrum disorder",
+        "Holocarboxylase synthetase deficiency"
+      ]
+    },
+    {
+      "case_id": 27,
+      "ddxs": [
+        "Galactosemia",
+        "Tyrosinemia Type I",
+        "Maple Syrup Urine Disease",
+        "Crigler-Najjar Syndrome Type I",
+        "Menkes Disease"
+      ]
+    },
+    {
+      "case_id": 28,
+      "ddxs": [
+        "Methylmalonic acidemia",
+        "Propionic acidemia",
+        "Isovaleric acidemia",
+        "Nonketotic hyperglycinemia",
+        "Glutaric acidemia type I"
+      ]
+    },
+    {
+      "case_id": 29,
+      "ddxs": [
+        "Homocystinuria",
+        "Methylmalonic acidemia",
+        "Congenital erythropoietic porphyria",
+        "Glycine encephalopathy",
+        "Niemann-Pick disease type A"
+      ]
+    },
+    {
+      "case_id": 30,
+      "ddxs": [
+        "Tyrosinemia Type I",
+        "Cystic Fibrosis",
+        "Phenylketonuria",
+        "Congenital Diaphragmatic Hernia",
+        "Tracheobronchomalacia"
+      ]
+    },
+    {
+      "case_id": 31,
+      "ddxs": [
+        "Methylmalonic acidemia",
+        "Propionic acidemia",
+        "Biotinidase deficiency",
+        "Mitochondrial myopathy",
+        "Organic aciduria"
+      ]
+    },
+    {
+      "case_id": 32,
+      "ddxs": [
+        "Tyrosinemia type I",
+        "Maple syrup urine disease",
+        "Methylmalonic acidemia",
+        "Galactosemia",
+        "Urea cycle disorder"
+      ]
+    },
+    {
+      "case_id": 33,
+      "ddxs": [
+        "Propionic Acidemia",
+        "Methylmalonic Acidemia",
+        "Biotinidase Deficiency",
+        "Isovaleric Acidemia",
+        "Maple Syrup Urine Disease"
+      ]
+    },
+    {
+      "case_id": 34,
+      "ddxs": [
+        "Methylmalonic acidemia",
+        "Propionic acidemia",
+        "Maple syrup urine disease",
+        "Isovaleric acidemia",
+        "Glutaric acidemia type I"
+      ]
+    },
+    {
+      "case_id": 35,
+      "ddxs": [
+        "Propionic acidemia",
+        "Maple syrup urine disease",
+        "Methylmalonic acidemia",
+        "Pyruvate carboxylase deficiency",
+        "Nonketotic hyperglycinemia"
+      ]
+    },
+    {
+      "case_id": 36,
+      "ddxs": [
+        "Tyrosinemia Type I",
+        "Phenylketonuria",
+        "Maple Syrup Urine Disease",
+        "Methylmalonic Acidemia",
+        "Isovaleric Acidemia"
+      ]
+    },
+    {
+      "case_id": 37,
+      "ddxs": [
+        "Medium-chain acyl-CoA dehydrogenase deficiency (MCAD deficiency)",
+        "Glutaric aciduria type I",
+        "Methylmalonic acidemia",
+        "Propionic acidemia",
+        "Isovaleric acidemia"
+      ]
+    },
+    {
+      "case_id": 38,
+      "ddxs": [
+        "Wilson's disease",
+        "Porphyria",
+        "Non-alcoholic fatty liver disease (NAFLD)",
+        "Iron deficiency anemia",
+        "Alpha-1 antitrypsin deficiency"
+      ]
+    },
+    {
+      "case_id": 39,
+      "ddxs": [
+        "Primary Carnitine Deficiency",
+        "Medium-Chain Acyl-CoA Dehydrogenase Deficiency",
+        "Glutaric Acidemia Type 2",
+        "Carnitine Transporter Deficiency",
+        "Neonatal Onset Multisystem Inflammatory Disease"
+      ]
+    },
+    {
+      "case_id": 40,
+      "ddxs": [
+        "Tyrosinemia Type I",
+        "Severe Combined Immunodeficiency (SCID)",
+        "Phenylketonuria (PKU)",
+        "Maple Syrup Urine Disease (MSUD)",
+        "Urea Cycle Disorder"
+      ]
+    },
+    {
+      "case_id": 41,
+      "ddxs": [
+        "Primary Hyperoxaluria",
+        "Methylmalonic Acidemia",
+        "Propionic Acidemia",
+        "Glutaric Acidemia Type I",
+        "Glycine Encephalopathy"
+      ]
+    },
+    {
+      "case_id": 42,
+      "ddxs": [
+        "Barth Syndrome",
+        "Zellweger Syndrome",
+        "Pompe Disease",
+        "Leigh Syndrome",
+        "Mitochondrial DNA Depletion Syndrome"
+      ]
+    },
+    {
+      "case_id": 43,
+      "ddxs": [
+        "Urea Cycle Disorder",
+        "Prader-Willi Syndrome",
+        "Citrullinemia Type I",
+        "Neonatal Hemochromatosis",
+        "Congenital Adrenal Hyperplasia"
+      ]
+    },
+    {
+      "case_id": 44,
+      "ddxs": [
+        "Glutaric acidemia type I",
+        "Canavan disease",
+        "Krabbe disease",
+        "Leigh syndrome",
+        "Nonketotic hyperglycinemia"
+      ]
+    },
+    {
+      "case_id": 45,
+      "ddxs": [
+        "Tyrosinemia type I",
+        "Phenylketonuria",
+        "Maple syrup urine disease",
+        "Homocystinuria",
+        "Methylmalonic acidemia"
+      ]
+    }
+  ]
+}

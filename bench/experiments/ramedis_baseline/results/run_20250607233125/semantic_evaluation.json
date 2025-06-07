@@ -1,0 +1,1556 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "timestamp": "2025-06-07T23:33:48.260449"
+  },
+  "evaluations": [
+    {
+      "case_id": 10,
+      "gdx_set": [
+        "Isovaleric acidemia",
+        "Isovaleric acedemia"
+      ],
+      "best_match": {
+        "gdx": "Isovaleric acidemia",
+        "ddx": "Maple Syrup Urine Disease",
+        "score": 0.6432751417160034
+      },
+      "ddx_semantic_scores": {
+        "Urea Cycle Disorder": [
+          0.4171852469444275,
+          0.29933688044548035
+        ],
+        "Nonketotic Hyperglycinemia": [
+          0.5968614220619202,
+          0.5258340835571289
+        ],
+        "Carnitine Transport Defect": [
+          0.5620653033256531,
+          0.4897528290748596
+        ],
+        "Maple Syrup Urine Disease": [
+          0.6432751417160034,
+          0.607389509677887
+        ],
+        "Organic Aciduria": [
+          0.47089385986328125,
+          0.3695511221885681
+        ]
+      }
+    },
+    {
+      "case_id": 3,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia Type I": [
+          0.6515018939971924
+        ],
+        "Phenylketonuria": [
+          1.0
+        ],
+        "Maple Syrup Urine Disease": [
+          0.6832215785980225
+        ],
+        "Homocystinuria": [
+          0.47054192423820496
+        ],
+        "Glycogen Storage Disease Type II (Pompe disease)": [
+          0.46393829584121704
+        ]
+      }
+    },
+    {
+      "case_id": 26,
+      "gdx_set": [
+        "Maple syrup urine disease"
+      ],
+      "best_match": {
+        "gdx": "Maple syrup urine disease",
+        "ddx": "Maple Syrup Urine Disease (MSUD)",
+        "score": 0.9355921149253845
+      },
+      "ddx_semantic_scores": {
+        "Maple Syrup Urine Disease (MSUD)": [
+          0.9355921149253845
+        ],
+        "Congenital adrenal hyperplasia (CAH)": [
+          0.39874267578125
+        ],
+        "Leigh syndrome": [
+          0.4428190588951111
+        ],
+        "Zellweger spectrum disorder": [
+          0.4226894974708557
+        ],
+        "Holocarboxylase synthetase deficiency": [
+          0.5652214288711548
+        ]
+      }
+    },
+    {
+      "case_id": 21,
+      "gdx_set": [
+        "Mitochondrial complex IV deficiency, nuclear type 1"
+      ],
+      "best_match": {
+        "gdx": "Mitochondrial complex IV deficiency, nuclear type 1",
+        "ddx": "Leigh Syndrome",
+        "score": 0.573227047920227
+      },
+      "ddx_semantic_scores": {
+        "Mitochondrial Encephalomyopathy, Lactic Acidosis, and Stroke-like episodes (MELAS)": [
+          0.5155774354934692
+        ],
+        "Leigh Syndrome": [
+          0.573227047920227
+        ],
+        "Smith-Lemli-Opitz Syndrome": [
+          0.358785480260849
+        ],
+        "Krabbe Disease": [
+          0.3215228319168091
+        ],
+        "Canavan Disease": [
+          0.43418169021606445
+        ]
+      }
+    },
+    {
+      "case_id": 20,
+      "gdx_set": [
+        "3-methylcrotonyl-CoA carboxylase deficiency",
+        "3-Methylcrotonyl-CoA carboxylase 1 deficiency"
+      ],
+      "best_match": {
+        "gdx": "3-Methylcrotonyl-CoA carboxylase 1 deficiency",
+        "ddx": "Primary Carnitine Deficiency",
+        "score": 0.6189729571342468
+      },
+      "ddx_semantic_scores": {
+        "Primary Carnitine Deficiency": [
+          0.6134506464004517,
+          0.6189729571342468
+        ],
+        "Mitochondrial Encephalomyopathy": [
+          0.536123514175415,
+          0.5148088932037354
+        ],
+        "Propionic Acidemia": [
+          0.5918290615081787,
+          0.5707312822341919
+        ],
+        "Urea Cycle Disorder": [
+          0.4385884702205658,
+          0.4270133972167969
+        ],
+        "Congenital Hypothyroidism": [
+          0.379071444272995,
+          0.3713470995426178
+        ]
+      }
+    },
+    {
+      "case_id": 19,
+      "gdx_set": [
+        "Primary carnitine deficiency",
+        "Carnitine deficiency, systemic primary",
+        "Systemic primary carnitine deficiency"
+      ],
+      "best_match": {
+        "gdx": "Carnitine deficiency, systemic primary",
+        "ddx": "Carnitine palmitoyltransferase I deficiency",
+        "score": 0.8401566743850708
+      },
+      "ddx_semantic_scores": {
+        "Medium-chain acyl-CoA dehydrogenase deficiency (MCAD)": [
+          0.6260661482810974,
+          0.6213968396186829,
+          0.6042081713676453
+        ],
+        "Propionic acidemia": [
+          0.5500096082687378,
+          0.4949745237827301,
+          0.4968845248222351
+        ],
+        "Methylmalonic acidemia": [
+          0.5535861849784851,
+          0.503965437412262,
+          0.5058975219726562
+        ],
+        "Carnitine palmitoyltransferase I deficiency": [
+          0.8390747308731079,
+          0.8401566743850708,
+          0.8198652267456055
+        ],
+        "Pyruvate carboxylase deficiency": [
+          0.576216459274292,
+          0.5563867688179016,
+          0.5338982343673706
+        ]
+      }
+    },
+    {
+      "case_id": 9,
+      "gdx_set": [
+        "Glutaric acidemia I",
+        "Glutaric acidemia type I",
+        "Glutaryl-CoA dehydrogenase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Glutaric acidemia I",
+        "ddx": "Glutaric Aciduria Type I",
+        "score": 0.9837251901626587
+      },
+      "ddx_semantic_scores": {
+        "Glutaric Aciduria Type I": [
+          0.9837251901626587,
+          0.9819910526275635,
+          0.8235527276992798
+        ],
+        "Carnitine Transporter Deficiency": [
+          0.44272303581237793,
+          0.4486158490180969,
+          0.5387388467788696
+        ],
+        "Maple Syrup Urine Disease": [
+          0.5689400434494019,
+          0.5665846467018127,
+          0.5896817445755005
+        ],
+        "Mitochondrial Disorders": [
+          0.3474738299846649,
+          0.3523823916912079,
+          0.4210739731788635
+        ],
+        "Organic Acidurias": [
+          0.4676420986652374,
+          0.445463091135025,
+          0.4419156610965729
+        ]
+      }
+    },
+    {
+      "case_id": 31,
+      "gdx_set": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "best_match": {
+        "gdx": "Biotinidase deficiency",
+        "ddx": "Biotinidase deficiency",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.5230445861816406,
+          0.47860971093177795
+        ],
+        "Propionic acidemia": [
+          0.5021426677703857,
+          0.44988739490509033
+        ],
+        "Biotinidase deficiency": [
+          1.0,
+          0.8538603782653809
+        ],
+        "Mitochondrial myopathy": [
+          0.2766861915588379,
+          0.26073622703552246
+        ],
+        "Organic aciduria": [
+          0.3482321500778198,
+          0.2811844050884247
+        ]
+      }
+    },
+    {
+      "case_id": 12,
+      "gdx_set": [
+        "Methylmalonic aciduria",
+        "Methylmalonic aciduria and homocystinuria, Cblc type",
+        "Methylmalonic acidemia",
+        "Methylmalonic acidemia",
+        "Homocystinuria, type cblC"
+      ],
+      "best_match": {
+        "gdx": "Methylmalonic acidemia",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.9999998807907104
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.9680109024047852,
+          0.6833062767982483,
+          0.9999998807907104,
+          0.9999998807907104,
+          0.542902946472168
+        ],
+        "Carnitine deficiency syndrome": [
+          0.514695405960083,
+          0.4589211642742157,
+          0.5391966104507446,
+          0.5391966104507446,
+          0.4967101514339447
+        ],
+        "Urea cycle disorder": [
+          0.4448961615562439,
+          0.39276987314224243,
+          0.4378318786621094,
+          0.4378318786621094,
+          0.4077078104019165
+        ],
+        "Congenital heart defect": [
+          0.2512260377407074,
+          0.24983619153499603,
+          0.23321448266506195,
+          0.23321448266506195,
+          0.24095571041107178
+        ],
+        "Leigh syndrome": [
+          0.4000585079193115,
+          0.36052843928337097,
+          0.42844897508621216,
+          0.42844897508621216,
+          0.35329920053482056
+        ]
+      }
+    },
+    {
+      "case_id": 16,
+      "gdx_set": [
+        "Hyperinsulinemic hypoglycemia, familial, 2",
+        "Congenital hyperinsulinemic hypoglycemia"
+      ],
+      "best_match": {
+        "gdx": "Congenital hyperinsulinemic hypoglycemia",
+        "ddx": "Congenital hyperinsulinism",
+        "score": 0.9384472370147705
+      },
+      "ddx_semantic_scores": {
+        "Wiedemann-Steiner syndrome": [
+          0.394832968711853,
+          0.40601813793182373
+        ],
+        "Beckwith-Wiedemann syndrome": [
+          0.45803725719451904,
+          0.4330850839614868
+        ],
+        "Wolf-Hirschhorn syndrome": [
+          0.4377587139606476,
+          0.41084861755371094
+        ],
+        "Congenital hyperinsulinism": [
+          0.7876638174057007,
+          0.9384472370147705
+        ],
+        "Menkes disease": [
+          0.4343622028827667,
+          0.43742164969444275
+        ]
+      }
+    },
+    {
+      "case_id": 29,
+      "gdx_set": [
+        "Homocystinuria",
+        "cystathionine beta-synthase deficiency",
+        "Classic homocystinuria",
+        "Homocysteinemia"
+      ],
+      "best_match": {
+        "gdx": "Homocystinuria",
+        "ddx": "Homocystinuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Homocystinuria": [
+          1.0,
+          0.827528715133667,
+          0.9386857151985168,
+          0.7898529767990112
+        ],
+        "Methylmalonic acidemia": [
+          0.5215993523597717,
+          0.5290180444717407,
+          0.49659109115600586,
+          0.4796125292778015
+        ],
+        "Congenital erythropoietic porphyria": [
+          0.40070319175720215,
+          0.41255319118499756,
+          0.4276353120803833,
+          0.3601614534854889
+        ],
+        "Glycine encephalopathy": [
+          0.6300410628318787,
+          0.6511970162391663,
+          0.5905580520629883,
+          0.629777729511261
+        ],
+        "Niemann-Pick disease type A": [
+          0.35538122057914734,
+          0.37013304233551025,
+          0.3819531202316284,
+          0.32537925243377686
+        ]
+      }
+    },
+    {
+      "case_id": 11,
+      "gdx_set": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "best_match": {
+        "gdx": "Congenital disorder of glycosylation, type Ia",
+        "ddx": "Congenital Disorder of Glycosylation Type 1A",
+        "score": 0.949425220489502
+      },
+      "ddx_semantic_scores": {
+        "Pontocerebellar Hypoplasia Type 2": [
+          0.35998934507369995
+        ],
+        "Joubert Syndrome": [
+          0.36732298135757446
+        ],
+        "Walker-Warburg Syndrome": [
+          0.3303225338459015
+        ],
+        "Congenital Disorder of Glycosylation Type 1A": [
+          0.949425220489502
+        ],
+        "Aicardi Syndrome": [
+          0.4781005382537842
+        ]
+      }
+    },
+    {
+      "case_id": 23,
+      "gdx_set": [
+        "Glutaric acidemia I",
+        "Glutaric acidemia type I",
+        "Glutaryl-CoA dehydrogenase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Glutaric acidemia type I",
+        "ddx": "Glutaric acidemia type I",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Glutaric acidemia type I": [
+          0.9929609298706055,
+          1.0,
+          0.827497661113739
+        ],
+        "Carnitine palmitoyltransferase II deficiency": [
+          0.5316529273986816,
+          0.5432388782501221,
+          0.6179381608963013
+        ],
+        "Maple syrup urine disease": [
+          0.5689400434494019,
+          0.5665846467018127,
+          0.5896817445755005
+        ],
+        "Organic acidemia": [
+          0.47462987899780273,
+          0.4564749598503113,
+          0.4582861661911011
+        ],
+        "Mitochondrial encephalomyopathy": [
+          0.453952431678772,
+          0.45871928334236145,
+          0.5054015517234802
+        ]
+      }
+    },
+    {
+      "case_id": 15,
+      "gdx_set": [
+        "Homocystinuria",
+        "cystathionine beta-synthase deficiency",
+        "Classic homocystinuria",
+        "Homocysteinemia"
+      ],
+      "best_match": {
+        "gdx": "Homocystinuria",
+        "ddx": "Homocystinuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Homocystinuria": [
+          1.0,
+          0.827528715133667,
+          0.9386857151985168,
+          0.7898529767990112
+        ],
+        "Marfan Syndrome": [
+          0.2829044759273529,
+          0.3145890533924103,
+          0.3192614018917084,
+          0.2664547264575958
+        ],
+        "Ehlers-Danlos Syndrome": [
+          0.3282882273197174,
+          0.31592464447021484,
+          0.32695984840393066,
+          0.34795376658439636
+        ],
+        "Smith-Lemli-Opitz Syndrome": [
+          0.302050918340683,
+          0.3502471148967743,
+          0.3219614028930664,
+          0.22464916110038757
+        ],
+        "Fragile X Syndrome": [
+          0.2823019325733185,
+          0.33708328008651733,
+          0.3161419630050659,
+          0.2577533721923828
+        ]
+      }
+    },
+    {
+      "case_id": 14,
+      "gdx_set": [
+        "Succinic semialdehyde dehydrogenase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Succinic semialdehyde dehydrogenase deficiency",
+        "ddx": "Organic acidemia",
+        "score": 0.5400195121765137
+      },
+      "ddx_semantic_scores": {
+        "Congenital adrenal hyperplasia due to 21-hydroxylase deficiency": [
+          0.4052541255950928
+        ],
+        "Primary hyperaldosteronism": [
+          0.4011392295360565
+        ],
+        "Organic acidemia": [
+          0.5400195121765137
+        ],
+        "Bartter syndrome": [
+          0.38322070240974426
+        ],
+        "Neonatal sepsis": [
+          0.26555559039115906
+        ]
+      }
+    },
+    {
+      "case_id": 25,
+      "gdx_set": [
+        "L-2-hydroxyglutaric aciduria"
+      ],
+      "best_match": {
+        "gdx": "L-2-hydroxyglutaric aciduria",
+        "ddx": "Canavan disease",
+        "score": 0.44234827160835266
+      },
+      "ddx_semantic_scores": {
+        "Pelizaeus-Merzbacher disease": [
+          0.33047249913215637
+        ],
+        "Leigh syndrome": [
+          0.3996797204017639
+        ],
+        "Krabbe disease": [
+          0.3400808572769165
+        ],
+        "Canavan disease": [
+          0.44234827160835266
+        ],
+        "Alexander disease": [
+          0.43015336990356445
+        ]
+      }
+    },
+    {
+      "case_id": 5,
+      "gdx_set": [
+        "Maple syrup urine disease"
+      ],
+      "best_match": {
+        "gdx": "Maple syrup urine disease",
+        "ddx": "Maple Syrup Urine Disease (MSUD)",
+        "score": 0.9355921149253845
+      },
+      "ddx_semantic_scores": {
+        "Maple Syrup Urine Disease (MSUD)": [
+          0.9355921149253845
+        ],
+        "Leigh Syndrome": [
+          0.4428190588951111
+        ],
+        "Zellweger Spectrum Disorder": [
+          0.4226894974708557
+        ],
+        "Menkes Disease": [
+          0.5389600396156311
+        ],
+        "Biotinidase Deficiency": [
+          0.499456524848938
+        ]
+      }
+    },
+    {
+      "case_id": 4,
+      "gdx_set": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "best_match": {
+        "gdx": "Congenital disorder of glycosylation, type Ia",
+        "ddx": "Congenital Disorders of Glycosylation",
+        "score": 0.8540608286857605
+      },
+      "ddx_semantic_scores": {
+        "Congenital Myotonic Dystrophy": [
+          0.47729307413101196
+        ],
+        "Cerebrocostomandibular Syndrome": [
+          0.3994545638561249
+        ],
+        "Congenital Disorders of Glycosylation": [
+          0.8540608286857605
+        ],
+        "Zellweger Spectrum Disorder": [
+          0.4060462713241577
+        ],
+        "Congenital Muscular Dystrophy": [
+          0.45451462268829346
+        ]
+      }
+    },
+    {
+      "case_id": 24,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia Type I": [
+          0.6515018939971924
+        ],
+        "Phenylketonuria": [
+          1.0
+        ],
+        "Maple Syrup Urine Disease": [
+          0.6832215785980225
+        ],
+        "Galactosemia": [
+          0.4480534791946411
+        ],
+        "Methylmalonic Acidemia": [
+          0.5440982580184937
+        ]
+      }
+    },
+    {
+      "case_id": 1,
+      "gdx_set": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Methylmalonic acidemia",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.9999998807907104
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.9999998807907104,
+          0.9680109024047852,
+          0.8807355165481567,
+          0.8907325863838196
+        ],
+        "Propionic acidemia": [
+          0.6754580140113831,
+          0.6590555906295776,
+          0.5651570558547974,
+          0.6129608154296875
+        ],
+        "Isovaleric acidemia": [
+          0.7510212063789368,
+          0.7446814775466919,
+          0.6919991970062256,
+          0.6903924942016602
+        ],
+        "Glutaric acidemia type I": [
+          0.6227201819419861,
+          0.6281981468200684,
+          0.5468958616256714,
+          0.6360635757446289
+        ],
+        "Ornithine transcarbamylase deficiency": [
+          0.5260632038116455,
+          0.5298824310302734,
+          0.5711988806724548,
+          0.5532011389732361
+        ]
+      }
+    },
+    {
+      "case_id": 7,
+      "gdx_set": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "best_match": {
+        "gdx": "Biotinidase deficiency",
+        "ddx": "Biotinidase deficiency",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Pyruvate dehydrogenase deficiency": [
+          0.4870275557041168,
+          0.47412821650505066
+        ],
+        "Leigh syndrome": [
+          0.36243635416030884,
+          0.39590299129486084
+        ],
+        "Biotinidase deficiency": [
+          1.0,
+          0.8538603782653809
+        ],
+        "Mitochondrial encephalomyopathy": [
+          0.35535454750061035,
+          0.32675865292549133
+        ],
+        "Congenital lactic acidosis": [
+          0.4100680351257324,
+          0.42917245626449585
+        ]
+      }
+    },
+    {
+      "case_id": 18,
+      "gdx_set": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Methylmalonic acidemia",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.9999998807907104
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.9999998807907104,
+          0.9680109024047852,
+          0.8807355165481567,
+          0.8907325863838196
+        ],
+        "Propionic acidemia": [
+          0.6754580140113831,
+          0.6590555906295776,
+          0.5651570558547974,
+          0.6129608154296875
+        ],
+        "Isovaleric acidemia": [
+          0.7510212063789368,
+          0.7446814775466919,
+          0.6919991970062256,
+          0.6903924942016602
+        ],
+        "Glutaric acidemia type I": [
+          0.6227201819419861,
+          0.6281981468200684,
+          0.5468958616256714,
+          0.6360635757446289
+        ],
+        "Multiple carboxylase deficiency": [
+          0.7205946445465088,
+          0.727961540222168,
+          0.6880760192871094,
+          0.7256921529769897
+        ]
+      }
+    },
+    {
+      "case_id": 2,
+      "gdx_set": [
+        "Succinic semialdehyde dehydrogenase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Succinic semialdehyde dehydrogenase deficiency",
+        "ddx": "Nonketotic Hyperglycinemia",
+        "score": 0.5915897488594055
+      },
+      "ddx_semantic_scores": {
+        "Spinal Muscular Atrophy Type 1 (SMA1)": [
+          0.37739887833595276
+        ],
+        "Mitochondrial DNA Depletion Syndrome": [
+          0.4678399860858917
+        ],
+        "Pompe Disease": [
+          0.42517709732055664
+        ],
+        "Urea Cycle Disorders": [
+          0.4193245768547058
+        ],
+        "Nonketotic Hyperglycinemia": [
+          0.5915897488594055
+        ]
+      }
+    },
+    {
+      "case_id": 13,
+      "gdx_set": [
+        "Medium chain acyl-CoA dehydrogenase deficiency",
+        "Acyl-Coa dehydrogenase, medium-chain, deficiency of"
+      ],
+      "best_match": {
+        "gdx": "Medium chain acyl-CoA dehydrogenase deficiency",
+        "ddx": "Medium-chain acyl-CoA dehydrogenase (MCAD) deficiency",
+        "score": 0.9666823148727417
+      },
+      "ddx_semantic_scores": {
+        "Medium-chain acyl-CoA dehydrogenase (MCAD) deficiency": [
+          0.9666823148727417,
+          0.9496051669120789
+        ],
+        "Carnitine transporter defect (Primary carnitine deficiency)": [
+          0.5965855121612549,
+          0.5784033536911011
+        ],
+        "Glutaric acidemia type II": [
+          0.5923784375190735,
+          0.5593599081039429
+        ],
+        "Mitochondrial trifunctional protein deficiency": [
+          0.7515419125556946,
+          0.7408496141433716
+        ],
+        "Fatty acid oxidation disorder unspecified": [
+          0.5888837575912476,
+          0.5120693445205688
+        ]
+      }
+    },
+    {
+      "case_id": 30,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia Type I": [
+          0.6515018939971924
+        ],
+        "Cystic Fibrosis": [
+          0.30573102831840515
+        ],
+        "Phenylketonuria": [
+          1.0
+        ],
+        "Congenital Diaphragmatic Hernia": [
+          0.28531157970428467
+        ],
+        "Tracheobronchomalacia": [
+          0.2830745577812195
+        ]
+      }
+    },
+    {
+      "case_id": 27,
+      "gdx_set": [
+        "Classic galactosemia",
+        "Galactosemia"
+      ],
+      "best_match": {
+        "gdx": "Galactosemia",
+        "ddx": "Galactosemia",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Galactosemia": [
+          0.9204297661781311,
+          1.0
+        ],
+        "Tyrosinemia Type I": [
+          0.548560619354248,
+          0.5304356217384338
+        ],
+        "Maple Syrup Urine Disease": [
+          0.5034151077270508,
+          0.46060192584991455
+        ],
+        "Crigler-Najjar Syndrome Type I": [
+          0.38356029987335205,
+          0.33444491028785706
+        ],
+        "Menkes Disease": [
+          0.3819262683391571,
+          0.37552979588508606
+        ]
+      }
+    },
+    {
+      "case_id": 32,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Maple syrup urine disease",
+        "score": 0.6832215785980225
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia type I": [
+          0.6515018939971924
+        ],
+        "Maple syrup urine disease": [
+          0.6832215785980225
+        ],
+        "Methylmalonic acidemia": [
+          0.5440982580184937
+        ],
+        "Galactosemia": [
+          0.4480534791946411
+        ],
+        "Urea cycle disorder": [
+          0.45039910078048706
+        ]
+      }
+    },
+    {
+      "case_id": 8,
+      "gdx_set": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "best_match": {
+        "gdx": "Congenital disorder of glycosylation, type Ia",
+        "ddx": "Aicardi-Goutières Syndrome",
+        "score": 0.43612056970596313
+      },
+      "ddx_semantic_scores": {
+        "Cockayne Syndrome": [
+          0.4000990688800812
+        ],
+        "Alagille Syndrome": [
+          0.38766244053840637
+        ],
+        "Smith-Lemli-Opitz Syndrome": [
+          0.3032439947128296
+        ],
+        "Aicardi-Goutières Syndrome": [
+          0.43612056970596313
+        ],
+        "Zellweger Spectrum Disorder": [
+          0.4060462713241577
+        ]
+      }
+    },
+    {
+      "case_id": 22,
+      "gdx_set": [
+        "Medium chain acyl-CoA dehydrogenase deficiency",
+        "Acyl-Coa dehydrogenase, medium-chain, deficiency of"
+      ],
+      "best_match": {
+        "gdx": "Medium chain acyl-CoA dehydrogenase deficiency",
+        "ddx": "Medium-Chain Acyl-CoA Dehydrogenase Deficiency (MCAD)",
+        "score": 0.962444543838501
+      },
+      "ddx_semantic_scores": {
+        "Primary Carnitine Deficiency": [
+          0.6324347853660583,
+          0.6100403070449829
+        ],
+        "Medium-Chain Acyl-CoA Dehydrogenase Deficiency (MCAD)": [
+          0.962444543838501,
+          0.9461985230445862
+        ],
+        "Carnitine Palmitoyltransferase II Deficiency": [
+          0.6195274591445923,
+          0.6061310172080994
+        ],
+        "Glutaric Acidemia Type II": [
+          0.5923784375190735,
+          0.5593599081039429
+        ],
+        "Long-Chain 3-Hydroxyacyl-CoA Dehydrogenase Deficiency": [
+          0.867681622505188,
+          0.8441231846809387
+        ]
+      }
+    },
+    {
+      "case_id": 17,
+      "gdx_set": [
+        "Propionic acidemia"
+      ],
+      "best_match": {
+        "gdx": "Propionic acidemia",
+        "ddx": "Non-ketotic hyperglycinemia",
+        "score": 0.688971757888794
+      },
+      "ddx_semantic_scores": {
+        "Non-ketotic hyperglycinemia": [
+          0.688971757888794
+        ],
+        "Urea cycle disorder": [
+          0.4605600833892822
+        ],
+        "Carnitine uptake defect": [
+          0.48191946744918823
+        ],
+        "Organic acidemia": [
+          0.5347672700881958
+        ],
+        "Glycogen storage disease type IV": [
+          0.44447022676467896
+        ]
+      }
+    },
+    {
+      "case_id": 6,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia Type I": [
+          0.6515018939971924
+        ],
+        "Phenylketonuria": [
+          1.0
+        ],
+        "DiGeorge Syndrome": [
+          0.35212334990501404
+        ],
+        "Hurler Syndrome": [
+          0.33510053157806396
+        ],
+        "Cystic Fibrosis": [
+          0.30573102831840515
+        ]
+      }
+    },
+    {
+      "case_id": 28,
+      "gdx_set": [
+        "3-Hydroxy-3-Methylglutaryl-Coa lyase deficiency",
+        "3-hydroxy-3-methylglutaric aciduria"
+      ],
+      "best_match": {
+        "gdx": "3-hydroxy-3-methylglutaric aciduria",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.7575393319129944
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.5947459936141968,
+          0.7575393319129944
+        ],
+        "Propionic acidemia": [
+          0.48574569821357727,
+          0.5893829464912415
+        ],
+        "Isovaleric acidemia": [
+          0.4899232089519501,
+          0.6171655654907227
+        ],
+        "Nonketotic hyperglycinemia": [
+          0.5289502143859863,
+          0.5815966725349426
+        ],
+        "Glutaric acidemia type I": [
+          0.6243847012519836,
+          0.6827965378761292
+        ]
+      }
+    },
+    {
+      "case_id": 34,
+      "gdx_set": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Methylmalonic acidemia",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.9999998807907104
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.9999998807907104,
+          0.9680109024047852,
+          0.8807355165481567,
+          0.8907325863838196
+        ],
+        "Propionic acidemia": [
+          0.6754580140113831,
+          0.6590555906295776,
+          0.5651570558547974,
+          0.6129608154296875
+        ],
+        "Maple syrup urine disease": [
+          0.6434930562973022,
+          0.6850922107696533,
+          0.5772832036018372,
+          0.6230400800704956
+        ],
+        "Isovaleric acidemia": [
+          0.7510212063789368,
+          0.7446814775466919,
+          0.6919991970062256,
+          0.6903924942016602
+        ],
+        "Glutaric acidemia type I": [
+          0.6227201819419861,
+          0.6281981468200684,
+          0.5468958616256714,
+          0.6360635757446289
+        ]
+      }
+    },
+    {
+      "case_id": 35,
+      "gdx_set": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "best_match": {
+        "gdx": "Biotinidase deficiencymultiple carboxylase deficiency, late-onset",
+        "ddx": "Pyruvate carboxylase deficiency",
+        "score": 0.6094837188720703
+      },
+      "ddx_semantic_scores": {
+        "Propionic acidemia": [
+          0.5021426677703857,
+          0.44988739490509033
+        ],
+        "Maple syrup urine disease": [
+          0.499456524848938,
+          0.44923076033592224
+        ],
+        "Methylmalonic acidemia": [
+          0.5230445861816406,
+          0.47860971093177795
+        ],
+        "Pyruvate carboxylase deficiency": [
+          0.5888306498527527,
+          0.6094837188720703
+        ],
+        "Nonketotic hyperglycinemia": [
+          0.523084282875061,
+          0.45778968930244446
+        ]
+      }
+    },
+    {
+      "case_id": 33,
+      "gdx_set": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "best_match": {
+        "gdx": "Biotinidase deficiency",
+        "ddx": "Biotinidase Deficiency",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Propionic Acidemia": [
+          0.5021426677703857,
+          0.44988739490509033
+        ],
+        "Methylmalonic Acidemia": [
+          0.5230445861816406,
+          0.47860971093177795
+        ],
+        "Biotinidase Deficiency": [
+          1.0,
+          0.8538603782653809
+        ],
+        "Isovaleric Acidemia": [
+          0.5625687837600708,
+          0.4873843491077423
+        ],
+        "Maple Syrup Urine Disease": [
+          0.499456524848938,
+          0.44923076033592224
+        ]
+      }
+    },
+    {
+      "case_id": 36,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia Type I": [
+          0.6515018939971924
+        ],
+        "Phenylketonuria": [
+          1.0
+        ],
+        "Maple Syrup Urine Disease": [
+          0.6832215785980225
+        ],
+        "Methylmalonic Acidemia": [
+          0.5440982580184937
+        ],
+        "Isovaleric Acidemia": [
+          0.5407965183258057
+        ]
+      }
+    },
+    {
+      "case_id": 37,
+      "gdx_set": [
+        "3-Hydroxy-3-Methylglutaryl-Coa lyase deficiency",
+        "3-hydroxy-3-methylglutaric aciduria"
+      ],
+      "best_match": {
+        "gdx": "3-hydroxy-3-methylglutaric aciduria",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.7575393319129944
+      },
+      "ddx_semantic_scores": {
+        "Medium-chain acyl-CoA dehydrogenase deficiency (MCAD deficiency)": [
+          0.6285000443458557,
+          0.6458742618560791
+        ],
+        "Glutaric aciduria type I": [
+          0.5926316976547241,
+          0.686022162437439
+        ],
+        "Methylmalonic acidemia": [
+          0.5947459936141968,
+          0.7575393319129944
+        ],
+        "Propionic acidemia": [
+          0.48574569821357727,
+          0.5893829464912415
+        ],
+        "Isovaleric acidemia": [
+          0.4899232089519501,
+          0.6171655654907227
+        ]
+      }
+    },
+    {
+      "case_id": 38,
+      "gdx_set": [
+        "Wilson disease",
+        "Hepatolenticular degeneration"
+      ],
+      "best_match": {
+        "gdx": "Wilson disease",
+        "ddx": "Wilson's disease",
+        "score": 0.9853307008743286
+      },
+      "ddx_semantic_scores": {
+        "Wilson's disease": [
+          0.9853307008743286,
+          0.6304975748062134
+        ],
+        "Porphyria": [
+          0.5014107823371887,
+          0.3875652253627777
+        ],
+        "Non-alcoholic fatty liver disease (NAFLD)": [
+          0.5032792091369629,
+          0.6092208623886108
+        ],
+        "Iron deficiency anemia": [
+          0.3394771218299866,
+          0.25878429412841797
+        ],
+        "Alpha-1 antitrypsin deficiency": [
+          0.4694390296936035,
+          0.39467400312423706
+        ]
+      }
+    },
+    {
+      "case_id": 39,
+      "gdx_set": [
+        "Medium chain acyl-CoA dehydrogenase deficiency",
+        "Acyl-Coa dehydrogenase, medium-chain, deficiency of"
+      ],
+      "best_match": {
+        "gdx": "Medium chain acyl-CoA dehydrogenase deficiency",
+        "ddx": "Medium-Chain Acyl-CoA Dehydrogenase Deficiency",
+        "score": 0.9983770251274109
+      },
+      "ddx_semantic_scores": {
+        "Primary Carnitine Deficiency": [
+          0.6324347853660583,
+          0.6100403070449829
+        ],
+        "Medium-Chain Acyl-CoA Dehydrogenase Deficiency": [
+          0.9983770251274109,
+          0.9756012558937073
+        ],
+        "Glutaric Acidemia Type 2": [
+          0.6074026226997375,
+          0.5744134187698364
+        ],
+        "Carnitine Transporter Deficiency": [
+          0.5744432210922241,
+          0.5466486215591431
+        ],
+        "Neonatal Onset Multisystem Inflammatory Disease": [
+          0.404282808303833,
+          0.40065598487854004
+        ]
+      }
+    },
+    {
+      "case_id": 40,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria (PKU)",
+        "score": 0.9432156682014465
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia Type I": [
+          0.6515018939971924
+        ],
+        "Severe Combined Immunodeficiency (SCID)": [
+          0.21579420566558838
+        ],
+        "Phenylketonuria (PKU)": [
+          0.9432156682014465
+        ],
+        "Maple Syrup Urine Disease (MSUD)": [
+          0.6337388753890991
+        ],
+        "Urea Cycle Disorder": [
+          0.45039910078048706
+        ]
+      }
+    },
+    {
+      "case_id": 41,
+      "gdx_set": [
+        "3-methylcrotonyl-CoA carboxylase deficiency",
+        "3-Methylcrotonyl-CoA carboxylase 1 deficiency"
+      ],
+      "best_match": {
+        "gdx": "3-methylcrotonyl-CoA carboxylase deficiency",
+        "ddx": "Methylmalonic Acidemia",
+        "score": 0.7635207176208496
+      },
+      "ddx_semantic_scores": {
+        "Primary Hyperoxaluria": [
+          0.46345609426498413,
+          0.473308801651001
+        ],
+        "Methylmalonic Acidemia": [
+          0.7635207176208496,
+          0.7451279163360596
+        ],
+        "Propionic Acidemia": [
+          0.5918290615081787,
+          0.5707312822341919
+        ],
+        "Glutaric Acidemia Type I": [
+          0.518506646156311,
+          0.5348004102706909
+        ],
+        "Glycine Encephalopathy": [
+          0.5370951890945435,
+          0.5227199792861938
+        ]
+      }
+    },
+    {
+      "case_id": 42,
+      "gdx_set": [
+        "Carbamoyl-phosphate synthetase 1 deficiency",
+        "Carbamoyl phosphate synthetase I deficiency, hyperammonemia"
+      ],
+      "best_match": {
+        "gdx": "Carbamoyl phosphate synthetase I deficiency, hyperammonemia",
+        "ddx": "Leigh Syndrome",
+        "score": 0.5119912624359131
+      },
+      "ddx_semantic_scores": {
+        "Barth Syndrome": [
+          0.37409472465515137,
+          0.39105939865112305
+        ],
+        "Zellweger Syndrome": [
+          0.38408163189888,
+          0.37391260266304016
+        ],
+        "Pompe Disease": [
+          0.4673544466495514,
+          0.41135621070861816
+        ],
+        "Leigh Syndrome": [
+          0.49144691228866577,
+          0.5119912624359131
+        ],
+        "Mitochondrial DNA Depletion Syndrome": [
+          0.4068599045276642,
+          0.40643954277038574
+        ]
+      }
+    },
+    {
+      "case_id": 43,
+      "gdx_set": [
+        "Citrullinemia",
+        "Citrullinemia type I",
+        "Citrullinemia, classic"
+      ],
+      "best_match": {
+        "gdx": "Citrullinemia type I",
+        "ddx": "Citrullinemia Type I",
+        "score": 0.9999998807907104
+      },
+      "ddx_semantic_scores": {
+        "Urea Cycle Disorder": [
+          0.49652671813964844,
+          0.4639911651611328,
+          0.4290601313114166
+        ],
+        "Prader-Willi Syndrome": [
+          0.3202595114707947,
+          0.33527249097824097,
+          0.33156654238700867
+        ],
+        "Citrullinemia Type I": [
+          0.9408754110336304,
+          0.9999998807907104,
+          0.9539812803268433
+        ],
+        "Neonatal Hemochromatosis": [
+          0.3788161277770996,
+          0.4216586649417877,
+          0.42760735750198364
+        ],
+        "Congenital Adrenal Hyperplasia": [
+          0.34617799520492554,
+          0.39368295669555664,
+          0.37893396615982056
+        ]
+      }
+    },
+    {
+      "case_id": 44,
+      "gdx_set": [
+        "Glutaric acidemia I",
+        "Glutaric acidemia type I",
+        "Glutaryl-CoA dehydrogenase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Glutaric acidemia type I",
+        "ddx": "Glutaric acidemia type I",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Glutaric acidemia type I": [
+          0.9929609298706055,
+          1.0,
+          0.827497661113739
+        ],
+        "Canavan disease": [
+          0.44149646162986755,
+          0.4344691038131714,
+          0.40430495142936707
+        ],
+        "Krabbe disease": [
+          0.36652112007141113,
+          0.35914748907089233,
+          0.29444918036460876
+        ],
+        "Leigh syndrome": [
+          0.47410672903060913,
+          0.4871627688407898,
+          0.49806350469589233
+        ],
+        "Nonketotic hyperglycinemia": [
+          0.5912010669708252,
+          0.5855600237846375,
+          0.5682171583175659
+        ]
+      }
+    },
+    {
+      "case_id": 45,
+      "gdx_set": [
+        "Tyrosinemia, type I",
+        "Tyrosinemia type 1",
+        "Tyrosinemia I",
+        "hepatorenal hyrosinemia"
+      ],
+      "best_match": {
+        "gdx": "Tyrosinemia, type I",
+        "ddx": "Tyrosinemia type I",
+        "score": 0.9962115287780762
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia type I": [
+          0.9962115287780762,
+          0.9898145198822021,
+          0.990271270275116,
+          0.6740833520889282
+        ],
+        "Phenylketonuria": [
+          0.6596444845199585,
+          0.6416957378387451,
+          0.6636271476745605,
+          0.5020884871482849
+        ],
+        "Maple syrup urine disease": [
+          0.5898535251617432,
+          0.5801113843917847,
+          0.598348081111908,
+          0.46712231636047363
+        ],
+        "Homocystinuria": [
+          0.48179441690444946,
+          0.4672512710094452,
+          0.4851025938987732,
+          0.4813550114631653
+        ],
+        "Methylmalonic acidemia": [
+          0.5156670212745667,
+          0.5106474161148071,
+          0.514766275882721,
+          0.3335765600204468
+        ]
+      }
+    }
+  ]
+}

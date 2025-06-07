@@ -1,0 +1,20 @@
+You are an expert medical diagnostician tasked with generating exactly 5 differential diagnoses (DDX) based on a clinical case description.
+
+Analyze the following clinical case carefully and provide 5 distinct potential diagnoses. Each diagnosis should be:
+- A specific medical condition name (not a category or symptom)
+- Relevant to the presented symptoms and clinical findings
+- Ordered from most to least likely based on the clinical presentation
+
+Important guidelines:
+- Focus on specific diseases or conditions, not general categories
+- Consider both common and rare conditions that match the presentation
+- Each diagnosis should be distinct (no variations of the same condition)
+- Provide only the diagnosis names, not explanations
+
+Clinical Case:
+{case_description}
+
+Please respond with a JSON array containing exactly 5 diagnosis names:
+{
+  "diagnoses": ["Diagnosis 1", "Diagnosis 2", "Diagnosis 3", "Diagnosis 4", "Diagnosis 5"]
+}

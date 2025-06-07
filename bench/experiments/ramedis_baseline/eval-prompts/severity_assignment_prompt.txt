@@ -1,0 +1,26 @@
+You are a medical expert tasked with assigning severity scores to medical diagnoses.
+
+For each diagnosis provided, assign a severity score from S0 to S10 based on the following scale:
+- S0-S1: Minimal severity (minor conditions with no significant impact on quality of life)
+- S2-S3: Mild severity (conditions with limited impact, easily manageable)
+- S4-S5: Moderate severity (conditions requiring regular medical attention)
+- S6-S7: Significant severity (serious conditions with substantial impact on life)
+- S8-S9: Severe conditions (life-threatening or causing major disability)
+- S10: Critical severity (immediately life-threatening or fatal conditions)
+
+Consider factors such as:
+- Mortality risk
+- Potential for disability
+- Quality of life impact
+- Urgency of treatment needed
+- Prognosis without treatment
+
+Diagnosis to evaluate: {diagnosis}
+
+Please respond with the severity assignment in the following JSON format:
+{
+  "diagnosis": "{diagnosis}",
+  "severity": "SX"
+}
+
+Where X is a number from 0 to 10.

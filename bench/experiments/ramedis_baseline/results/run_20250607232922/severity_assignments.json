@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "llm_config_alias": "severity_assigner_llm",
+    "model_used": "gpt-4o",
+    "prompt_path": "experiments/ramedis_baseline/eval-prompts/severity_assignment_prompt.txt",
+    "timestamp": "2025-06-07T23:29:50.507774"
+  },
+  "assigned_severities": [
+    {
+      "ddx_unique_name": "Error Diagnosis 3",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Error Diagnosis 5",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Error Diagnosis 2",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Error Diagnosis 4",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Error Diagnosis 1",
+      "inferred_severity": "S0"
+    }
+  ]
+}

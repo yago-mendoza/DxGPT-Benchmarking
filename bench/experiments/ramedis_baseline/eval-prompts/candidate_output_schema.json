@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "diagnoses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 5,
+      "maxItems": 5,
+      "description": "List of exactly 5 differential diagnoses"
+    }
+  },
+  "required": ["diagnoses"],
+  "additionalProperties": false
+}
