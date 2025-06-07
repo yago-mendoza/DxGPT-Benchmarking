@@ -55,7 +55,7 @@ dev = [
 # Package discovery and data files
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["utils*"]  # Includes utils and all its subpackages
+include = ["utils*"] 
 
 [tool.setuptools.package-data]
 "utils.icd10" = ["data/*.json"]  # Static data files for ICD10 taxonomy

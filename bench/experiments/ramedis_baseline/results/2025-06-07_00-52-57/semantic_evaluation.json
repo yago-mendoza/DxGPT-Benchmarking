@@ -1,0 +1,1376 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-07T00:54:10.833608",
+    "average_score": 0.0
+  },
+  "evaluations": [
+    {
+      "case_id": 1,
+      "score": 0.0,
+      "gdx": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "ddx_scores": {
+        "Acidemia metilmalónica": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de cobalamina tipo C": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de mutasa de metilmalonil-CoA": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Acidosis láctica congénita": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Trastornos metabólicos hereditarios": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 2,
+      "score": 0.0,
+      "gdx": [
+        "Succinic semialdehyde dehydrogenase deficiency"
+      ],
+      "ddx_scores": {
+        "Acidemia glutárica tipo I": [
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0
+        ],
+        "Enfermedad de Canavan": [
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 3,
+      "score": 0.0,
+      "gdx": [
+        "Phenylketonuria"
+      ],
+      "ddx_scores": {
+        "Tirosinemia tipo I": [
+          0.0
+        ],
+        "Deficiencia de 4-hidroxifenilpiruvato dioxigenasa": [
+          0.0
+        ],
+        "Deficiencia de dihidropteridina reductasa": [
+          0.0
+        ],
+        "Deficiencia de tirosina aminotransferasa": [
+          0.0
+        ],
+        "Enfermedad de almacenamiento de ésteres de colesterol": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 4,
+      "score": 0.0,
+      "gdx": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "ddx_scores": {
+        "Síndrome de Donohue": [
+          0.0
+        ],
+        "Síndrome de Walker-Warburg": [
+          0.0
+        ],
+        "Síndrome cerebrocostomandibular": [
+          0.0
+        ],
+        "Síndrome de Joubert": [
+          0.0
+        ],
+        "Síndrome de cerebro-ojo-facio-esquelético": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 5,
+      "score": 0.0,
+      "gdx": [
+        "Maple syrup urine disease"
+      ],
+      "ddx_scores": {
+        "Enfermedad de la orina con olor a jarabe de arce": [
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0
+        ],
+        "Acidosis metilmalónica": [
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 6,
+      "score": 0.0,
+      "gdx": [
+        "Phenylketonuria"
+      ],
+      "ddx_scores": {
+        "Síndrome de inmunodeficiencia combinada severa": [
+          0.0
+        ],
+        "Tirosinemia tipo I": [
+          0.0
+        ],
+        "Fenilcetonuria": [
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0
+        ],
+        "Deficiencia de alfa-1 antitripsina": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 7,
+      "score": 0.0,
+      "gdx": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "ddx_scores": {
+        "Síndrome de Leigh (encefalopatía necrotizante subaguda)": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Alpers-Huttenlocher": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de piruvato deshidrogenasa": [
+          0.0,
+          0.0
+        ],
+        "Miopatía mitocondrial con encefalopatía y acidosis láctica": [
+          0.0,
+          0.0
+        ],
+        "Síndrome MELAS (encefalopatía mitocondrial, acidosis láctica y episodios similares a ictus)": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 8,
+      "score": 0.0,
+      "gdx": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "ddx_scores": {
+        "Síndrome de Cockayne": [
+          0.0
+        ],
+        "Síndrome de Alström": [
+          0.0
+        ],
+        "Enfermedad de Refsum": [
+          0.0
+        ],
+        "Síndrome de Aicardi-Goutières": [
+          0.0
+        ],
+        "Síndrome de Marinesco-Sjögren": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 9,
+      "score": 0.0,
+      "gdx": [
+        "Glutaric acidemia I",
+        "Glutaric acidemia type I",
+        "Glutaryl-CoA dehydrogenase deficiency"
+      ],
+      "ddx_scores": {
+        "Déficit de deshidrogenasa de glutárico acidemia tipo I": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de carnitina primaria": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Enfermedad de Leigh": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Trastorno del ciclo de la urea": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 10,
+      "score": 0.0,
+      "gdx": [
+        "Isovaleric acidemia",
+        "Isovaleric acedemia"
+      ],
+      "ddx_scores": {
+        "Síndrome de deficiencia de ciclo de la urea (por ejemplo, deficiencia de ornitina transcarbamilasa)": [
+          0.0,
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0,
+          0.0
+        ],
+        "Encefalopatía no cetósica por hiperglicinemia": [
+          0.0,
+          0.0
+        ],
+        "Déficit de carnitina primaria": [
+          0.0,
+          0.0
+        ],
+        "Acidemia isovalérica": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 11,
+      "score": 0.0,
+      "gdx": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "ddx_scores": {
+        "Síndrome de Joubert": [
+          0.0
+        ],
+        "Síndrome de Walker-Warburg": [
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0
+        ],
+        "Síndrome de Meckel-Gruber": [
+          0.0
+        ],
+        "Síndrome de Cockayne": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 12,
+      "score": 0.0,
+      "gdx": [
+        "Methylmalonic aciduria",
+        "Methylmalonic aciduria and homocystinuria, Cblc type",
+        "Methylmalonic acidemia",
+        "Methylmalonic acidemia",
+        "Homocystinuria, type cblC"
+      ],
+      "ddx_scores": {
+        "Deficiencia de la metilmalonil-CoA mutasa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de cobalamina tipo C (cblC)": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Hiperamonemia neonatal transitoria": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de carnitina primaria": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 13,
+      "score": 0.0,
+      "gdx": [
+        "Medium chain acyl-CoA dehydrogenase deficiency",
+        "Acyl-Coa dehydrogenase, medium-chain, deficiency of"
+      ],
+      "ddx_scores": {
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media (MCAD)": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de carnitina primaria": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de acil-CoA deshidrogenasa de cadena larga (LCAD)": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de CPT1 (Carnitina palmitoiltransferasa tipo 1)": [
+          0.0,
+          0.0
+        ],
+        "Enfermedad hepática metabólica de origen genético": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 14,
+      "score": 0.0,
+      "gdx": [
+        "Succinic semialdehyde dehydrogenase deficiency"
+      ],
+      "ddx_scores": {
+        "Insuficiencia suprarrenal congénita": [
+          0.0
+        ],
+        "Deficiencia de 21-hidroxilasa": [
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0
+        ],
+        "Acidosis tubular renal tipo 4": [
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 15,
+      "score": 0.0,
+      "gdx": [
+        "Homocystinuria",
+        "cystathionine beta-synthase deficiency",
+        "Classic homocystinuria",
+        "Homocysteinemia"
+      ],
+      "ddx_scores": {
+        "Homocistinuria clásica": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Marfan": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Ehlers-Danlos": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Adrenoleucodistrofia": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 16,
+      "score": 0.0,
+      "gdx": [
+        "Hyperinsulinemic hypoglycemia, familial, 2",
+        "Congenital hyperinsulinemic hypoglycemia"
+      ],
+      "ddx_scores": {
+        "Síndrome de Wiedemann-Steiner": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Donohue": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Costello": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Beckwith-Wiedemann": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Kabuki": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 17,
+      "score": 0.0,
+      "gdx": [
+        "Propionic acidemia"
+      ],
+      "ddx_scores": {
+        "Síndrome de Zellweger": [
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0
+        ],
+        "Enfermedad de Niemann-Pick tipo C": [
+          0.0
+        ],
+        "Síndrome de Menkes": [
+          0.0
+        ],
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 18,
+      "score": 0.0,
+      "gdx": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "ddx_scores": {
+        "Acidemia metilmalónica": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de vitamina B12 congénita": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Enfermedad mitocondrial": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 19,
+      "score": 0.0,
+      "gdx": [
+        "Primary carnitine deficiency",
+        "Carnitine deficiency, systemic primary",
+        "Systemic primary carnitine deficiency"
+      ],
+      "ddx_scores": {
+        "Deficiencia de Acil-CoA deshidrogenasa de cadena media (MCAD)": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de Carnitina": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Acidosis láctica congénita": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Enfermedad de almacenamiento de glucógeno tipo I (GSD I)": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de piruvato deshidrogenasa (PDH)": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 20,
+      "score": 0.0,
+      "gdx": [
+        "3-methylcrotonyl-CoA carboxylase deficiency",
+        "3-Methylcrotonyl-CoA carboxylase 1 deficiency"
+      ],
+      "ddx_scores": {
+        "Deficiencia primaria de carnitina": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de carnitina-palmitoiltransferasa tipo II": [
+          0.0,
+          0.0
+        ],
+        "Acidemia glutárica tipo II": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 21,
+      "score": 0.0,
+      "gdx": [
+        "Mitochondrial complex IV deficiency, nuclear type 1"
+      ],
+      "ddx_scores": {
+        "Encefalopatía mitocondrial con acumulación de láctico y trazos de accidente cerebrovascular (MELAS)": [
+          0.0
+        ],
+        "Trastorno de oxidación de ácidos grasos de cadena corta": [
+          0.0
+        ],
+        "Enfermedad de Charcot-Marie-Tooth tipo 2": [
+          0.0
+        ],
+        "Trastorno de la oxidación de ácidos grasos de cadena media": [
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 22,
+      "score": 0.0,
+      "gdx": [
+        "Medium chain acyl-CoA dehydrogenase deficiency",
+        "Acyl-Coa dehydrogenase, medium-chain, deficiency of"
+      ],
+      "ddx_scores": {
+        "Deficiencia de carnitina primaria": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de captación de carnitina": [
+          0.0,
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0,
+          0.0
+        ],
+        "Acidemia metilmalónica": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 23,
+      "score": 0.0,
+      "gdx": [
+        "Glutaric acidemia I",
+        "Glutaric acidemia type I",
+        "Glutaryl-CoA dehydrogenase deficiency"
+      ],
+      "ddx_scores": {
+        "Acidemia glutárica tipo I": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de carnitina primaria": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome metabólico neonatal": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Enfermedad por alteración del ciclo de urea": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 24,
+      "score": 0.0,
+      "gdx": [
+        "Phenylketonuria"
+      ],
+      "ddx_scores": {
+        "Tirosinemia tipo I": [
+          0.0
+        ],
+        "Tirosinemia tipo II": [
+          0.0
+        ],
+        "Tirosinemia tipo III": [
+          0.0
+        ],
+        "Hiperfenilalaninemia secundaria a deficiencia de biopterina": [
+          0.0
+        ],
+        "Deficiencia de tetrahidrobiopterina": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 25,
+      "score": 0.0,
+      "gdx": [
+        "L-2-hydroxyglutaric aciduria"
+      ],
+      "ddx_scores": {
+        "Leucoencefalopatía megaloencefálica con quistes subcorticales": [
+          0.0
+        ],
+        "Adrenoleucodistrofia ligada al cromosoma X": [
+          0.0
+        ],
+        "Enfermedad de Canavan": [
+          0.0
+        ],
+        "Síndrome de Pelizaeus-Merzbacher": [
+          0.0
+        ],
+        "Leucoencefalopatía inducida por mutaciones en el gen EIF2B": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 26,
+      "score": 0.0,
+      "gdx": [
+        "Maple syrup urine disease"
+      ],
+      "ddx_scores": {
+        "Leucinosis (enfermedad de la orina con olor a jarabe de arce)": [
+          0.0
+        ],
+        "Síndrome de Prader-Willi": [
+          0.0
+        ],
+        "Hipoglucemia hiperinsulinémica congénita": [
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0
+        ],
+        "Enfermedad mitocondrial por defectos en la cadena respiratoria": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 27,
+      "score": 0.0,
+      "gdx": [
+        "Classic galactosemia",
+        "Galactosemia"
+      ],
+      "ddx_scores": {
+        "Síndrome de Gilbert": [
+          0.0,
+          0.0
+        ],
+        "Galactosemia clásica": [
+          0.0,
+          0.0
+        ],
+        "Enfermedad del jarabe de arce": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0,
+          0.0
+        ],
+        "Hiperbilirrubinemia familiar": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 28,
+      "score": 0.0,
+      "gdx": [
+        "3-Hydroxy-3-Methylglutaryl-Coa lyase deficiency",
+        "3-hydroxy-3-methylglutaric aciduria"
+      ],
+      "ddx_scores": {
+        "Deficiencia de glutárico aciduria tipo I": [
+          0.0,
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0,
+          0.0
+        ],
+        "Acidemia metilmalónica": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de carnitina palmitoil-transferasa tipo II": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 29,
+      "score": 0.0,
+      "gdx": [
+        "Homocystinuria",
+        "cystathionine beta-synthase deficiency",
+        "Classic homocystinuria",
+        "Homocysteinemia"
+      ],
+      "ddx_scores": {
+        "Deficiencia de cobalamina (vitamina B12) congénita": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de deficiencia de metionina sintasa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Porfiria hepática aguda": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Inmunodeficiencia primaria con anemia y deterioro neurológico": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de folato congénita": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 30,
+      "score": 0.0,
+      "gdx": [
+        "Phenylketonuria"
+      ],
+      "ddx_scores": {
+        "Deficiencia de ornitina transcarbamilasa": [
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0
+        ],
+        "Deficiencia de carbamoil fosfato sintetasa I": [
+          0.0
+        ],
+        "Deficiencia de tirosina aminotransferasa": [
+          0.0
+        ],
+        "Síndrome de Crigler-Najjar tipo I": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 31,
+      "score": 0.0,
+      "gdx": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "ddx_scores": {
+        "Aciduria glutárica tipo II": [
+          0.0,
+          0.0
+        ],
+        "Aciduria metilmalónica": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0,
+          0.0
+        ],
+        "Acidosis láctica congénita": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 32,
+      "score": 0.0,
+      "gdx": [
+        "Phenylketonuria"
+      ],
+      "ddx_scores": {
+        "Tirosinemia tipo I": [
+          0.0
+        ],
+        "Fenilcetonuria": [
+          0.0
+        ],
+        "Síndrome de Zellweger": [
+          0.0
+        ],
+        "Enfermedad de Menkes": [
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 33,
+      "score": 0.0,
+      "gdx": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "ddx_scores": {
+        "Enfermedad mitocondrial": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0,
+          0.0
+        ],
+        "Acidosis láctica congénita": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de glicinemia no cetósica": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 34,
+      "score": 0.0,
+      "gdx": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "ddx_scores": {
+        "Acidemia metilmalónica": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de cobalamina tipo C": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Acidemia propiónica": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Enfermedad de almacenamiento lisosomal": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de holocarboxilasa sintetasa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 35,
+      "score": 0.0,
+      "gdx": [
+        "Biotinidase deficiency",
+        "Biotinidase deficiencymultiple carboxylase deficiency, late-onset"
+      ],
+      "ddx_scores": {
+        "Acidosis láctica congénita": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de propionil-CoA carboxilasa": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0,
+          0.0
+        ],
+        "Encefalopatía mitocondrial con acidosis láctica y episodios similares a ictus (MELAS)": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de piruvato carboxilasa": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 36,
+      "score": 0.0,
+      "gdx": [
+        "Phenylketonuria"
+      ],
+      "ddx_scores": {
+        "Fenilcetonuria": [
+          0.0
+        ],
+        "Tirosinemia tipo I": [
+          0.0
+        ],
+        "Deficiencia de BH4 (Tetrahydrobiopterina)": [
+          0.0
+        ],
+        "Enfermedad de Menkes": [
+          0.0
+        ],
+        "Acidemia isovalérica": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 37,
+      "score": 0.0,
+      "gdx": [
+        "3-Hydroxy-3-Methylglutaryl-Coa lyase deficiency",
+        "3-hydroxy-3-methylglutaric aciduria"
+      ],
+      "ddx_scores": {
+        "Acidemia glutárica tipo II": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de 3-hidroxi-3-metilglutaril-CoA liasa": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de acil-CoA deshidrogenasa de cadena larga": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de carnitina palmitoiltransferasa tipo II": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 38,
+      "score": 0.0,
+      "gdx": [
+        "Wilson disease",
+        "Hepatolenticular degeneration"
+      ],
+      "ddx_scores": {
+        "Enfermedad de Wilson": [
+          0.0,
+          0.0
+        ],
+        "Porfiria hepática aguda": [
+          0.0,
+          0.0
+        ],
+        "Hemocromatosis": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de ceruloplasmina": [
+          0.0,
+          0.0
+        ],
+        "Esteatosis hepática": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 39,
+      "score": 0.0,
+      "gdx": [
+        "Medium chain acyl-CoA dehydrogenase deficiency",
+        "Acyl-Coa dehydrogenase, medium-chain, deficiency of"
+      ],
+      "ddx_scores": {
+        "Deficiencia de carnitina primaria": [
+          0.0,
+          0.0
+        ],
+        "Trastornos del metabolismo de los ácidos grasos": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de muerte súbita del lactante": [
+          0.0,
+          0.0
+        ],
+        "Errores innatos del metabolismo": [
+          0.0,
+          0.0
+        ],
+        "Miocardiopatía infantil debido a trastornos metabólicos": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 40,
+      "score": 0.0,
+      "gdx": [
+        "Phenylketonuria"
+      ],
+      "ddx_scores": {
+        "Síndrome de deficiencia de tirosina hidroxilasa": [
+          0.0
+        ],
+        "Síndrome de deficiencia de biopterina": [
+          0.0
+        ],
+        "Tirosinemia tipo I": [
+          0.0
+        ],
+        "Inmunodeficiencia combinada severa (SCID)": [
+          0.0
+        ],
+        "Fenilcetonuria (PKU)": [
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 41,
+      "score": 0.0,
+      "gdx": [
+        "3-methylcrotonyl-CoA carboxylase deficiency",
+        "3-Methylcrotonyl-CoA carboxylase 1 deficiency"
+      ],
+      "ddx_scores": {
+        "Acidemia propiónica": [
+          0.0,
+          0.0
+        ],
+        "Acidemia metilmalónica": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de Fanconi": [
+          0.0,
+          0.0
+        ],
+        "Síndrome de HHH (hiperornitinemia-hiperamonemia-homocitrulinuria)": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 42,
+      "score": 0.0,
+      "gdx": [
+        "Carbamoyl-phosphate synthetase 1 deficiency",
+        "Carbamoyl phosphate synthetase I deficiency, hyperammonemia"
+      ],
+      "ddx_scores": {
+        "Síndrome de Barth": [
+          0.0,
+          0.0
+        ],
+        "Deficiencia de Coenzima Q10": [
+          0.0,
+          0.0
+        ],
+        "Enfermedad de Leigh": [
+          0.0,
+          0.0
+        ],
+        "Trastornos del ciclo de Krebs": [
+          0.0,
+          0.0
+        ],
+        "Errores innatos del metabolismo relacionados con la oxidación mitocondrial": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 43,
+      "score": 0.0,
+      "gdx": [
+        "Citrullinemia",
+        "Citrullinemia type I",
+        "Citrullinemia, classic"
+      ],
+      "ddx_scores": {
+        "Síndrome de urea ciclo defectuoso (deficiencia de arginosuccinato sintetasa)": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Prader-Willi": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Hipoglucemia hiperinsulinémica congénita": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia múltiple de carboxilasa": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Alpers-Huttenlocher": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 44,
+      "score": 0.0,
+      "gdx": [
+        "Glutaric acidemia I",
+        "Glutaric acidemia type I",
+        "Glutaryl-CoA dehydrogenase deficiency"
+      ],
+      "ddx_scores": {
+        "Aciduria glutárica tipo 1": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Encefalopatía mitocondrial con acidosis láctica y episodios similares a accidentes cerebrovasculares (MELAS)": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Leigh": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Síndrome de Canavan": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de biotinidasa": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "case_id": 45,
+      "score": 0.0,
+      "gdx": [
+        "Tyrosinemia, type I",
+        "Tyrosinemia type 1",
+        "Tyrosinemia I",
+        "hepatorenal hyrosinemia"
+      ],
+      "ddx_scores": {
+        "Tirosinemia tipo I": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Deficiencia de la fenilalanina hidroxilasa": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Porfiria aguda intermitente": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Acidemia metilmalónica": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "Trastorno del ciclo de la urea": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ]
+}

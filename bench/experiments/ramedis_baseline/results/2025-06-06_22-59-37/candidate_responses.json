@@ -1,0 +1,460 @@
+{
+  "metadata": {
+    "timestamp": "2025-06-06T23:00:42.368718",
+    "model": "gpt-4o",
+    "dataset": "ramedis-45.json",
+    "prompt": "candidate_prompt.txt"
+  },
+  "responses": [
+    {
+      "case_id": 1,
+      "ddx": [
+        "Acidemia metilmalónica",
+        "Deficiencia de cobalamina tipo C",
+        "Deficiencia de metilmalonil-CoA mutasa",
+        "Acidemia propiónica",
+        "Deficiencia de cobalamina tipo B"
+      ]
+    },
+    {
+      "case_id": 2,
+      "ddx": [
+        "Acidemia propiónica",
+        "Acidemia metilmalónica",
+        "Deficiencia de biotinidasa",
+        "Síndrome de Leigh",
+        "Enfermedad de Pompe"
+      ]
+    },
+    {
+      "case_id": 3,
+      "ddx": [
+        "Tirosinemia tipo I",
+        "Deficiencia de fenilalanina hidroxilasa (fenilcetonuria)",
+        "Síndrome de Zellweger",
+        "Enfermedad de la cadena respiratoria mitocondrial",
+        "Deficiencia de dihidropteridina reductasa"
+      ]
+    },
+    {
+      "case_id": 4,
+      "ddx": [
+        "Síndrome de Joubert",
+        "Síndrome de Walker-Warburg",
+        "Síndrome de Fraser",
+        "Síndrome de Berdon",
+        "Síndrome de Prader-Willi"
+      ]
+    },
+    {
+      "case_id": 5,
+      "ddx": [
+        "Enfermedad de la orina con olor a jarabe de arce",
+        "Acidemia propiónica",
+        "Enfermedad de Sandhoff",
+        "Leucodistrofia metacromática",
+        "Síndrome de Zellweger"
+      ]
+    },
+    {
+      "case_id": 6,
+      "ddx": [
+        "Síndrome de Smith-Lemli-Opitz",
+        "Deficiencia de ciclo de la urea",
+        "Síndrome de Hurler",
+        "Fenilcetonuria",
+        "Síndrome de Zellweger"
+      ]
+    },
+    {
+      "case_id": 7,
+      "ddx": [
+        "Síndrome de Leigh",
+        "Deficiencia de piruvato deshidrogenasa",
+        "Enfermedad de Alpers",
+        "Síndrome de Pearson",
+        "Síndrome de la depleción del ADN mitocondrial"
+      ]
+    },
+    {
+      "case_id": 8,
+      "ddx": [
+        "Síndrome de Cockayne",
+        "Síndrome cerebrohepatorrenal",
+        "Síndrome de Zellweger",
+        "Enfermedad de Niemann-Pick tipo C",
+        "Síndrome de Alpers-Huttenlocher"
+      ]
+    },
+    {
+      "case_id": 9,
+      "ddx": [
+        "Acidemia glutárica tipo 1",
+        "Síndrome de Zellweger",
+        "Deficiencia de carnitina primaria",
+        "Síndrome de Leigh",
+        "Enfermedad mitocondrial multisistémica"
+      ]
+    },
+    {
+      "case_id": 10,
+      "ddx": [
+        "Deficiencia de ciclo de la urea",
+        "Síndrome de Zellweger",
+        "Acidemia propiónica",
+        "Hiperglicinemia no cetósica",
+        "Deficiencia múltiple de acil-CoA deshidrogenasa"
+      ]
+    },
+    {
+      "case_id": 11,
+      "ddx": [
+        "Síndrome de Joubert",
+        "Síndrome de Walker-Warburg",
+        "Atrofia Cerebelosa Congénita",
+        "Enfermedad de Batten",
+        "Síndrome de Aicardi-Goutières"
+      ]
+    },
+    {
+      "case_id": 12,
+      "ddx": [
+        "Síndrome de Leigh",
+        "Acidemia metilmalónica",
+        "Deficiencia de carnitina",
+        "Deficiencia de biotinidasa",
+        "Síndrome de Zellweger"
+      ]
+    },
+    {
+      "case_id": 13,
+      "ddx": [
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media (MCAD)",
+        "Deficiencia de carnitina primaria",
+        "Síndrome de Reye",
+        "Deficiencia de fructosa-1,6-bisfosfatasa",
+        "Galactosemia clásica"
+      ]
+    },
+    {
+      "case_id": 14,
+      "ddx": [
+        "Deficiencia de la 21-hidroxilasa (hiperplasia suprarrenal congénita)",
+        "Acidosis tubular renal tipo 1 (distal)",
+        "Síndrome de Zellweger",
+        "Deficiencia de biotinidasa",
+        "Síndrome de muerte súbita del lactante"
+      ]
+    },
+    {
+      "case_id": 15,
+      "ddx": [
+        "Homocistinuria",
+        "Síndrome de Marfan",
+        "Síndrome de Ehlers-Danlos",
+        "Deficiencia de cobalamina (vitamina B12)",
+        "Síndrome de Stickler"
+      ]
+    },
+    {
+      "case_id": 16,
+      "ddx": [
+        "Síndrome de Wiedemann-Steiner",
+        "Síndrome de Wolf-Hirschhorn",
+        "Síndrome de Kabuki",
+        "Anemia de células falciformes",
+        "Síndrome de Beckwith-Wiedemann"
+      ]
+    },
+    {
+      "case_id": 17,
+      "ddx": [
+        "Enfermedad de almacenamiento lisosomal: Síndrome de Zellweger",
+        "Deficiencia de ciclo de urea: Hiperamonemia congénita",
+        "Deficiencia de enzimas mitocondriales: Enfermedad de Leigh",
+        "Trastorno metabólico congénito: Aciduria glutárica tipo II",
+        "Deficiencia de beta-oxidación de ácidos grasos: Síndrome de Reye"
+      ]
+    },
+    {
+      "case_id": 18,
+      "ddx": [
+        "Acidemia metilmalónica",
+        "Deficiencia de metilmalonil-CoA mutasa",
+        "Enfermedad mitocondrial de la cadena respiratoria",
+        "Acidosis láctica congénita",
+        "Deficiencia combinada de adenosilcobalamina y metilcobalamina"
+      ]
+    },
+    {
+      "case_id": 19,
+      "ddx": [
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media (MCAD)",
+        "Acidemia propiónica",
+        "Acidemia metilmalónica",
+        "Deficiencia de carnitina primaria",
+        "Síndrome de Reye"
+      ]
+    },
+    {
+      "case_id": 20,
+      "ddx": [
+        "Deficiencia primaria de carnitina",
+        "Síndrome de deficiencia múltiple de acil-CoA deshidrogenasa (MADD)",
+        "Deficiencia de carnitina palmitoiltransferasa tipo I",
+        "Deficiencia de carnitina palmitoiltransferasa tipo II",
+        "Acidemia Metilmalónica"
+      ]
+    },
+    {
+      "case_id": 21,
+      "ddx": [
+        "Acidemia etilmalónica",
+        "Encefalopatía mitocondrial",
+        "Síndrome de Leigh",
+        "Trastorno del metabolismo de la glicina",
+        "Encefalopatía espástica hereditaria"
+      ]
+    },
+    {
+      "case_id": 22,
+      "ddx": [
+        "Deficiencia de carnitina primaria",
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media",
+        "Síndrome de muerte súbita del lactante relacionado con trastornos metabólicos",
+        "Acidemia propiónica",
+        "Acidemia metilmalónica"
+      ]
+    },
+    {
+      "case_id": 23,
+      "ddx": [
+        "Aciduria glutárica tipo I",
+        "Deficiencia de carnitina primaria",
+        "Encefalopatía mitocondrial",
+        "Síndrome de Leigh",
+        "Trastorno del ciclo de la urea"
+      ]
+    },
+    {
+      "case_id": 24,
+      "ddx": [
+        "Tirosinemia Tipo I",
+        "Deficiencia de dihidropteridina reductasa",
+        "Síndrome de Crigler-Najjar Tipo I",
+        "Deficiencia de carbamil fosfato sintetasa I",
+        "Deficiencia de argininosuccinato sintetasa (citrulinemia clásica)"
+      ]
+    },
+    {
+      "case_id": 25,
+      "ddx": [
+        "Leucodistrofia metacromática",
+        "Adrenoleucodistrofia ligada al cromosoma X",
+        "Síndrome de Pelizaeus-Merzbacher",
+        "Leucodistrofia Krabbe",
+        "Esclerosis tuberosa"
+      ]
+    },
+    {
+      "case_id": 26,
+      "ddx": [
+        "Enfermedad de jarabe de arce (aciduria orgánica de cadena ramificada)",
+        "Síndrome de Prader-Willi",
+        "Deficiencia múltiple de acil-CoA deshidrogenasa (MADD)",
+        "Acidemia propiónica",
+        "Acidemia metilmalónica"
+      ]
+    },
+    {
+      "case_id": 27,
+      "ddx": [
+        "Síndrome de Crigler-Najjar tipo II",
+        "Síndrome de Lesch-Nyhan",
+        "Galactosemia clásica",
+        "Deficiencia de fosforilasa de glucógeno tipo IX",
+        "Síndrome de Alpers"
+      ]
+    },
+    {
+      "case_id": 28,
+      "ddx": [
+        "Deficiencia de la enzima 3-hidroxi-3-metilglutaril-CoA liasa (HMG-CoA liasa)",
+        "Acidemia propiónica",
+        "Acidemia metilmalónica",
+        "Síndrome de Reye",
+        "Deficiencia de carnitina primaria"
+      ]
+    },
+    {
+      "case_id": 29,
+      "ddx": [
+        "Déficit de la ciclooxigenasa reductasa mitocondrial",
+        "Síndrome de deficiencia de metionina adenosiltransferasa",
+        "Porfiria aguda intermitente",
+        "Deficiencia de folato congénita",
+        "Anemia megaloblástica de origen genético"
+      ]
+    },
+    {
+      "case_id": 30,
+      "ddx": [
+        "Síndrome de dificultad respiratoria neonatal",
+        "Deficiencia de fenilalanina hidroxilasa",
+        "Deficiencia de citrulina",
+        "Fibrosis quística",
+        "Síndrome de Pierre Robin"
+      ]
+    },
+    {
+      "case_id": 31,
+      "ddx": [
+        "Síndrome de Leigh",
+        "Acidemia metilmalónica",
+        "Deficiencia de biotinidasa",
+        "Leucodistrofia metacromática",
+        "Acidemia propiónica"
+      ]
+    },
+    {
+      "case_id": 32,
+      "ddx": [
+        "Tirosinemia tipo I",
+        "Enfermedad de Canavan",
+        "Deficiencia de ciclo de la urea",
+        "Acidemia propiónica",
+        "Síndrome de Zellweger"
+      ]
+    },
+    {
+      "case_id": 33,
+      "ddx": [
+        "Deficiencia de biotinidasa",
+        "Síndrome de Leigh",
+        "Errores innatos del metabolismo del ciclo de la urea",
+        "Deficiencia de piruvato deshidrogenasa",
+        "Acidosis láctica congénita"
+      ]
+    },
+    {
+      "case_id": 34,
+      "ddx": [
+        "Acidemia metilmalónica con homocistinuria combinada",
+        "Acidemia propiónica",
+        "Deficiencia de cobalamina tipo C",
+        "Acidemia isovalérica",
+        "Deficiencia de vitamina B12 congénita"
+      ]
+    },
+    {
+      "case_id": 35,
+      "ddx": [
+        "Acidemia propiónica",
+        "Acidemia metilmalónica",
+        "Deficiencia de piruvato carboxilasa",
+        "Enfermedad de Leigh",
+        "Glutaric aciduria tipo I"
+      ]
+    },
+    {
+      "case_id": 36,
+      "ddx": [
+        "Tirosinemia tipo I",
+        "Hiperfenilalaninemia debido a deficiencia de BH4",
+        "Defecto en el metabolismo de aminoácidos aromáticos",
+        "Enfermedad de almacenamiento lisosomal",
+        "Deficiencia de enzima fumarácil acetoacetato hidrolasa"
+      ]
+    },
+    {
+      "case_id": 37,
+      "ddx": [
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media (MCAD)",
+        "Acidemia glutárica tipo I",
+        "Deficiencia de 3-hidroxi-3-metilglutaril-CoA liasa",
+        "Síndrome de deficiencia múltiple de carboxilasas",
+        "Trastorno de oxidación de ácidos grasos de cadena corta"
+      ]
+    },
+    {
+      "case_id": 38,
+      "ddx": [
+        "Enfermedad de Wilson",
+        "Porfiria aguda intermitente",
+        "Deficiencia de ceruloplasmina",
+        "Hemocromatosis hereditaria",
+        "Enfermedad hepática no alcohólica"
+      ]
+    },
+    {
+      "case_id": 39,
+      "ddx": [
+        "Deficiencia de carnitina primaria",
+        "Síndrome de deficiencia del transportador de carnitina",
+        "Acidemia propiónica",
+        "Deficiencia de acil-CoA deshidrogenasa de cadena media",
+        "Síndrome de muerte súbita del lactante"
+      ]
+    },
+    {
+      "case_id": 40,
+      "ddx": [
+        "Deficiencia de tirosina aminotransferasa",
+        "Deficiencia de fenilalanina hidroxilasa",
+        "Síndrome de inmunodeficiencia combinada grave",
+        "Deficiencia de ornitina transcarbamilasa",
+        "Hipotiroidismo congénito"
+      ]
+    },
+    {
+      "case_id": 41,
+      "ddx": [
+        "Acidemia propiónica",
+        "Acidemia metilmalónica",
+        "Deficiencia de carnitina primaria",
+        "Síndrome de metabolismo de glicina",
+        "Deficiencia de enzimas del ciclo de la urea"
+      ]
+    },
+    {
+      "case_id": 42,
+      "ddx": [
+        "Síndrome de Barth",
+        "Deficiencia de fosforilasa muscular (Enfermedad de McArdle)",
+        "Síndrome de Alpers-Huttenlocher",
+        "Deficiencia de Coenzima Q10",
+        "Enfermedad de Pompe"
+      ]
+    },
+    {
+      "case_id": 43,
+      "ddx": [
+        "Síndrome de hiperamonemia por déficit de ciclo de la urea",
+        "Enfermedad de oroticaciduria hereditaria",
+        "Síndrome de Prader-Willi",
+        "Hepatitis viral crónica",
+        "Hipoglucemia reactiva neonatal"
+      ]
+    },
+    {
+      "case_id": 44,
+      "ddx": [
+        "Acidemia glutárica tipo I",
+        "Deficiencia de riboflavina",
+        "Leucodistrofia metacromática",
+        "Acidemia propiónica",
+        "Síndrome de Leigh"
+      ]
+    },
+    {
+      "case_id": 45,
+      "ddx": [
+        "Tirosinemia tipo I",
+        "Fenilcetonuria",
+        "Tirosinemia tipo II",
+        "Porfiria aguda intermitente",
+        "Tirosinemia tipo III"
+      ]
+    }
+  ]
+}
