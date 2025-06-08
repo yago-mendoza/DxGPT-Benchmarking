@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "diagnosis": {
+      "type": "string",
+      "description": "The medical diagnosis being evaluated"
+    },
+    "severity": {
+      "type": "string", 
+      "pattern": "^S(10|[0-9])$",
+      "description": "Severity score from S0 to S10"
+    }
+  },
+  "required": ["diagnosis", "severity"],
+  "additionalProperties": false
+}

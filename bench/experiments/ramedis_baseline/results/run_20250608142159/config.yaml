@@ -11,16 +11,15 @@ llm_configs:
     params:
       temperature: 0.7
       max_tokens: 600
-      top_p: 0.9
 
   # Alias para el LLM que asigna severidad a los DDX únicos
   severity_assigner_llm:
     model: "gpt-4o"  # Can use same or different model
-    prompt: "eval-prompts/severity_assignment_prompt.txt"
-    output_schema: "eval-prompts/severity_assignment_output_schema.json"
+    prompt: "eval-prompts/severity_assignment_batch_prompt.txt"
+    output_schema: "eval-prompts/severity_assignment_batch_schema.json"
     params:
-      temperature: 0.3
-      max_tokens: 200
+      temperature: 0.1
+      max_tokens: 1000
 
 # Configuración de visualizaciones
 plotting:

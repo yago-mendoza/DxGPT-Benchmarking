@@ -15,6 +15,7 @@ Configuration:
 
 import os
 import time
+import random  # Agregar import para jitter
 from dataclasses import dataclass
 from enum import Enum
 from typing import Dict, List, Optional, Set, Union
@@ -36,6 +37,8 @@ class ModelConfig:
     request_timeout: int = 120
     normalization_epsilon: float = 1e-12
     zero_norm_threshold: float = 1e-9
+    initial_wait: float = 5.0  # Espera inicial en segundos
+    backoff_factor: float = 1.0  # Factor multiplicador para cada reintento
 
 @dataclass(frozen=True)
 class ApiCredentials:
@@ -78,6 +81,52 @@ class EmbeddingClient:
         self._credentials = credentials
         self._config = config
         self._processor = EmbeddingProcessor(config)
+        self._is_warmed_up = False
+    
+    def warm_up(self) -> bool:
+        """
+        Warm up the HuggingFace endpoint before processing.
+        
+        Returns:
+            bool: True if endpoint is ready, False otherwise
+        """
+        if self._is_warmed_up:
+            return True
+            
+        print("Warming up SapBERT endpoint...")
+        test_text = ["test"]
+        
+        max_attempts = 5
+        wait_time = 5.0
+        
+        for attempt in range(max_attempts):
+            try:
+                response = requests.post(
+                    self._credentials.url,
+                    headers=self._credentials.headers,
+                    json={"inputs": test_text, "options": {"wait_for_model": True}},
+                    timeout=30
+                )
+                
+                if response.status_code == 200:
+                    print("SapBERT endpoint is ready!")
+                    self._is_warmed_up = True
+                    return True
+                elif response.status_code == 503:
+                    print(f"Endpoint starting up... waiting {wait_time}s (attempt {attempt + 1}/{max_attempts})")
+                    time.sleep(wait_time)
+                    wait_time += 1  # Increase wait time
+                else:
+                    print(f"Unexpected response: {response.status_code} - {response.text[:100]}")
+                    return False
+                    
+            except Exception as e:
+                print(f"Error during warm-up: {type(e).__name__}: {str(e)}")
+                if attempt < max_attempts - 1:
+                    time.sleep(wait_time)
+                    
+        print("Failed to warm up endpoint after maximum attempts")
+        return False
     
     def get_embeddings(self, texts: List[str]) -> Optional[np.ndarray]:
         """
@@ -92,6 +141,11 @@ class EmbeddingClient:
         if not texts:
             return np.array([], dtype=np.float32).reshape(0, self._config.embedding_dimension)
         
+        # Ensure endpoint is warmed up
+        if not self._is_warmed_up:
+            if not self.warm_up():
+                return None
+        
         raw_response = self._fetch_raw_embeddings(texts)
         if raw_response is None:
             return None
@@ -100,8 +154,22 @@ class EmbeddingClient:
     
     def _fetch_raw_embeddings(self, texts: List[str]) -> Optional[List[List[List[float]]]]:
         """Communicate with HuggingFace endpoint for raw token embeddings."""
+        
+        # Validate and clean inputs
+        if not texts:
+            return []
+        
+        # Clean texts
+        clean_texts = []
+        for i, text in enumerate(texts):
+            if not text or not text.strip():
+                clean_texts.append("Unknown condition")
+            else:
+                clean_text = text.strip()[:512]  # Limit length
+                clean_texts.append(clean_text)
+        
         payload = {
-            "inputs": texts,
+            "inputs": clean_texts,
             "options": {"wait_for_model": True}
         }
         
@@ -112,18 +180,28 @@ class EmbeddingClient:
                 json=payload,
                 timeout=self._config.request_timeout
             )
-            response.raise_for_status()
-            return response.json()
             
-        except requests.exceptions.RequestException as error:
-            self._log_api_error(error)
+            if response.status_code == 200:
+                return response.json()
+            
+            # Log errors concisely
+            if response.status_code == 400:
+                error_msg = response.json().get('error', response.text[:100])
+                print(f"API Error 400: {error_msg}")
+            elif response.status_code == 503:
+                print(f"⚠️  Endpoint unavailable (503). Please run warm_up() first.")
+            else:
+                print(f"API Error {response.status_code}: {response.text[:100]}")
+                
             return None
-    
-    def _log_api_error(self, error: requests.exceptions.RequestException) -> None:
-        """Log API communication errors with context."""
-        print(f"ERROR: API request failed to {self._credentials.url}: {error}")
-        if hasattr(error, 'response') and error.response:
-            print(f"ERROR: Server response: {error.response.text[:500]}")
+                
+        except requests.exceptions.Timeout:
+            print(f"⏱️  Request timeout after {self._config.request_timeout}s")
+            return None
+                    
+        except requests.exceptions.RequestException as error:
+            print(f"🌐 Network error: {type(error).__name__}")
+            return None
 
 
 class EmbeddingProcessor:
@@ -286,7 +364,6 @@ class SimilarityCalculator:
         embeddings = self._client.get_embeddings(unique_terms)
         
         if embeddings is None or embeddings.shape[0] != len(unique_terms):
-            print("ERROR: Failed to retrieve embeddings or dimension mismatch")
             return {}
         
         return {
@@ -334,6 +411,23 @@ _embedding_client = EmbeddingClient(_credentials)
 _similarity_calculator = SimilarityCalculator(_embedding_client)
 
 
+def warm_up_endpoint() -> bool:
+    """
+    Warm up the SapBERT endpoint before processing.
+    
+    This should be called once before batch processing to ensure the endpoint is ready.
+    
+    Returns:
+        bool: True if endpoint is ready, False otherwise
+        
+    Example:
+        >>> from utils.bert import warm_up_endpoint, calculate_semantic_similarity
+        >>> if warm_up_endpoint():
+        ...     results = calculate_semantic_similarity("heart attack", "myocardial infarction")
+    """
+    return _embedding_client.warm_up()
+
+
 def calculate_semantic_similarity(
     input_a: Union[str, List[str]],
     input_b: Union[str, List[str]]
@@ -343,6 +437,8 @@ def calculate_semantic_similarity(
     
     Performs many-to-many comparison between elements of input_a and input_b
     using SapBERT embeddings and cosine similarity.
+    
+    Note: For best performance, call warm_up_endpoint() once before batch processing.
     
     Args:
         input_a: Medical term(s) - string or list of strings

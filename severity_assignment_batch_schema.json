@@ -6,7 +6,7 @@
       "description": "The medical diagnosis being evaluated"
     },
     "severity": {
-      "type": "string",
+      "type": "string", 
       "pattern": "^S(10|[0-9])$",
       "description": "Severity score from S0 to S10"
     }

@@ -1,6 +1,6 @@
-You are a medical expert tasked with assigning severity scores to medical diagnoses.
+You are a medical expert tasked with assigning severity scores to multiple medical diagnoses.
 
-For each diagnosis provided, assign a severity score from S0 to S10 based on the following scale:
+For each diagnosis in the list below, assign a severity score from S0 to S10 based on the following scale:
 - S0-S1: Minimal severity (minor conditions with no significant impact on quality of life)
 - S2-S3: Mild severity (conditions with limited impact, easily manageable)
 - S4-S5: Moderate severity (conditions requiring regular medical attention)
@@ -15,12 +15,12 @@ Consider factors such as:
 - Urgency of treatment needed
 - Prognosis without treatment
 
-Diagnosis to evaluate: {diagnosis}
+Process each diagnosis independently and return a JSON object with a "severities" property containing an array with severity assignments for all diagnoses in the order they were provided.
 
-Please respond with the severity assignment in the following JSON format:
+Example response format:
 {
-  "diagnosis": "{diagnosis}",
-  "severity": "SX"
+  "severities": [
+    {"diagnosis": "Common cold", "severity": "S1"},
+    {"diagnosis": "Pneumonia", "severity": "S6"}
+  ]
 }
-
-Where X is a number from 0 to 10.

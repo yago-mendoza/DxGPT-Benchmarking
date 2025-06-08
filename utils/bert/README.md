@@ -36,13 +36,34 @@ HF_TOKEN=hf_your_token_with_permissions
 ## 📦 Importación
 
 ```python
-from utils.bert import calculate_semantic_similarity
-s```
+from utils.bert import calculate_semantic_similarity, warm_up_endpoint
+```
+
+## 🔥 Warm-up del Endpoint (IMPORTANTE)
+
+Para procesamiento en lote o múltiples llamadas, es **altamente recomendado** calentar el endpoint primero:
+
+```python
+from utils.bert import warm_up_endpoint, calculate_semantic_similarity
+
+# Calentar el endpoint UNA VEZ antes de procesar
+if warm_up_endpoint():
+    print("✅ Endpoint listo para procesar")
+    # Ahora puedes hacer múltiples llamadas sin esperas
+    results = calculate_semantic_similarity(terms_a, terms_b)
+else:
+    print("❌ Error al inicializar el endpoint")
+```
+
+### ¿Por qué es importante?
+- El endpoint de HuggingFace puede estar "dormido" si no se ha usado recientemente
+- Sin warm-up, la primera llamada puede tardar 30-60 segundos
+- Con warm-up, todas las llamadas son rápidas (~2-3 segundos)
 
 ## 🔧 Uso Principal
 
 ### Función Principal: `calculate_semantic_similarity()`
-La única función que necesitas para calcular similaridad semántica.
+La función principal para calcular similaridad semántica.
 
 ```python
 # Comparar dos términos
@@ -62,7 +83,7 @@ result = calculate_semantic_similarity(
 
 ### Ejemplo 1: Comparación simple
 ```python
-from utils.services.bert_similarity import calculate_semantic_similarity
+from utils.bert import calculate_semantic_similarity
 
 # Comparar dos términos médicos
 result = calculate_semantic_similarity("diabetes", "high blood sugar")
@@ -74,20 +95,27 @@ score = result['diabetes']['high blood sugar']
 print(f"Similaridad: {score:.3f}")
 ```
 
-### Ejemplo 2: Uno vs múltiples
+### Ejemplo 2: Procesamiento en lote con warm-up
 ```python
-# Comparar un síntoma con múltiples condiciones
-symptom = "chest pain"
-conditions = ["heart attack", "anxiety", "pneumonia"]
+from utils.bert import warm_up_endpoint, calculate_semantic_similarity
 
-result = calculate_semantic_similarity(symptom, conditions)
+# IMPORTANTE: Calentar endpoint antes de procesamiento masivo
+if not warm_up_endpoint():
+    print("⚠️  Advertencia: El endpoint podría estar lento")
 
-print("Similaridades:")
-for condition, score in result[symptom].items():
-    if score is not None:
-        print(f"  {condition}: {score:.3f}")
-    else:
-        print(f"  {condition}: Error")
+# Procesar múltiples casos
+cases = [
+    ("fever", ["flu", "covid-19", "cold"]),
+    ("chest pain", ["heart attack", "anxiety", "pneumonia"]),
+    ("headache", ["migraine", "tension", "tumor"])
+]
+
+for symptom, conditions in cases:
+    result = calculate_semantic_similarity(symptom, conditions)
+    print(f"\n{symptom}:")
+    for condition, score in result[symptom].items():
+        if score is not None:
+            print(f"  → {condition}: {score:.3f}")
 ```
 
 ### Ejemplo 3: Matriz completa
@@ -113,10 +141,7 @@ for symptom in symptoms:
 
 ### Ejemplo 4: Análisis con visualización
 ```python
-from utils.services.bert_similarity import (
-    calculate_semantic_similarity,
-    SimilarityVisualizer
-)
+from utils.bert import calculate_semantic_similarity
 
 # Calcular similaridades
 result = calculate_semantic_similarity(
@@ -124,17 +149,17 @@ result = calculate_semantic_similarity(
     ["ARDS", "pneumonia", "broken leg"]
 )
 
-# Usar visualizador para mejor presentación
-visualizer = SimilarityVisualizer()
-
+# Visualizar resultados
 for term_a, comparisons in result.items():
-    print(f"Comparaciones para '{term_a}':")
+    print(f"\nComparaciones para '{term_a}':")
     for term_b, score in comparisons.items():
-        bar = visualizer.create_progress_bar(score)
-        level = visualizer.get_similarity_level(score)
-        score_str = visualizer.format_score(score)
-        
-        print(f"  vs '{term_b}': {score_str} {bar} {level}")
+        if score is not None:
+            # Crear barra visual
+            bar_length = int(score * 20)
+            bar = "█" * bar_length + "░" * (20 - bar_length)
+            print(f"  vs '{term_b}': {score:.3f} [{bar}]")
+        else:
+            print(f"  vs '{term_b}': Error")
 ```
 
 ## 📊 Estructura de Respuesta
@@ -169,10 +194,11 @@ La función devuelve un diccionario anidado:
 
 ## ⚡ Características
 
+- **Warm-up automático**: Prepara el endpoint para procesamiento rápido
 - **Comparación cruzada**: Muchos-a-muchos automáticamente
 - **Manejo de errores**: Devuelve `None` si falla el cálculo
 - **Optimización**: Reutiliza embeddings para términos repetidos
-- **Visualización**: Herramientas incluidas para mostrar resultados
+- **Logs limpios**: Mensajes concisos con emojis para claridad
 
 ## 🎯 Casos de Uso
 
@@ -185,15 +211,35 @@ La función devuelve un diccionario anidado:
 ## 🔴 Manejo de Errores
 
 ```python
+# Siempre verificar warm-up para procesamiento masivo
+if not warm_up_endpoint():
+    print("⚠️  El endpoint podría no estar disponible")
+    # Considerar implementar lógica de fallback
+
 result = calculate_semantic_similarity("term1", "term2")
 
 score = result["term1"]["term2"]
 if score is None:
     print("Error: No se pudo calcular la similaridad")
     # Posibles causas:
+    # - Endpoint no calentado (usar warm_up_endpoint())
     # - Problema de conectividad
     # - API key inválida
-    # - Endpoint no disponible
+    # - Límite de rate excedido
 else:
     print(f"Similaridad: {score:.3f}")
-``` 
+```
+
+## 🚀 Mejores Prácticas
+
+1. **Siempre usar warm-up** para procesamiento en lote
+2. **Agrupar llamadas** cuando sea posible (la función acepta listas)
+3. **Verificar None** en los resultados antes de usar scores
+4. **Monitorear logs** - los emojis indican el estado:
+   - 🔄 = Procesando
+   - ✅ = Éxito
+   - ⚠️ = Advertencia
+   - ❌ = Error
+   - ⏳ = Esperando
+   - ⏱️ = Timeout
+   - 🌐 = Error de red 
