@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "llm_config_alias": "candidate_dx_gpt",
+    "model_used": "gpt-4o",
+    "prompt_path": "experiments/ramedis_baseline/eval-prompts/candidate_prompt.txt",
+    "dataset_path": "bench/datasets/ramedis-45.json",
+    "timestamp": "2025-06-08T19:22:00.231953"
+  },
+  "responses": [
+    {
+      "case_id": 1,
+      "ddxs": [
+        "Methylmalonic acidemia",
+        "Propionic acidemia",
+        "Multiple carboxylase deficiency",
+        "Isovaleric acidemia",
+        "Glutaric acidemia type I"
+      ]
+    },
+    {
+      "case_id": 2,
+      "ddxs": [
+        "Spinal muscular atrophy type 1 (SMA1)",
+        "Pompe disease",
+        "Mitochondrial myopathy",
+        "Zellweger spectrum disorder",
+        "Leigh syndrome"
+      ]
+    },
+    {
+      "case_id": 3,
+      "ddxs": [
+        "Hereditary Tyrosinemia Type I",
+        "Phenylketonuria",
+        "Maple Syrup Urine Disease",
+        "Galactosemia",
+        "Ornithine Transcarbamylase Deficiency"
+      ]
+    },
+    {
+      "case_id": 4,
+      "ddxs": [
+        "Congenital Diaphragmatic Hernia",
+        "Spinal Muscular Atrophy",
+        "Ponto-Cerebellar Hypoplasia",
+        "Beckwith-Wiedemann Syndrome",
+        "Leigh Syndrome"
+      ]
+    },
+    {
+      "case_id": 5,
+      "ddxs": [
+        "Maple Syrup Urine Disease (MSUD)",
+        "Leigh Syndrome",
+        "Phenylketonuria (PKU)",
+        "Organic Aciduria",
+        "Homocystinuria"
+      ]
+    }
+  ]
+}

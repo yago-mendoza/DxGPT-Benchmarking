@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "timestamp": "2025-06-08T21:46:07.683978"
+  },
+  "evaluations": [
+    {
+      "case_id": 1,
+      "gdx_set": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Methylmalonic acidemia",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.9999998807907104
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.9999998807907104,
+          0.9680109024047852,
+          0.8807355165481567,
+          0.8907325863838196
+        ],
+        "Propionic acidemia": [
+          0.6754580140113831,
+          0.6590555906295776,
+          0.5651570558547974,
+          0.6129608154296875
+        ],
+        "Isovaleric acidemia": [
+          0.7510212063789368,
+          0.7446814775466919,
+          0.6919991970062256,
+          0.6903924942016602
+        ],
+        "Glutaric acidemia type I": [
+          0.6227201819419861,
+          0.6281981468200684,
+          0.5468958616256714,
+          0.6360635757446289
+        ],
+        "Multiple carboxylase deficiency": [
+          0.7205946445465088,
+          0.727961540222168,
+          0.6880760192871094,
+          0.7256921529769897
+        ]
+      }
+    },
+    {
+      "case_id": 2,
+      "gdx_set": [
+        "Succinic semialdehyde dehydrogenase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Succinic semialdehyde dehydrogenase deficiency",
+        "ddx": "Organic acidemia",
+        "score": 0.5400195121765137
+      },
+      "ddx_semantic_scores": {
+        "Pompe disease": [
+          0.42517709732055664
+        ],
+        "Spinal muscular atrophy (SMA) type 1": [
+          0.40501922369003296
+        ],
+        "Zellweger syndrome": [
+          0.3922729790210724
+        ],
+        "Leigh syndrome": [
+          0.5111503601074219
+        ],
+        "Organic acidemia": [
+          0.5400195121765137
+        ]
+      }
+    },
+    {
+      "case_id": 3,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria (PKU)",
+        "score": 0.9432156682014465
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia Type I": [
+          0.6515018939971924
+        ],
+        "Phenylketonuria (PKU)": [
+          0.9432156682014465
+        ],
+        "Maple Syrup Urine Disease (MSUD)": [
+          0.6337388753890991
+        ],
+        "Methylmalonic Acidemia": [
+          0.5440982580184937
+        ],
+        "Homocystinuria": [
+          0.47054192423820496
+        ]
+      }
+    },
+    {
+      "case_id": 4,
+      "gdx_set": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "best_match": {
+        "gdx": "Congenital disorder of glycosylation, type Ia",
+        "ddx": "Congenital Disorder of Glycosylation Type Ia (PMM2 deficiency)",
+        "score": 0.8166195154190063
+      },
+      "ddx_semantic_scores": {
+        "Congenital Disorder of Glycosylation Type Ia (PMM2 deficiency)": [
+          0.8166195154190063
+        ],
+        "Walker-Warburg Syndrome": [
+          0.3303225338459015
+        ],
+        "Congenital Myopathy (RYR1-related)": [
+          0.388466477394104
+        ],
+        "Neonatal Marfan Syndrome": [
+          0.32576096057891846
+        ],
+        "Sotos Syndrome": [
+          0.4104621708393097
+        ]
+      }
+    },
+    {
+      "case_id": 5,
+      "gdx_set": [
+        "Maple syrup urine disease"
+      ],
+      "best_match": {
+        "gdx": "Maple syrup urine disease",
+        "ddx": "Maple Syrup Urine Disease (MSUD)",
+        "score": 0.9355921149253845
+      },
+      "ddx_semantic_scores": {
+        "Maple Syrup Urine Disease (MSUD)": [
+          0.9355921149253845
+        ],
+        "Leigh Syndrome": [
+          0.4428190588951111
+        ],
+        "Organic Acidemia": [
+          0.5374430418014526
+        ],
+        "Cerebral Palsy with Metabolic Disorder": [
+          0.48953306674957275
+        ],
+        "Inborn Error of Branched-Chain Amino Acid Metabolism": [
+          0.6672383546829224
+        ]
+      }
+    }
+  ]
+}

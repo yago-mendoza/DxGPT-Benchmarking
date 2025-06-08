@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "llm_config_alias": "severity_assigner_llm",
+    "model_used": "gpt-4o",
+    "prompt_path": "experiments/ramedis_baseline/eval-prompts/severity_assignment_batch_prompt.txt",
+    "timestamp": "2025-06-08T19:11:41.387100"
+  },
+  "assigned_severities": [
+    {
+      "ddx_unique_name": "Methylmalonic Acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial Encephalopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Spinal muscular atrophy type 1",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Isovaleric Acidemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Phenylketonuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Organic Acidemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Pompe disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Leigh Syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Zellweger syndrome",
+      "inferred_severity": "S10"
+    },
+    {
+      "ddx_unique_name": "Congenital Disorder of Glycosylation Type Ia (PMM2-CDG)",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Zellweger Spectrum Disorder",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Ornithine Transcarbamylase Deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Fukuyama Congenital Muscular Dystrophy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Walker-Warburg Syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Maple Syrup Urine Disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Smith-Lemli-Opitz Syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glutaric Acidemia Type I",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Leigh syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Tyrosinemia Type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Urea Cycle Disorder",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Nonketotic Hyperglycinemia",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Propionic Acidemia",
+      "inferred_severity": "S7"
+    }
+  ]
+}

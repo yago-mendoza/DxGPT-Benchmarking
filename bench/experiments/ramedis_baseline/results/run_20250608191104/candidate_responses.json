@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "llm_config_alias": "candidate_dx_gpt",
+    "model_used": "gpt-4o",
+    "prompt_path": "experiments/ramedis_baseline/eval-prompts/candidate_prompt.txt",
+    "dataset_path": "bench/datasets/ramedis-45.json",
+    "timestamp": "2025-06-08T19:11:15.980605"
+  },
+  "responses": [
+    {
+      "case_id": 1,
+      "ddxs": [
+        "Methylmalonic Acidemia",
+        "Propionic Acidemia",
+        "Isovaleric Acidemia",
+        "Glutaric Acidemia Type I",
+        "Ornithine Transcarbamylase Deficiency"
+      ]
+    },
+    {
+      "case_id": 2,
+      "ddxs": [
+        "Pompe disease",
+        "Spinal muscular atrophy type 1",
+        "Zellweger syndrome",
+        "Methylmalonic acidemia",
+        "Leigh syndrome"
+      ]
+    },
+    {
+      "case_id": 3,
+      "ddxs": [
+        "Tyrosinemia Type I",
+        "Phenylketonuria",
+        "Maple Syrup Urine Disease",
+        "Urea Cycle Disorder",
+        "Nonketotic Hyperglycinemia"
+      ]
+    },
+    {
+      "case_id": 4,
+      "ddxs": [
+        "Congenital Disorder of Glycosylation Type Ia (PMM2-CDG)",
+        "Fukuyama Congenital Muscular Dystrophy",
+        "Walker-Warburg Syndrome",
+        "Smith-Lemli-Opitz Syndrome",
+        "Zellweger Spectrum Disorder"
+      ]
+    },
+    {
+      "case_id": 5,
+      "ddxs": [
+        "Maple Syrup Urine Disease",
+        "Leigh Syndrome",
+        "Phenylketonuria",
+        "Mitochondrial Encephalopathy",
+        "Organic Acidemia"
+      ]
+    }
+  ]
+}

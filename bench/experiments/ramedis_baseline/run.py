@@ -550,72 +550,139 @@ def assign_severities_batch(
 
 
 # PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
-# 5. CASE-LEVEL SEVERITY EVALUATION
+# 5. CASE-LEVEL SEVERITY EVALUATION - NUEVA METODOLOGÍA
 # PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 
 # Mapeo de etiquetas de severidad a valores numéricos
 SEVERITY_MAPPING = {f"S{i}": i for i in range(11)}  # S0->0, S1->1, ..., S10->10
-MAX_SEVERITY_VALUE = 10
-MIN_SEVERITY_VALUE = 0
-MAX_SEVERITY_DIFF_SQUARED = (MAX_SEVERITY_VALUE - MIN_SEVERITY_VALUE) ** 2
 
 def evaluate_case_severity(
     case_id: str,
     ddxs: List[str],
     gdxs: List[Dict[str, Any]],
+    best_gdx_name: str,
     severity_assignments: Dict[str, str],
-    semantic_scores: Dict[str, List[float]],
     logger: logging.Logger
 ) -> Dict[str, Any]:
     """
     Evalúa el score de severidad para un caso específico.
     
+    Nueva metodología:
+    1. Toma el mejor GDX (del semantic_evaluation.json) y su severidad
+    2. Calcula la distancia máxima posible según la severidad del GDX
+    3. Para cada DDX: calcula (distancia²)/D y luego divide por D para [0,1]
+    4. Score final = promedio de los valores normalizados
+    5. Separa DDX en optimistas (menos severos) y pesimistas (más severos)
+    
     Args:
         case_id: ID del caso
         ddxs: Lista de DDX generados para el caso
         gdxs: Lista de GDX con sus severidades
+        best_gdx_name: Nombre del mejor GDX (de semantic_evaluation)
         severity_assignments: Mapeo de DDX a severidades asignadas
-        semantic_scores: Scores semánticos DDX-GDX del caso
         logger: Logger para debugging
         
     Returns:
-        Dict con score de severidad final y penalización promedio
+        Dict con estructura específica: id, final_score, gdx info, 
+        optimist metrics, pessimist metrics, ddx list
     """
-    penalties = []
+    # Encontrar la severidad del mejor GDX
+    best_gdx_severity = None
+    for gdx in gdxs:
+        if gdx.get("name") == best_gdx_name:
+            best_gdx_severity = gdx.get("severity", "S5")
+            break
     
-    for ddx_idx, ddx in enumerate(ddxs):
-        # Obtener severidad numérica del DDX
-        ddx_severity_label = severity_assignments.get(ddx, "S5")  # Default S5 si no se encuentra
+    if best_gdx_severity is None:
+        logger.warning(f"Case {case_id}: Could not find severity for best GDX '{best_gdx_name}'")
+        best_gdx_severity = "S5"  # Default
+
+    sev_gdx = SEVERITY_MAPPING.get(best_gdx_severity, 5)
+    
+    # Calcular distancia máxima posible D
+    if sev_gdx <= 5:
+        max_distance = 10 - sev_gdx
+    else:
+        max_distance = sev_gdx
+    
+    # Manejar caso edge donde max_distance = 0 (S0 o S10)
+    if max_distance == 0:
+        max_distance = 1  # Para evitar división por cero
+    
+    # Inicializar estructuras para categorización
+    ddx_normalized_values = []
+    ddx_list = []
+    
+    # Listas para optimistas y pesimistas
+    optimist_values = []  # DDX menos severos que GDX (sev_ddx < sev_gdx)
+    pessimist_values = [] # DDX más severos que GDX (sev_ddx > sev_gdx)
+    
+    for ddx in ddxs:
+        # Obtener severidad del DDX
+        ddx_severity_label = severity_assignments.get(ddx, "S5")
         sev_ddx = SEVERITY_MAPPING[ddx_severity_label]
         
-        # Encontrar el GDX con mayor similitud semántica
-        ddx_scores = semantic_scores.get(ddx, [0.0] * len(gdxs))
-        if not ddx_scores or not gdxs:
-            penalties.append(MAX_SEVERITY_DIFF_SQUARED)
-            continue
+        # Calcular distancia absoluta
+        distance = abs(sev_gdx - sev_ddx)
+
+        # Normalizar a [0,1] dividiendo por D
+        normalized_value = distance / max_distance
         
-        best_gdx_idx = np.argmax(ddx_scores)
-        best_gdx = gdxs[best_gdx_idx]
+        ddx_normalized_values.append(normalized_value)
         
-        # Obtener severidad numérica del GDX
-        gdx_severity_label = best_gdx.get("severity", "S5")
-        sev_gdx = SEVERITY_MAPPING.get(gdx_severity_label, 5)
+        # Categorizar como optimista o pesimista
+        # Optimista: DDX es menos severo que GDX (valor numérico menor)
+        # Pesimista: DDX es más severo que GDX (valor numérico mayor)
+        if sev_ddx < sev_gdx:
+            optimist_values.append(normalized_value)
+        elif sev_ddx > sev_gdx:
+            pessimist_values.append(normalized_value)
+        # Si sev_ddx == sev_gdx, no se cuenta en ninguna categoría
         
-        # Calcular penalización cuadrática
-        penalty = (sev_ddx - sev_gdx) ** 2
-        penalties.append(penalty)
+        # Estructura específica para cada DDX
+        ddx_list.append({
+            "disease": ddx,
+            "severity": ddx_severity_label,
+            "distance": distance,
+            "score": round(normalized_value, 4)
+        })
     
-    # Calcular penalización promedio
-    avg_penalty = sum(penalties) / len(penalties) if penalties else 0
+    # Calcular score final: promedio de los valores normalizados
+    final_score = sum(ddx_normalized_values) / len(ddx_normalized_values)
     
-    # Calcular score final (0-1, donde 1 es mejor)
-    final_score = 1 - (avg_penalty / MAX_SEVERITY_DIFF_SQUARED)
-    final_score = max(0, min(1, final_score))  # Acotar entre 0 y 1
+    # Calcular métricas para optimistas
+    n_optimist = len(optimist_values)
+    score_optimist = sum(optimist_values) / n_optimist if n_optimist > 0 else 0.0
     
+    # Calcular métricas para pesimistas
+    n_pessimist = len(pessimist_values)
+    score_pessimist = sum(pessimist_values) / n_pessimist if n_pessimist > 0 else 0.0
+    
+    # Logging para debugging
+    logger.debug(f"Case {case_id}: Best GDX '{best_gdx_name}' has severity {best_gdx_severity} (value: {sev_gdx})")
+    logger.debug(f"  Max distance D: {max_distance}")
+    logger.debug(f"  DDX normalized values: {[round(v, 3) for v in ddx_normalized_values]}")
+    logger.debug(f"  Optimists: n={n_optimist}, avg_score={score_optimist:.4f}")
+    logger.debug(f"  Pessimists: n={n_pessimist}, avg_score={score_pessimist:.4f}")
+    logger.debug(f"  Final score (average): {final_score:.4f}")
+    
+    # Estructura exacta solicitada con las nuevas métricas
     return {
-        "case_id": case_id,
-        "final_severity_score": round(final_score, 4),
-        "avg_penalty_raw": round(avg_penalty, 2)
+        "id": case_id,
+        "final_score": round(final_score, 4),
+        "optimist": {
+            "n": n_optimist,
+            "score": round(score_optimist, 4)
+        },
+        "pessimist": {
+            "n": n_pessimist,
+            "score": round(score_pessimist, 4)
+        },
+        "gdx": {
+            "disease": best_gdx_name,
+            "severity": best_gdx_severity
+        },
+        "ddx_list": ddx_list  # disease, severity, distance, score
     }
 
 
@@ -632,7 +699,7 @@ def process_severity_evaluation(
     Args:
         cases: Lista de casos con sus GDX
         candidate_responses: Respuestas con DDX generados
-        semantic_evaluations: Evaluaciones semánticas por caso
+        semantic_evaluations: Evaluaciones semánticas (contiene el mejor GDX)
         severity_assignments: Asignaciones de severidad para DDX únicos
         logger: Logger para tracking
         
@@ -659,130 +726,27 @@ def process_severity_evaluation(
         gdxs = case.get("diagnoses", [])
         semantic_eval = semantic_map[case_id]
         
+        # Obtener el mejor GDX del semantic evaluation
+        best_match = semantic_eval.get("best_match", {})
+        best_gdx_name = best_match.get("gdx", "")
+        
         result = evaluate_case_severity(
             case_id=case_id,
             ddxs=ddxs,
             gdxs=gdxs,
+            best_gdx_name=best_gdx_name,
             severity_assignments=severity_map,
-            semantic_scores=semantic_eval["ddx_semantic_scores"],
             logger=logger
         )
         
         results.append(result)
     
-    logger.info("Severity evaluation completed")
+    # Estadísticas finales
+    scores = [r["final_score"] for r in results]
+    logger.info(f"Severity evaluation completed")
+    logger.info(f"Average score: {np.mean(scores):.3f} (Min: {np.min(scores):.3f}, Max: {np.max(scores):.3f})")
+    
     return results
-
-
-# PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
-# 6. VISUALIZATION GENERATION
-# PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
-
-def generate_visualizations(
-    semantic_evaluations: List[Dict[str, Any]],
-    severity_evaluations: List[Dict[str, Any]],
-    plotting_config: Dict[str, bool],
-    plots_dir: Path,
-    logger: logging.Logger
-):
-    """
-    Genera las visualizaciones configuradas en config.yaml.
-    
-    Args:
-        semantic_evaluations: Evaluaciones semánticas por caso
-        severity_evaluations: Evaluaciones de severidad por caso
-        plotting_config: Configuración de qué gráficos generar
-        plots_dir: Directorio donde guardar los gráficos
-        logger: Logger para tracking
-    """
-    # Extraer datos para visualización
-    semantic_scores = [eval["best_match"]["score"] for eval in semantic_evaluations]
-    
-    # Crear mapeo de case_id a severity score
-    severity_map = {eval["case_id"]: eval["final_severity_score"] for eval in severity_evaluations}
-    severity_scores = [severity_map.get(eval["case_id"], 0) for eval in semantic_evaluations]
-    
-    # Configurar estilo de matplotlib
-    plt.style.use('seaborn-v0_8-darkgrid')
-    
-    # 1. Scatter Plot Detallado: Todos los casos
-    if plotting_config.get("plot_semantic_vs_severity_all_cases", False):
-        plt.figure(figsize=(10, 8))
-        plt.scatter(severity_scores, semantic_scores, alpha=0.6, s=100)
-        plt.xlabel("Final Severity Score", fontsize=12)
-        plt.ylabel("Best Semantic Match Score", fontsize=12)
-        plt.title("Semantic vs Severity Scores - All Cases", fontsize=14)
-        plt.xlim(-0.05, 1.05)
-        plt.ylim(-0.05, 1.05)
-        plt.grid(True, alpha=0.3)
-        
-        # Agregar línea de tendencia
-        z = np.polyfit(severity_scores, semantic_scores, 1)
-        p = np.poly1d(z)
-        plt.plot([0, 1], p([0, 1]), "r--", alpha=0.8, label=f"Trend: y={z[0]:.2f}x+{z[1]:.2f}")
-        plt.legend()
-        
-        plt.tight_layout()
-        plt.savefig(plots_dir / "semantic_vs_severity_all_cases.png", dpi=300)
-        plt.close()
-        logger.info("Generated: semantic_vs_severity_all_cases.png")
-    
-    # 2. Scatter Plot Agregado: Promedio
-    if plotting_config.get("plot_semantic_vs_severity_average", False):
-        avg_semantic = np.mean(semantic_scores)
-        avg_severity = np.mean(severity_scores)
-        
-        plt.figure(figsize=(8, 8))
-        plt.scatter([avg_severity], [avg_semantic], s=200, c='red', marker='D')
-        plt.xlabel("Average Final Severity Score", fontsize=12)
-        plt.ylabel("Average Best Semantic Match Score", fontsize=12)
-        plt.title("Average Semantic vs Severity Scores", fontsize=14)
-        plt.xlim(0, 1)
-        plt.ylim(0, 1)
-        plt.grid(True, alpha=0.3)
-        
-        # Agregar anotación con valores
-        plt.annotate(f"({avg_severity:.3f}, {avg_semantic:.3f})", 
-                    xy=(avg_severity, avg_semantic), 
-                    xytext=(avg_severity + 0.05, avg_semantic + 0.05),
-                    fontsize=10)
-        
-        plt.tight_layout()
-        plt.savefig(plots_dir / "semantic_vs_severity_average.png", dpi=300)
-        plt.close()
-        logger.info("Generated: semantic_vs_severity_average.png")
-    
-    # 3. Histograma de distribución semántica
-    if plotting_config.get("plot_semantic_distribution", False):
-        plt.figure(figsize=(10, 6))
-        plt.hist(semantic_scores, bins=20, alpha=0.7, color='blue', edgecolor='black')
-        plt.xlabel("Best Semantic Match Score", fontsize=12)
-        plt.ylabel("Frequency", fontsize=12)
-        plt.title("Distribution of Semantic Similarity Scores", fontsize=14)
-        plt.axvline(np.mean(semantic_scores), color='red', linestyle='--', 
-                   label=f'Mean: {np.mean(semantic_scores):.3f}')
-        plt.legend()
-        plt.grid(True, alpha=0.3)
-        plt.tight_layout()
-        plt.savefig(plots_dir / "semantic_distribution.png", dpi=300)
-        plt.close()
-        logger.info("Generated: semantic_distribution.png")
-    
-    # 4. Histograma de distribución de severidad
-    if plotting_config.get("plot_severity_distribution", False):
-        plt.figure(figsize=(10, 6))
-        plt.hist(severity_scores, bins=20, alpha=0.7, color='green', edgecolor='black')
-        plt.xlabel("Final Severity Score", fontsize=12)
-        plt.ylabel("Frequency", fontsize=12)
-        plt.title("Distribution of Severity Evaluation Scores", fontsize=14)
-        plt.axvline(np.mean(severity_scores), color='red', linestyle='--', 
-                   label=f'Mean: {np.mean(severity_scores):.3f}')
-        plt.legend()
-        plt.grid(True, alpha=0.3)
-        plt.tight_layout()
-        plt.savefig(plots_dir / "severity_distribution.png", dpi=300)
-        plt.close()
-        logger.info("Generated: severity_distribution.png")
 
 
 # PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
@@ -919,24 +883,22 @@ def main():
             json.dump(severity_eval_output, f, indent=2, ensure_ascii=False)
         logger.info("Saved severity_evaluation.json")
         
-        # 6. Visualization Generation
-        logger.info("=" * 80)
-        logger.info("STEP 6: Visualization Generation")
-        logger.info("=" * 80)
-        
-        generate_visualizations(
-            semantic_evaluations, severity_evaluations, 
-            config.get("plotting", {}), results_dir / "plots", logger
-        )
-        
+        # 6. Final Summary
         logger.info("=" * 80)
         logger.info("EXPERIMENT COMPLETED SUCCESSFULLY")
-        logger.info(f"Results saved in: {results_dir}")
         logger.info("=" * 80)
+        logger.info(f"All results saved to: {results_dir}")
         
     except Exception as e:
-        logger.error(f"FATAL ERROR: {str(e)}", exc_info=True)
+        logger.error("=" * 80)
+        logger.error("EXPERIMENT FAILED")
+        logger.error("=" * 80)
+        logger.error(f"Error: {str(e)}")
+        logger.error("Exception details:", exc_info=True)
         raise
+    
+    finally:
+        logger.info("Experiment execution completed")
 
 
 if __name__ == "__main__":

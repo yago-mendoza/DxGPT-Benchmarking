@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "timestamp": "2025-06-08T21:46:12.370044"
+  },
+  "evaluations": [
+    {
+      "id": 1,
+      "final_score": 0.2667,
+      "optimist": {
+        "n": 5,
+        "score": 0.2667
+      },
+      "pessimist": {
+        "n": 0,
+        "score": 0.0
+      },
+      "gdx": {
+        "disease": "Methylmalonic acidemia",
+        "severity": "S9"
+      },
+      "ddx_list": [
+        {
+          "disease": "Methylmalonic acidemia",
+          "severity": "S7",
+          "distance": 2,
+          "score": 0.2222
+        },
+        {
+          "disease": "Propionic acidemia",
+          "severity": "S7",
+          "distance": 2,
+          "score": 0.2222
+        },
+        {
+          "disease": "Isovaleric acidemia",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.3333
+        },
+        {
+          "disease": "Glutaric acidemia type I",
+          "severity": "S7",
+          "distance": 2,
+          "score": 0.2222
+        },
+        {
+          "disease": "Multiple carboxylase deficiency",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.3333
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "final_score": 0.1,
+      "optimist": {
+        "n": 1,
+        "score": 0.25
+      },
+      "pessimist": {
+        "n": 2,
+        "score": 0.125
+      },
+      "gdx": {
+        "disease": "Succinic semialdehyde dehydrogenase deficiency",
+        "severity": "S8"
+      },
+      "ddx_list": [
+        {
+          "disease": "Pompe disease",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Spinal muscular atrophy (SMA) type 1",
+          "severity": "S9",
+          "distance": 1,
+          "score": 0.125
+        },
+        {
+          "disease": "Zellweger syndrome",
+          "severity": "S9",
+          "distance": 1,
+          "score": 0.125
+        },
+        {
+          "disease": "Leigh syndrome",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Organic acidemia",
+          "severity": "S6",
+          "distance": 2,
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "final_score": 0.1429,
+      "optimist": {
+        "n": 2,
+        "score": 0.3571
+      },
+      "pessimist": {
+        "n": 0,
+        "score": 0.0
+      },
+      "gdx": {
+        "disease": "Phenylketonuria",
+        "severity": "S7"
+      },
+      "ddx_list": [
+        {
+          "disease": "Tyrosinemia Type I",
+          "severity": "S7",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Phenylketonuria (PKU)",
+          "severity": "S4",
+          "distance": 3,
+          "score": 0.4286
+        },
+        {
+          "disease": "Maple Syrup Urine Disease (MSUD)",
+          "severity": "S7",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Methylmalonic Acidemia",
+          "severity": "S7",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Homocystinuria",
+          "severity": "S5",
+          "distance": 2,
+          "score": 0.2857
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "final_score": 0.225,
+      "optimist": {
+        "n": 3,
+        "score": 0.3333
+      },
+      "pessimist": {
+        "n": 1,
+        "score": 0.125
+      },
+      "gdx": {
+        "disease": "Congenital disorder of glycosylation, type Ia",
+        "severity": "S8"
+      },
+      "ddx_list": [
+        {
+          "disease": "Congenital Disorder of Glycosylation Type Ia (PMM2 deficiency)",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Walker-Warburg Syndrome",
+          "severity": "S9",
+          "distance": 1,
+          "score": 0.125
+        },
+        {
+          "disease": "Congenital Myopathy (RYR1-related)",
+          "severity": "S6",
+          "distance": 2,
+          "score": 0.25
+        },
+        {
+          "disease": "Neonatal Marfan Syndrome",
+          "severity": "S6",
+          "distance": 2,
+          "score": 0.25
+        },
+        {
+          "disease": "Sotos Syndrome",
+          "severity": "S4",
+          "distance": 4,
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "final_score": 0.2444,
+      "optimist": {
+        "n": 5,
+        "score": 0.2444
+      },
+      "pessimist": {
+        "n": 0,
+        "score": 0.0
+      },
+      "gdx": {
+        "disease": "Maple syrup urine disease",
+        "severity": "S9"
+      },
+      "ddx_list": [
+        {
+          "disease": "Maple Syrup Urine Disease (MSUD)",
+          "severity": "S7",
+          "distance": 2,
+          "score": 0.2222
+        },
+        {
+          "disease": "Leigh Syndrome",
+          "severity": "S8",
+          "distance": 1,
+          "score": 0.1111
+        },
+        {
+          "disease": "Organic Acidemia",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.3333
+        },
+        {
+          "disease": "Cerebral Palsy with Metabolic Disorder",
+          "severity": "S7",
+          "distance": 2,
+          "score": 0.2222
+        },
+        {
+          "disease": "Inborn Error of Branched-Chain Amino Acid Metabolism",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.3333
+        }
+      ]
+    }
+  ]
+}

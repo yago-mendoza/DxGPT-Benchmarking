@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "timestamp": "2025-06-08T19:22:24.164242"
+  },
+  "evaluations": [
+    {
+      "id": 1,
+      "final_score": 0.1111,
+      "gdx": {
+        "disease": "Methylmalonic acidemia",
+        "severity": "S9"
+      },
+      "ddx_list": [
+        {
+          "disease": "Methylmalonic acidemia",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.1111
+        },
+        {
+          "disease": "Propionic acidemia",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.1111
+        },
+        {
+          "disease": "Multiple carboxylase deficiency",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.1111
+        },
+        {
+          "disease": "Isovaleric acidemia",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.1111
+        },
+        {
+          "disease": "Glutaric acidemia type I",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.1111
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "final_score": 0.0094,
+      "gdx": {
+        "disease": "Succinic semialdehyde dehydrogenase deficiency",
+        "severity": "S8"
+      },
+      "ddx_list": [
+        {
+          "disease": "Spinal muscular atrophy type 1 (SMA1)",
+          "severity": "S9",
+          "distance": 1,
+          "score": 0.0156
+        },
+        {
+          "disease": "Pompe disease",
+          "severity": "S7",
+          "distance": 1,
+          "score": 0.0156
+        },
+        {
+          "disease": "Mitochondrial myopathy",
+          "severity": "S7",
+          "distance": 1,
+          "score": 0.0156
+        },
+        {
+          "disease": "Zellweger spectrum disorder",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Leigh syndrome",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "final_score": 0.0449,
+      "gdx": {
+        "disease": "Phenylketonuria",
+        "severity": "S7"
+      },
+      "ddx_list": [
+        {
+          "disease": "Hereditary Tyrosinemia Type I",
+          "severity": "S7",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Phenylketonuria",
+          "severity": "S4",
+          "distance": 3,
+          "score": 0.1837
+        },
+        {
+          "disease": "Maple Syrup Urine Disease",
+          "severity": "S6",
+          "distance": 1,
+          "score": 0.0204
+        },
+        {
+          "disease": "Galactosemia",
+          "severity": "S6",
+          "distance": 1,
+          "score": 0.0204
+        },
+        {
+          "disease": "Ornithine Transcarbamylase Deficiency",
+          "severity": "S7",
+          "distance": 0,
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "final_score": 0.0312,
+      "gdx": {
+        "disease": "Congenital disorder of glycosylation, type Ia",
+        "severity": "S8"
+      },
+      "ddx_list": [
+        {
+          "disease": "Congenital Diaphragmatic Hernia",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Spinal Muscular Atrophy",
+          "severity": "S7",
+          "distance": 1,
+          "score": 0.0156
+        },
+        {
+          "disease": "Ponto-Cerebellar Hypoplasia",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        },
+        {
+          "disease": "Beckwith-Wiedemann Syndrome",
+          "severity": "S5",
+          "distance": 3,
+          "score": 0.1406
+        },
+        {
+          "disease": "Leigh Syndrome",
+          "severity": "S8",
+          "distance": 0,
+          "score": 0.0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "final_score": 0.1654,
+      "gdx": {
+        "disease": "Maple syrup urine disease",
+        "severity": "S9"
+      },
+      "ddx_list": [
+        {
+          "disease": "Maple Syrup Urine Disease (MSUD)",
+          "severity": "S6",
+          "distance": 3,
+          "score": 0.1111
+        },
+        {
+          "disease": "Leigh Syndrome",
+          "severity": "S8",
+          "distance": 1,
+          "score": 0.0123
+        },
+        {
+          "disease": "Phenylketonuria (PKU)",
+          "severity": "S4",
+          "distance": 5,
+          "score": 0.3086
+        },
+        {
+          "disease": "Organic Aciduria",
+          "severity": "S5",
+          "distance": 4,
+          "score": 0.1975
+        },
+        {
+          "disease": "Homocystinuria",
+          "severity": "S5",
+          "distance": 4,
+          "score": 0.1975
+        }
+      ]
+    }
+  ]
+}

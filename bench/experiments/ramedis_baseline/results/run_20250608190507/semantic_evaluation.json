@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "timestamp": "2025-06-08T19:06:26.425097"
+  },
+  "evaluations": [
+    {
+      "case_id": 1,
+      "gdx_set": [
+        "Methylmalonic acidemia",
+        "Methylmalonic aciduria",
+        "Vitamin B12-unresponsive methylmalonic acidemia",
+        "methylmalonyl-coa mutase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Methylmalonic acidemia",
+        "ddx": "Methylmalonic acidemia",
+        "score": 0.9999998807907104
+      },
+      "ddx_semantic_scores": {
+        "Methylmalonic acidemia": [
+          0.9999998807907104,
+          0.9680109024047852,
+          0.8807355165481567,
+          0.8907325863838196
+        ],
+        "Propionic acidemia": [
+          0.6754580140113831,
+          0.6590555906295776,
+          0.5651570558547974,
+          0.6129608154296875
+        ],
+        "Isovaleric acidemia": [
+          0.7510212063789368,
+          0.7446814775466919,
+          0.6919991970062256,
+          0.6903924942016602
+        ],
+        "Glutaric acidemia type I": [
+          0.6227201819419861,
+          0.6281981468200684,
+          0.5468958616256714,
+          0.6360635757446289
+        ],
+        "Multiple carboxylase deficiency": [
+          0.7205946445465088,
+          0.727961540222168,
+          0.6880760192871094,
+          0.7256921529769897
+        ]
+      }
+    },
+    {
+      "case_id": 2,
+      "gdx_set": [
+        "Succinic semialdehyde dehydrogenase deficiency"
+      ],
+      "best_match": {
+        "gdx": "Succinic semialdehyde dehydrogenase deficiency",
+        "ddx": "Pyruvate dehydrogenase deficiency",
+        "score": 0.7443435192108154
+      },
+      "ddx_semantic_scores": {
+        "Leigh syndrome": [
+          0.5111503601074219
+        ],
+        "Pyruvate dehydrogenase deficiency": [
+          0.7443435192108154
+        ],
+        "Mitochondrial myopathy": [
+          0.4078817367553711
+        ],
+        "Organic acidemia": [
+          0.5400195121765137
+        ],
+        "Spinal muscular atrophy type 1": [
+          0.42332199215888977
+        ]
+      }
+    },
+    {
+      "case_id": 3,
+      "gdx_set": [
+        "Phenylketonuria"
+      ],
+      "best_match": {
+        "gdx": "Phenylketonuria",
+        "ddx": "Phenylketonuria",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Tyrosinemia type I": [
+          0.6515018939971924
+        ],
+        "Maple syrup urine disease": [
+          0.6832215785980225
+        ],
+        "Phenylketonuria": [
+          1.0
+        ],
+        "Nonketotic hyperglycinemia": [
+          0.6471371054649353
+        ],
+        "Urea cycle disorder": [
+          0.45039910078048706
+        ]
+      }
+    },
+    {
+      "case_id": 4,
+      "gdx_set": [
+        "Congenital disorder of glycosylation, type Ia"
+      ],
+      "best_match": {
+        "gdx": "Congenital disorder of glycosylation, type Ia",
+        "ddx": "Congenital Disorder of Glycosylation Type Ia",
+        "score": 0.9964665770530701
+      },
+      "ddx_semantic_scores": {
+        "Congenital Disorder of Glycosylation Type Ia": [
+          0.9964665770530701
+        ],
+        "Walker-Warburg Syndrome": [
+          0.3303225338459015
+        ],
+        "Leigh Syndrome": [
+          0.4307480454444885
+        ],
+        "Cerebro-Oculo-Facio-Skeletal Syndrome": [
+          0.4081513285636902
+        ],
+        "Meckel-Gruber Syndrome": [
+          0.34014543890953064
+        ]
+      }
+    },
+    {
+      "case_id": 5,
+      "gdx_set": [
+        "Maple syrup urine disease"
+      ],
+      "best_match": {
+        "gdx": "Maple syrup urine disease",
+        "ddx": "Maple Syrup Urine Disease",
+        "score": 1.0
+      },
+      "ddx_semantic_scores": {
+        "Maple Syrup Urine Disease": [
+          1.0
+        ],
+        "Leigh Syndrome": [
+          0.4428190588951111
+        ],
+        "Methylmalonic Acidemia": [
+          0.6434930562973022
+        ],
+        "Phenylketonuria": [
+          0.6832215785980225
+        ],
+        "Glutaric Acidemia Type I": [
+          0.5665846467018127
+        ]
+      }
+    }
+  ]
+}

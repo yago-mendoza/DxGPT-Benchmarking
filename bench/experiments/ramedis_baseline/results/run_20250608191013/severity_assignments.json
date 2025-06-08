@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "llm_config_alias": "severity_assigner_llm",
+    "model_used": "gpt-4o",
+    "prompt_path": "experiments/ramedis_baseline/eval-prompts/severity_assignment_batch_prompt.txt",
+    "timestamp": "2025-06-08T19:10:42.278297"
+  },
+  "assigned_severities": [
+    {
+      "ddx_unique_name": "Organic acidemia due to cobalamin deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Tyrosinemia Type I",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Glutaric Aciduria Type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Maternal Phenylketonuria Syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Organic Aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Congenital Myasthenic Syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Phenylketonuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Canavan Disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Leigh Syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial Myopathy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Menkes Disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Walker-Warburg Syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Pompe Disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Congenital Disorder of Glycosylation Type Ia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Galactosemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Multiple carboxylase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Joubert Syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Glycogen Storage Disease Type II (Pompe Disease)",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Leigh syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Spinal Muscular Atrophy Type 1",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Zellweger Spectrum Disorder",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Maple Syrup Urine Disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Propionic acidemia",
+      "inferred_severity": "S8"
+    }
+  ]
+}

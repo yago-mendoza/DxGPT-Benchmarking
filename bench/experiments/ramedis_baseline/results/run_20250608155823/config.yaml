@@ -20,3 +20,10 @@ llm_configs:
     params:
       temperature: 0.1
       max_tokens: 1000
+
+# Configuración de visualizaciones
+plotting:
+  plot_semantic_vs_severity_all_cases: true
+  plot_semantic_vs_severity_average: true
+  plot_semantic_distribution: true
+  plot_severity_distribution: true

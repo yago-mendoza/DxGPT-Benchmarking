@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "timestamp": "2025-06-08T15:53:00.886681"
+  },
+  "evaluations": [
+    {
+      "case_id": 1,
+      "final_severity_score": 0.92,
+      "weighted_sum": 0.4
+    },
+    {
+      "case_id": 2,
+      "final_severity_score": 0.972,
+      "weighted_sum": 0.14
+    },
+    {
+      "case_id": 3,
+      "final_severity_score": 0.976,
+      "weighted_sum": 0.12
+    },
+    {
+      "case_id": 4,
+      "final_severity_score": 0.97,
+      "weighted_sum": 0.15
+    },
+    {
+      "case_id": 5,
+      "final_severity_score": 0.946,
+      "weighted_sum": 0.27
+    }
+  ]
+}
