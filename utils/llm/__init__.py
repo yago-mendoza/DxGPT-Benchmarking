@@ -1,4 +1,6 @@
 """
+__init__
+
 AzureLLM v4 - Wrapper de alto nivel para Azure OpenAI API
 
 Este módulo proporciona una interfaz unificada para trabajar con modelos de Azure OpenAI,
@@ -12,45 +14,28 @@ Uso típico:
     response = llm.generate("Hola, ¿cómo estás?")
 """
 
+# Import all implementations
 from .azure import (
-    # Clase principal y alias limpio
+    Azure, 
     AzureLLM,
-    Azure,
-    
-    # Configuración y esquemas
     LLMConfig,
     Schema,
-    
-    # Sistema de plantillas
-    Template,
-    
-    # Procesamiento por lotes
-    BatchProcessor,
-    
-    # Funciones de conveniencia
-    create_llm,
-    quick_generate
+    create_llm as create_azure_llm,
+    quick_generate as quick_generate_azure
 )
 
-__version__ = "4.0.0"
-__author__ = "AzureLLM Team"
-
+# Export all
 __all__ = [
-    # Interfaz principal (lo más usado)
-    "Azure",
-    "AzureLLM",
+    # Azure exports
+    'Azure',
+    'AzureLLM',
+    'LLMConfig',
+    'Schema',
     
-    # Configuración avanzada
-    "LLMConfig",
-    "Schema",
+    # Factory functions
+    'create_llm',
+    'quick_generate',
     
-    # Plantillas
-    "Template",
-    
-    # Batch processing
-    "BatchProcessor",
-    
-    # Conveniencia
-    "create_llm",
-    "quick_generate"
+    # Base class if available
+    'BaseLLM',
 ]

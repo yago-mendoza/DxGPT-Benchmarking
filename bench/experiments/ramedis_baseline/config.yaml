@@ -10,7 +10,7 @@ llm_configs:
     output_schema: "eval-prompts/candidate_output_schema.json"
     params:
       temperature: 0.7
-      max_tokens: 600
+      max_tokens: 1000
 
   # Alias para el LLM que asigna severidad a los DDX únicos
   severity_assigner_llm:

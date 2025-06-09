@@ -93,5 +93,850 @@
       "CCRD:67"
     ],
     "origin": "RAMEDIS"
+  },
+  {
+    "id": 6,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Skin rash\\n -Abnormality of prenatal development or birth\\n -Obesity\\n -Death in infancy\\n -Diarrhea\\n -Hypertyrosinemia\\n -Neonatal death\\n -Death in childhood\\n -Gastrointestinal inflammation\\n -Recurrent viral infections\\n -Hyperphenylalaninemia\\n -Erythematous plaque\\n -Erythematous macule\\n -Erythematous papule\\n -Hernia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Phenylketonuria",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:261600",
+      "ORPHA:716",
+      "CCRD:90"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 7,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Eczematoid dermatitis\\n -Skin rash\\n -Death in infancy\\n -Alopecia\\n -Increased serum lactate\\n -Increased CSF lactate\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Biotinidase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Biotinidase deficiencymultiple carboxylase deficiency, late-onset",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:253260",
+      "ORPHA:79241",
+      "CCRD:13"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 8,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Rod-cone dystrophy\\n -Intellectual disability\\n -Cerebellar atrophy\\n -Death in infancy\\n -Thromboembolism\\n -Abnormal facial shape\\n -Abnormal calvaria morphology\\n -Lipodystrophy\\n -Cerebellar agenesis\\n -Acute hepatitis\\n -Chronic hepatitis\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Congenital disorder of glycosylation, type Ia",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:212065",
+      "ORPHA:79318"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 9,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Macrocephaly\\n -Cystic hygroma\\n -Lethargy\\n -Generalized hypotonia\\n -Dystonia\\n -Death in infancy\\n -Fever\\n -Vomiting\\n -Diarrhea\\n -Dyspnea\\n -Drowsiness\\n -Sleep disturbance\\n -Glutaric aciduria\\n -Neonatal death\\n -Decreased plasma free carnitine\\n -Dyskinesia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Glutaric acidemia I",
+        "severity": "S9"
+      },
+      {
+        "name": "Glutaric acidemia type I",
+        "severity": "S9"
+      },
+      {
+        "name": "Glutaryl-CoA dehydrogenase deficiency",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:231670",
+      "ORPHA:25"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 10,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Lethargy\\n -Death in infancy\\n -Hyperammonemia\\n -Drowsiness\\n -Sleep disturbance\\n -Neonatal death\\n -Death in childhood\\n -Abnormal circulating glycine concentration\\n -Abnormal circulating carnitine concentration\\n -Feeding difficulties\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Isovaleric acidemia",
+        "severity": "S8"
+      },
+      {
+        "name": "Isovaleric acedemia",
+        "severity": "S10"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:243500",
+      "ORPHA:33",
+      "CCRD:58"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 11,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Microcephaly\\n -Strabismus\\n -Nystagmus\\n -Intellectual disability\\n -Ataxia\\n -Hyporeflexia\\n -Motor delay\\n -Cerebellar atrophy\\n -Generalized hypotonia\\n -Encephalopathy\\n -Growth delay\\n -Death in infancy\\n -Cerebellar agenesis\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Congenital disorder of glycosylation, type Ia",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:212065",
+      "ORPHA:79318"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 12,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Strabismus\\n -Nystagmus\\n -Optic atrophy\\n -Abnormality of prenatal development or birth\\n -Motor delay\\n -Generalized hypotonia\\n -Death in infancy\\n -Ventricular septal defect\\n -Hyperammonemia\\n -Hyperhomocystinemia\\n -Hyperalaninemia\\n -Neonatal death\\n -Death in childhood\\n -Abnormal circulating carnitine concentration\\n -Methylmalonic aciduria\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C9",
+    "diagnoses": [
+      {
+        "name": "Methylmalonic aciduria",
+        "severity": "S8"
+      },
+      {
+        "name": "Methylmalonic aciduria and homocystinuria, Cblc type",
+        "severity": "S9"
+      },
+      {
+        "name": "Methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "Methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "Homocystinuria, type cblC",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:277400",
+      "ORPHA:79282",
+      "CCRD:71"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 13,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Death in infancy\\n -Hypoglycemia\\n -Vomiting\\n -Diarrhea\\n -Elevated hepatic transaminase\\n -Abnormal circulating carnitine concentration\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C5",
+    "diagnoses": [
+      {
+        "name": "Medium chain acyl-CoA dehydrogenase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Acyl-Coa dehydrogenase, medium-chain, deficiency of",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:201450",
+      "ORPHA:42",
+      "CCRD:70"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 14,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Coma\\n -Death in infancy\\n -Hyperkalemia\\n -Hyponatremia\\n -Neonatal death\\n -Respiratory acidosis\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C6",
+    "diagnoses": [
+      {
+        "name": "Succinic semialdehyde dehydrogenase deficiency",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:271980",
+      "ORPHA:22"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 15,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Ptosis\\n -Ectopia lentis\\n -Large hands\\n -Intellectual disability\\n -Motor delay\\n -Long foot\\n -Hyperhomocystinemia\\n -Hypermethioninemia\\n -Death in childhood\\n -Death in adolescence\\n -Fatigue\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Homocystinuria",
+        "severity": "S8"
+      },
+      {
+        "name": "cystathionine beta-synthase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Classic homocystinuria",
+        "severity": "S7"
+      },
+      {
+        "name": "Homocysteinemia",
+        "severity": "S5"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:236200",
+      "ORPHA:394",
+      "CCRD:45"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 16,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Wide mouth\\n -Epicanthus\\n -Carious teeth\\n -Hyperinsulinemia\\n -Sparse hair\\n -Seizure\\n -Death in infancy\\n -Hypoglycemia\\n -Neonatal death\\n -Death in childhood\\n -Abnormal hemoglobin\\n -Feeding difficulties\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Hyperinsulinemic hypoglycemia, familial, 2",
+        "severity": "S8"
+      },
+      {
+        "name": "Congenital hyperinsulinemic hypoglycemia",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:601820",
+      "CCRD:20"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 17,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Intellectual disability\\n -Seizure\\n -Motor delay\\n -Death in infancy\\n -Anemia\\n -Hyperammonemia\\n -Hyperglycinemia\\n -Hepatomegaly\\n -Neonatal death\\n -Death in childhood\\n -Abnormal circulating carnitine concentration\\n -Hypoglycinemia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C9",
+    "diagnoses": [
+      {
+        "name": "Propionic acidemia",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:606054",
+      "ORPHA:35",
+      "CCRD:99"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 18,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Generalized hypotonia\\n -Death in infancy\\n -Thrombocytopenia\\n -Leukopenia\\n -Metabolic acidosis\\n -Apnea\\n -Decreased methylmalonyl-CoA mutase activity\\n -Neonatal death\\n -Feeding difficulties\\n -Methylmalonic aciduria\\n -Abnormal nervous system physiology\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "Methylmalonic aciduria",
+        "severity": "S8"
+      },
+      {
+        "name": "Vitamin B12-unresponsive methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "methylmalonyl-coa mutase deficiency",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:251000",
+      "ORPHA:27",
+      "CCRD:71"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 19,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Coma\\n -Death in infancy\\n -Sudden death\\n -Hypoglycemia\\n -Vomiting\\n -Elevated circulating alkaline phosphatase concentration\\n -Decreased plasma free carnitine\\n -Abnormal circulating aspartate family amino acid concentration\\n -Abnormal circulating alanine concentration\\n -Increased circulating lactate dehydrogenase concentration\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C9",
+    "diagnoses": [
+      {
+        "name": "Primary carnitine deficiency",
+        "severity": "S7"
+      },
+      {
+        "name": "Carnitine deficiency, systemic primary",
+        "severity": "S8"
+      },
+      {
+        "name": "Systemic primary carnitine deficiency",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:212140",
+      "ORPHA:158",
+      "CCRD:15"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 20,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Lethargy\\n -Death in infancy\\n -Clumsiness\\n -Drowsiness\\n -Sleep disturbance\\n -Poor coordination\\n -Neonatal death\\n -Death in childhood\\n -Decreased plasma free carnitine\\n -Feeding difficulties\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "3-methylcrotonyl-CoA carboxylase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "3-Methylcrotonyl-CoA carboxylase 1 deficiency",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:210200",
+      "ORPHA:6"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 21,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Delayed speech and language development\\n -Hypothyroidism\\n -Dysarthria\\n -Spastic diplegia\\n -Encephalopathy\\n -Hyperreflexia\\n -Spastic tetraplegia\\n -Ethylmalonic aciduria\\n -Cytochrome C oxidase-negative muscle fibers\\n -Recurrent viral infections\\n -Abnormal circulating glycine concentration\\n -Death in adolescence\\n -Death in early adulthood\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Mitochondrial complex IV deficiency, nuclear type 1",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:220110"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 22,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Death in infancy\\n -Neonatal death\\n -Abnormal circulating carnitine concentration\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Medium chain acyl-CoA dehydrogenase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Acyl-Coa dehydrogenase, medium-chain, deficiency of",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:201450",
+      "ORPHA:42",
+      "CCRD:70"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 23,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Macrocephaly\\n -Cystic hygroma\\n -Hyperhidrosis\\n -Lethargy\\n -Generalized hypotonia\\n -Dystonia\\n -Death in infancy\\n -Metabolic acidosis\\n -Fever\\n -Vomiting\\n -Diarrhea\\n -Dyspnea\\n -Drowsiness\\n -Sleep disturbance\\n -Glutaric aciduria\\n -Elevated circulating glutaric acid concentration\\n -Neonatal death\\n -Death in childhood\\n -Decreased plasma free carnitine\\n -Dyskinesia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Glutaric acidemia I",
+        "severity": "S9"
+      },
+      {
+        "name": "Glutaric acidemia type I",
+        "severity": "S9"
+      },
+      {
+        "name": "Glutaryl-CoA dehydrogenase deficiency",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:231670",
+      "ORPHA:25"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 24,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Death in infancy\\n -Hypertyrosinemia\\n -Neonatal death\\n -Death in childhood\\n -Hyperphenylalaninemia\\n -Death in adolescence\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Phenylketonuria",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:261600",
+      "ORPHA:716",
+      "CCRD:90"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 25,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Delayed speech and language development\\n -Intellectual disability\\n -Hyperreflexia\\n -Death in infancy\\n -Difficulty walking\\n -Abnormal cerebral white matter morphology\\n -Difficulty climbing stairs\\n -Death in childhood\\n -Difficulty running\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C6",
+    "diagnoses": [
+      {
+        "name": "L-2-hydroxyglutaric aciduria",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:236792",
+      "ORPHA:79314"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 26,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Apathy\\n -Spasticity\\n -Generalized hypotonia\\n -Obesity\\n -Death in infancy\\n -Hypoglycemia\\n -Neonatal death\\n -Hypervalinemia\\n -Hyperleucinemia\\n -Hyperisoleucinemia\\n -Death in early adulthood\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Maple syrup urine disease",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:248600",
+      "ORPHA:511",
+      "CCRD:67"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 27,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Delayed speech and language development\\n -Obesity\\n -Death in infancy\\n -Hyperalaninemia\\n -Aminoaciduria\\n -Increased total bilirubin\\n -Abnormality of galactoside metabolism\\n -Abnormal circulating aspartate family amino acid concentration\\n -Abnormal circulating tyrosine concentration\\n -Death in adolescence\\n -Hypergalactosemia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Classic galactosemia",
+        "severity": "S8"
+      },
+      {
+        "name": "Galactosemia",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:230400",
+      "ORPHA:79239",
+      "CCRD:30"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 28,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Death in infancy\\n -Metabolic acidosis\\n -Fever\\n -Hyperammonemia\\n -Vomiting\\n -Dicarboxylic aciduria\\n -3-Methylglutaric aciduria\\n -Abnormal circulating glycine concentration\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C6",
+    "diagnoses": [
+      {
+        "name": "3-Hydroxy-3-Methylglutaryl-Coa lyase deficiency",
+        "severity": "S9"
+      },
+      {
+        "name": "3-hydroxy-3-methylglutaric aciduria",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:246450",
+      "ORPHA:20"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 29,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Jaundice\\n -Generalized hypotonia\\n -Anemia\\n -Hyperhomocystinemia\\n -Progressive neurologic deterioration\\n -Hypomethioninemia\\n -Death in childhood\\n -Recurrent viral infections\\n -Abnormal circulating porphyrin concentration\\n -Abnormality of folate metabolism\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Homocystinuria",
+        "severity": "S8"
+      },
+      {
+        "name": "cystathionine beta-synthase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Classic homocystinuria",
+        "severity": "S7"
+      },
+      {
+        "name": "Homocysteinemia",
+        "severity": "S5"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:236200",
+      "ORPHA:394",
+      "CCRD:45"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 30,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Death in infancy\\n -Upper airway obstruction\\n -Hypertyrosinemia\\n -Neonatal death\\n -Death in childhood\\n -Hyperphenylalaninemia\\n -Chronic pulmonary obstruction\\n -Death in adolescence\\n -Death in early adulthood\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Phenylketonuria",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:261600",
+      "ORPHA:716",
+      "CCRD:90"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 31,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Apathy\\n -Seizure\\n -Spasticity\\n -Death in infancy\\n -Alopecia\\n -Dyspnea\\n -Fatigue\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Biotinidase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Biotinidase deficiencymultiple carboxylase deficiency, late-onset",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:253260",
+      "ORPHA:79241",
+      "CCRD:13"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 32,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Obesity\\n -Death in infancy\\n -Fever\\n -Vomiting\\n -Hypertyrosinemia\\n -Neonatal death\\n -Death in childhood\\n -Gastrointestinal inflammation\\n -Hyperphenylalaninemia\\n -Death in adolescence\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C9",
+    "diagnoses": [
+      {
+        "name": "Phenylketonuria",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:261600",
+      "ORPHA:716",
+      "CCRD:90"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 33,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Skin rash\\n -Death in infancy\\n -Alopecia\\n -Metabolic acidosis\\n -Increased CSF lactate\\n -Aminoaciduria\\n -Abnormal circulating glycine concentration\\n -Erythematous plaque\\n -Erythematous macule\\n -Erythematous papule\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Biotinidase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Biotinidase deficiencymultiple carboxylase deficiency, late-onset",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:253260",
+      "ORPHA:79241",
+      "CCRD:13"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 34,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Death in infancy\\n -Dehydration\\n -Decreased methylmalonyl-CoA mutase activity\\n -Neonatal death\\n -Feeding difficulties\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "Methylmalonic aciduria",
+        "severity": "S8"
+      },
+      {
+        "name": "Vitamin B12-unresponsive methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "methylmalonyl-coa mutase deficiency",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:251000",
+      "ORPHA:27",
+      "CCRD:71"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 35,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Lethargy\\n -Generalized hypotonia\\n -Death in infancy\\n -Metabolic acidosis\\n -Fever\\n -Increased serum lactate\\n -Drowsiness\\n -Sleep disturbance\\n -Decreased pyruvate carboxylase activity\\n -Propionyl-CoA carboxylase deficiency\\n -Aminoaciduria\\n -Stomatitis\\n -Stridor\\n -Abnormal circulating glycine concentration\\n -Fatigue\\n -Elevated urinary carboxylic acid\\n -Gangrene\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C10",
+    "diagnoses": [
+      {
+        "name": "Biotinidase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Biotinidase deficiencymultiple carboxylase deficiency, late-onset",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:253260",
+      "ORPHA:79241",
+      "CCRD:13"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 36,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Death in infancy\\n -Hypertyrosinemia\\n -Neonatal death\\n -Death in childhood\\n -Hyperphenylalaninemia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C9",
+    "diagnoses": [
+      {
+        "name": "Phenylketonuria",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:261600",
+      "ORPHA:716",
+      "CCRD:90"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 37,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Death in infancy\\n -Dicarboxylic aciduria\\n -3-Methylglutaric aciduria\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "3-Hydroxy-3-Methylglutaryl-Coa lyase deficiency",
+        "severity": "S9"
+      },
+      {
+        "name": "3-hydroxy-3-methylglutaric aciduria",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:246450",
+      "ORPHA:20"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 38,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Carious teeth\\n -Obesity\\n -Elevated hepatic transaminase\\n -Death in childhood\\n -Abnormal circulating porphyrin concentration\\n -Decreased circulating ceruloplasmin concentration\\n -Increased urinary copper concentration\\n -Abnormal circulating aspartate family amino acid concentration\\n -Abnormal circulating alanine concentration\\n -Decreased circulating copper concentration\\n -Decreased serum iron\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C10",
+    "diagnoses": [
+      {
+        "name": "Wilson disease",
+        "severity": "S7"
+      },
+      {
+        "name": "Hepatolenticular degeneration",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:277900",
+      "ORPHA:905",
+      "CCRD:37"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 39,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Death in infancy\\n -Neonatal death\\n -Abnormal circulating carnitine concentration\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Medium chain acyl-CoA dehydrogenase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "Acyl-Coa dehydrogenase, medium-chain, deficiency of",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:201450",
+      "ORPHA:42",
+      "CCRD:70"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 40,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Death in infancy\\n -Hypertyrosinemia\\n -Death in childhood\\n -Recurrent viral infections\\n -Hyperphenylalaninemia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Phenylketonuria",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:261600",
+      "ORPHA:716",
+      "CCRD:90"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 41,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Aminoaciduria\\n -Abnormal circulating glycine concentration\\n -Abnormal circulating carnitine concentration\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C5",
+    "diagnoses": [
+      {
+        "name": "3-methylcrotonyl-CoA carboxylase deficiency",
+        "severity": "S8"
+      },
+      {
+        "name": "3-Methylcrotonyl-CoA carboxylase 1 deficiency",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:210200",
+      "ORPHA:6"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 42,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Generalized hypotonia\\n -Death in infancy\\n -Hepatomegaly\\n -Tachypnea\\n -3-Methylglutaconic aciduria\\n -Neonatal death\\n -Feeding difficulties\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C6",
+    "diagnoses": [
+      {
+        "name": "Carbamoyl-phosphate synthetase 1 deficiency",
+        "severity": "S9"
+      },
+      {
+        "name": "Carbamoyl phosphate synthetase I deficiency, hyperammonemia",
+        "severity": "S10"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:237300",
+      "ORPHA:147"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 43,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Delayed speech and language development\\n -Hyperhidrosis\\n -Abnormality of prenatal development or birth\\n -Lethargy\\n -Motor delay\\n -Obesity\\n -Death in infancy\\n -Hypoglycemia\\n -Respiratory alkalosis\\n -Hyperammonemia\\n -Hypothermia\\n -Drowsiness\\n -Sleep disturbance\\n -Tachypnea\\n -Oroticaciduria\\n -Neonatal death\\n -Death in childhood\\n -Elevated plasma citrulline\\n -Pustule\\n -Acute hepatitis\\n -Chronic hepatitis\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Citrullinemia",
+        "severity": "S8"
+      },
+      {
+        "name": "Citrullinemia type I",
+        "severity": "S9"
+      },
+      {
+        "name": "Citrullinemia, classic",
+        "severity": "S10"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:215700",
+      "ORPHA:247525",
+      "CCRD:18"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 44,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Macrocephaly\\n -Abnormality of visual evoked potentials\\n -Irritability\\n -Seizure\\n -Generalized hypotonia\\n -Death in infancy\\n -Athetosis\\n -Glutaric aciduria\\n -Neonatal death\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C6",
+    "diagnoses": [
+      {
+        "name": "Glutaric acidemia I",
+        "severity": "S9"
+      },
+      {
+        "name": "Glutaric acidemia type I",
+        "severity": "S9"
+      },
+      {
+        "name": "Glutaryl-CoA dehydrogenase deficiency",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:231670",
+      "ORPHA:25"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 45,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Delayed speech and language development\\n -4-Hydroxyphenylpyruvic aciduria\\n -Elevated urinary delta-aminolevulinic acid\\n -Hypertyrosinemia\\n -Death in childhood\\n -Abnormal circulating phenylalanine concentration\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C5",
+    "diagnoses": [
+      {
+        "name": "Tyrosinemia, type I",
+        "severity": "S10"
+      },
+      {
+        "name": "Tyrosinemia type 1",
+        "severity": "S9"
+      },
+      {
+        "name": "Tyrosinemia I",
+        "severity": "S9"
+      },
+      {
+        "name": "hepatorenal hyrosinemia",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:276700",
+      "ORPHA:882",
+      "CCRD:115.1"
+    ],
+    "origin": "RAMEDIS"
   }
 ]

@@ -109,7 +109,7 @@ class EmbeddingClient:
                 )
                 
                 if response.status_code == 200:
-                    print("SapBERT endpoint is ready!")
+                    print("SapBERT endpoint ready.")
                     self._is_warmed_up = True
                     return True
                 elif response.status_code == 503:
