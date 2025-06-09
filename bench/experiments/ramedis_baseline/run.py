@@ -422,7 +422,7 @@ def process_semantic_evaluation_parallel(
 # PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 
 # Batch size para asignación de severidad
-SEVERITY_LLM_BATCH_SIZE = 100
+SEVERITY_LLM_BATCH_SIZE = 50
 
 def assign_severities_batch(
     llm: Azure, 
@@ -748,6 +748,124 @@ def process_severity_evaluation(
     
     return results
 
+# PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+# 6. SUMMARY GENERATION
+# PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+
+def extract_semantic_scores(semantic_data: Dict) -> List[float]:
+    """
+    Extrae todos los scores semánticos del JSON de evaluación semántica.
+    """
+    scores = []
+    evaluations = semantic_data.get('evaluations', [])
+    
+    for evaluation in evaluations:
+        best_match = evaluation.get('best_match', {})
+        score = best_match.get('score')
+        
+        if score is not None:
+            scores.append(float(score))
+        else:
+            logger.warning(f"No se encontró score para case_id {evaluation.get('case_id', 'desconocido')}")
+    
+    return scores
+
+
+def extract_severity_scores(severity_data: Dict) -> List[float]:
+    """
+    Extrae todos los scores de severidad del JSON de evaluación de severidad.
+    """
+    scores = []
+    evaluations = severity_data.get('evaluations', [])
+    
+    for evaluation in evaluations:
+        score = evaluation.get('final_score')
+        
+        if score is not None:
+            scores.append(float(score))
+        else:
+            logger.warning(f"No se encontró final_score para id {evaluation.get('id', 'desconocido')}")
+    
+    return scores
+
+
+def calculate_statistics(scores: List[float]) -> Dict[str, Union[float, Dict[str, float]]]:
+    """
+    Calcula estadísticas descriptivas para una lista de scores.
+    """
+    if not scores:
+        return {
+            "mean_score": 0.0,
+            "standard_deviation": 0.0,
+            "range": {
+                "min": 0.0,
+                "max": 0.0
+            }
+        }
+    
+    scores_array = np.array(scores)
+    
+    return {
+        "mean_score": round(float(np.mean(scores_array)), 4),
+        "standard_deviation": round(float(np.std(scores_array)), 4),
+        "range": {
+            "min": round(float(np.min(scores_array)), 4),
+            "max": round(float(np.max(scores_array)), 4)
+        }
+    }
+
+
+def extract_llm_configs(config: Dict) -> Dict:
+    """
+    Extrae solo las configuraciones relevantes de LLM del config.
+    """
+    llm_configs = config.get('llm_configs', {})
+    filtered_configs = {}
+    
+    for llm_name, llm_config in llm_configs.items():
+        filtered_configs[llm_name] = {
+            "model": llm_config.get("model", ""),
+            "prompt": llm_config.get("prompt", "")
+        }
+    
+    return filtered_configs
+
+
+def generate_summary_json(
+    semantic_output: Dict,
+    severity_eval_output: Dict,
+    config: Dict,
+    results_dir: Path,
+    logger: logging.Logger
+) -> None:
+    """
+    Genera el JSON de resumen con estadísticas.
+    """
+    # Extraer scores
+    semantic_scores = extract_semantic_scores(semantic_output)
+    severity_scores = extract_severity_scores(severity_eval_output)
+    
+    # Calcular estadísticas
+    semantic_stats = calculate_statistics(semantic_scores)
+    severity_stats = calculate_statistics(severity_scores)
+    
+    # Construir el JSON de salida
+    summary_output = {
+        "metadata": {
+            "experiment_name": config.get("experiment_name", ""),
+            "llm_configs": extract_llm_configs(config)
+        },
+        "semantic_evaluation": semantic_stats,
+        "severity_evaluation": severity_stats
+    }
+    
+    # Guardar el resumen
+    with open(results_dir / "summary.json", 'w', encoding='utf-8') as f:
+        json.dump(summary_output, f, indent=4, ensure_ascii=False)
+    
+    logger.info("Saved summary.json")
+    logger.info(f"  Semantic Evaluation - Mean: {semantic_stats['mean_score']}")
+    logger.info(f"  Severity Evaluation - Mean: {severity_stats['mean_score']}")
 
 # PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 # MAIN EXECUTION PIPELINE
