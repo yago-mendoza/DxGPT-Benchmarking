@@ -1,0 +1,22 @@
+experiment_name: "Ramedis Baseline con GPT-4o"
+dataset_path: "bench/datasets/RAMEDIS.json" # en bench/datasets tiene que estar
+
+# Configuraciones de LLM (instanciadas por run.py)
+llm_configs:
+  # Alias para el LLM que genera diagnósticos candidatos
+  candidate_dx_gpt:
+    model: "jonsnow"
+    prompt: "eval-prompts/candidate_prompt.txt"
+    output_schema: "eval-prompts/candidate_output_schema.json"
+    params:
+      temperature: 0.7
+      max_tokens: 1000
+
+  # Alias para el LLM que asigna severidad a los DDX únicos
+  severity_assigner_llm:
+    model: "gpt-4o"  # Can use same or different model
+    prompt: "eval-prompts/severity_assignment_batch_prompt.txt"
+    output_schema: "eval-prompts/severity_assignment_batch_schema.json"
+    params:
+      temperature: 0.1
+      max_tokens: 2000

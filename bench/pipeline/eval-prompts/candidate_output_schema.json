@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "diagnoses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "A disease or medical condition"
+      },
+      "minItems": 5,
+      "maxItems": 5,
+      "description": "List of exactly 5 differential diseases or medical conditions"
+    }
+  },
+  "required": ["diagnoses"],
+  "additionalProperties": false
+}
