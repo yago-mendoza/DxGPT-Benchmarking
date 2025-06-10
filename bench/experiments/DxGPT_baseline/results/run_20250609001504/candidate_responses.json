@@ -3,7 +3,7 @@
     "experiment_name": "Ramedis Baseline con GPT-4o",
     "llm_config_alias": "candidate_dx_gpt",
     "model_used": "gpt-4o",
-    "prompt_path": "experiments/ramedis_baseline/eval-prompts/candidate_prompt.txt",
+    "prompt_path": "experiments/DxGPT_baseline/eval-prompts/candidate_prompt.txt",
     "dataset_path": "bench/datasets/RAMEDIS.json",
     "timestamp": "2025-06-09T00:40:58.313759"
   },

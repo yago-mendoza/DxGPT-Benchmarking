@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparación de Modelos - Ramedis Baseline</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .drop-zone {
+            background-color: #1a1a1a;
+            border: 2px dashed #dc2626;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .drop-zone:hover {
+            border-color: #ef4444;
+            background-color: #262626;
+        }
+
+        .drop-zone.dragging {
+            border-color: #ef4444;
+            background-color: #262626;
+            transform: scale(1.02);
+        }
+
+        .drop-zone p {
+            font-size: 1.2rem;
+            color: #a3a3a3;
+            margin-bottom: 10px;
+        }
+
+        .drop-zone .icon {
+            font-size: 3rem;
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+
+        .chart-container {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .models-panel {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .models-panel h2 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        .model-item {
+            background-color: #262626;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .model-item:hover {
+            background-color: #303030;
+        }
+
+        .model-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex: 1;
+        }
+
+        .model-controls input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #dc2626;
+        }
+
+        .model-controls input[type="text"] {
+            background-color: #1a1a1a;
+            border: 1px solid #404040;
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            flex: 1;
+            font-size: 14px;
+        }
+
+        .model-controls input[type="color"] {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        .model-controls select {
+            background-color: #1a1a1a;
+            border: 1px solid #404040;
+            color: #ffffff;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .model-controls option {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .remove-btn {
+            background-color: #dc2626;
+            color: #ffffff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+        .remove-btn:hover {
+            background-color: #ef4444;
+        }
+
+        .export-controls {
+            background-color: #1a1a1a;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .export-btn {
+            background-color: #dc2626;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .export-btn:hover {
+            background-color: #ef4444;
+            transform: translateY(-2px);
+        }
+
+        .info-text {
+            color: #a3a3a3;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #chartCanvas {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        
+        .zoom-controls-panel {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background: rgba(26, 26, 26, 0.95);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #404040;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            z-index: 1100;
+        }
+        
+        .zoom-controls-panel h3 {
+            color: #ffffff;
+            font-size: 13px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .zoom-control-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .zoom-control-group label {
+            color: #a3a3a3;
+            font-size: 11px;
+            width: 40px;
+            font-weight: 500;
+        }
+        
+        .zoom-control-group input {
+            width: 55px;
+            background: #0a0a0a;
+            color: #ffffff;
+            border: 1px solid #404040;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .zoom-control-group input:hover {
+            border-color: #dc2626;
+        }
+        
+        .zoom-control-group input:focus {
+            outline: none;
+            border-color: #dc2626;
+            box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+        }
+        
+        .apply-zoom-btn {
+            margin-top: 10px;
+            width: 100%;
+            background: #dc2626;
+            color: #ffffff;
+            border: none;
+            padding: 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease;
+        }
+        
+        .apply-zoom-btn:hover {
+            background: #ef4444;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+        }
+        
+        .apply-zoom-btn:hover[style*="background: #737373"] {
+            background: #525252 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Comparación de Modelos</h1>
+        
+        <div class="drop-zone" id="dropZone">
+            <div class="icon">=></div>
+            <p>Arrastra y suelta archivos summary.json aquí</p>
+            <p style="font-size: 0.9rem; color: #737373;">o haz clic para seleccionar</p>
+            <input type="file" id="fileInput" accept=".json" multiple>
+        </div>
+
+        <div class="models-panel hidden" id="modelsPanel">
+            <h2>Modelos Cargados</h2>
+            <div id="modelsList"></div>
+        </div>
+
+        <div class="chart-container hidden" id="chartContainer">
+            <canvas id="chartCanvas"></canvas>
+        </div>
+        
+        <div class="zoom-controls-panel hidden" id="zoomControlsPanel">
+            <h3>Control de Zoom</h3>
+            <div class="zoom-control-group">
+                <label>X Min:</label>
+                <input type="number" id="xMin" value="0" min="0" max="1" step="0.01">
+            </div>
+            <div class="zoom-control-group">
+                <label>X Max:</label>
+                <input type="number" id="xMax" value="1" min="0" max="1" step="0.01">
+            </div>
+            <div class="zoom-control-group">
+                <label>Y Min:</label>
+                <input type="number" id="yMin" value="0" min="0" max="1" step="0.01">
+            </div>
+            <div class="zoom-control-group">
+                <label>Y Max:</label>
+                <input type="number" id="yMax" value="1" min="0" max="1" step="0.01">
+            </div>
+            <button class="apply-zoom-btn" onclick="applyZoomLimits()">Aplicar Zoom</button>
+            <button class="apply-zoom-btn" onclick="resetChartZoom()" style="margin-top: 8px; background: #737373;">Reset Zoom</button>
+        </div>
+
+        <div class="export-controls hidden" id="exportControls">
+            <button class="export-btn" onclick="exportChart('white')">Exportar PNG (Fondo Blanco)</button>
+            <button class="export-btn" onclick="exportChart('dark')">Exportar PNG (Fondo Oscuro)</button>
+            <button class="export-btn" onclick="exportChart('transparent')">Exportar PNG (Sin Fondo)</button>
+        </div>
+
+        <p class="info-text">Semantic Score (Eje Y) vs Severity Score (Eje X)</p>
+    </div>
+
+    <script>
+        let chart = null;
+        let models = [];
+        const markerStyles = ['circle', 'cross', 'crossRot', 'dash', 'line', 'rect', 'rectRounded', 'rectRot', 'star', 'triangle'];
+        
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const modelsPanel = document.getElementById('modelsPanel');
+        const modelsList = document.getElementById('modelsList');
+        const chartContainer = document.getElementById('chartContainer');
+        const exportControls = document.getElementById('exportControls');
+
+        // Eventos de drag and drop
+        dropZone.addEventListener('click', () => fileInput.click());
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragging');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragging');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragging');
+            handleFiles(e.dataTransfer.files);
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function generateRandomColor() {
+            const colors = ['#dc2626', '#ef4444', '#f87171', '#fca5a5', '#fecaca', '#fee2e2', 
+                           '#7c2d12', '#9a3412', '#c2410c', '#ea580c', '#f97316', '#fb923c'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function handleFiles(files) {
+            Array.from(files).forEach(file => {
+                if (file.type === 'application/json') {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        try {
+                            const data = JSON.parse(e.target.result);
+                            processModelData(data, file.name);
+                        } catch (error) {
+                            alert('Error al leer el archivo: ' + file.name);
+                        }
+                    };
+                    reader.readAsText(file);
+                }
+            });
+        }
+
+        function processModelData(data, filename) {
+            const modelName = data.metadata?.llm_configs?.candidate_dx_gpt?.model || filename;
+            const semanticScore = data.semantic_evaluation?.mean_score || 0;
+            const severityScore = data.severity_evaluation?.mean_score || 0;
+
+            const model = {
+                id: Date.now() + Math.random(),
+                originalName: modelName,
+                displayName: modelName,
+                semanticScore: semanticScore,
+                severityScore: severityScore,
+                color: generateRandomColor(),
+                markerStyle: markerStyles[models.length % markerStyles.length],
+                visible: true,
+                data: data
+            };
+
+            models.push(model);
+            updateUI();
+        }
+
+        function updateUI() {
+            if (models.length > 0) {
+                modelsPanel.classList.remove('hidden');
+                chartContainer.classList.remove('hidden');
+                exportControls.classList.remove('hidden');
+                document.getElementById('zoomControlsPanel').classList.remove('hidden');
+                renderModelsList();
+                updateChart();
+            } else {
+                modelsPanel.classList.add('hidden');
+                chartContainer.classList.add('hidden');
+                exportControls.classList.add('hidden');
+                document.getElementById('zoomControlsPanel').classList.add('hidden');
+            }
+        }
+
+        function renderModelsList() {
+            modelsList.innerHTML = '';
+            models.forEach(model => {
+                const modelItem = document.createElement('div');
+                modelItem.className = 'model-item';
+                modelItem.innerHTML = `
+                    <div class="model-controls">
+                        <input type="checkbox" ${model.visible ? 'checked' : ''} 
+                               onchange="toggleModelVisibility('${model.id}', this.checked)">
+                        <input type="text" value="${model.displayName}" 
+                               onchange="updateModelName('${model.id}', this.value)"
+                               placeholder="Nombre del modelo">
+                        <input type="color" value="${model.color}" 
+                               onchange="updateModelColor('${model.id}', this.value)">
+                        <select onchange="updateModelMarker('${model.id}', this.value)">
+                            ${markerStyles.map(style => 
+                                `<option value="${style}" ${style === model.markerStyle ? 'selected' : ''}>${style}</option>`
+                            ).join('')}
+                        </select>
+                        <button class="remove-btn" onclick="removeModel('${model.id}')">Eliminar</button>
+                    </div>
+                `;
+                modelsList.appendChild(modelItem);
+            });
+        }
+
+        function updateModelName(modelId, newName) {
+            const model = models.find(m => m.id == modelId);
+            if (model) {
+                model.displayName = newName;
+                updateChart();
+            }
+        }
+
+        function updateModelColor(modelId, newColor) {
+            const model = models.find(m => m.id == modelId);
+            if (model) {
+                model.color = newColor;
+                updateChart();
+            }
+        }
+
+        function updateModelMarker(modelId, newMarker) {
+            const model = models.find(m => m.id == modelId);
+            if (model) {
+                model.markerStyle = newMarker;
+                updateChart();
+            }
+        }
+
+        function toggleModelVisibility(modelId, visible) {
+            const model = models.find(m => m.id == modelId);
+            if (model) {
+                model.visible = visible;
+                updateChart();
+            }
+        }
+
+        function removeModel(modelId) {
+            models = models.filter(m => m.id != modelId);
+            updateUI();
+        }
+
+        function updateChart() {
+            const ctx = document.getElementById('chartCanvas').getContext('2d');
+
+            if (chart) {
+                chart.destroy();
+            }
+
+            const datasets = models
+                .filter(model => model.visible)
+                .map(model => ({
+                    label: model.displayName,
+                    data: [{
+                        x: model.severityScore,
+                        y: model.semanticScore
+                    }],
+                    backgroundColor: model.color,
+                    borderColor: model.color,
+                    borderWidth: 2,
+                    pointStyle: model.markerStyle,
+                    pointRadius: 10,
+                    pointHoverRadius: 12
+                }));
+
+            chart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: {
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'right',
+                            labels: {
+                                color: '#ffffff',
+                                font: {
+                                    size: 14
+                                },
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: '#262626',
+                            titleColor: '#ffffff',
+                            bodyColor: '#ffffff',
+                            borderColor: '#404040',
+                            borderWidth: 1,
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: Semantic=${context.parsed.y.toFixed(4)}, Severity=${context.parsed.x.toFixed(4)}`;
+                                }
+                            }
+                        },
+                        zoom: {
+                            pan: {
+                                enabled: true,
+                                mode: 'xy'
+                            },
+                            zoom: {
+                                wheel: {
+                                    enabled: true
+                                },
+                                mode: 'xy'
+                            },
+                            limits: {
+                                x: {min: 0, max: 1},
+                                y: {min: 0, max: 1}
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            position: 'bottom',
+                            title: {
+                                display: true,
+                                text: 'Severity Score',
+                                color: '#ffffff',
+                                font: {
+                                    size: 16
+                                }
+                            },
+                            grid: {
+                                color: '#404040',
+                                lineWidth: 1
+                            },
+                            ticks: {
+                                color: '#ffffff',
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            min: 0,
+                            max: 1,
+                            reverse: true
+                        },
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Semantic Score',
+                                color: '#ffffff',
+                                font: {
+                                    size: 16
+                                }
+                            },
+                            grid: {
+                                color: '#404040',
+                                lineWidth: 1
+                            },
+                            ticks: {
+                                color: '#ffffff',
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            min: 0,
+                            max: 1
+                        }
+                    }
+                }
+            });
+            
+            // Configurar el comportamiento del canvas para pan
+            const canvas = document.getElementById('chartCanvas');
+            canvas.style.cursor = 'grab';
+            
+            // Resetear zoom para habilitar pan
+            if (chart.resetZoom) {
+                chart.resetZoom();
+            }
+            
+            canvas.addEventListener('mousedown', () => {
+                canvas.style.cursor = 'grabbing';
+            });
+            
+            canvas.addEventListener('mouseup', () => {
+                canvas.style.cursor = 'grab';
+            });
+            
+            canvas.addEventListener('mouseleave', () => {
+                canvas.style.cursor = 'grab';
+            });
+        }
+
+        function resetChartZoom() {
+            if (chart && chart.resetZoom) {
+                chart.resetZoom();
+            }
+        }
+        
+        function applyZoomLimits() {
+            if (!chart) return;
+            
+            const xMin = parseFloat(document.getElementById('xMin').value);
+            const xMax = parseFloat(document.getElementById('xMax').value);
+            const yMin = parseFloat(document.getElementById('yMin').value);
+            const yMax = parseFloat(document.getElementById('yMax').value);
+            
+            // Debido a que el eje X está invertido, invertimos los valores
+            chart.zoomScale('x', {min: xMin, max: xMax});
+            chart.zoomScale('y', {min: yMin, max: yMax});
+        }
+
+        function exportChart(backgroundType) {
+            const canvas = document.getElementById('chartCanvas');
+            const tempCanvas = document.createElement('canvas');
+            const tempCtx = tempCanvas.getContext('2d');
+            
+            tempCanvas.width = canvas.width;
+            tempCanvas.height = canvas.height;
+
+            // Configurar el fondo según el tipo
+            if (backgroundType === 'white') {
+                tempCtx.fillStyle = '#ffffff';
+                tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+            } else if (backgroundType === 'dark') {
+                tempCtx.fillStyle = '#0a0a0a';
+                tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+            }
+            // Si es transparent, no dibujamos fondo
+
+            // Dibujar el gráfico encima
+            tempCtx.drawImage(canvas, 0, 0);
+
+            // Si es fondo blanco, necesitamos cambiar los colores del texto
+            if (backgroundType === 'white') {
+                // Crear una nueva versión del gráfico con colores oscuros
+                const originalColors = {
+                    legend: chart.options.plugins.legend.labels.color,
+                    xTitle: chart.options.scales.x.title.color,
+                    yTitle: chart.options.scales.y.title.color,
+                    xTicks: chart.options.scales.x.ticks.color,
+                    yTicks: chart.options.scales.y.ticks.color,
+                    xGrid: chart.options.scales.x.grid.color,
+                    yGrid: chart.options.scales.y.grid.color
+                };
+
+                // Cambiar temporalmente los colores
+                chart.options.plugins.legend.labels.color = '#000000';
+                chart.options.scales.x.title.color = '#000000';
+                chart.options.scales.y.title.color = '#000000';
+                chart.options.scales.x.ticks.color = '#000000';
+                chart.options.scales.y.ticks.color = '#000000';
+                chart.options.scales.x.grid.color = '#cccccc';
+                chart.options.scales.y.grid.color = '#cccccc';
+                
+                chart.update('none'); // Actualizar sin animación
+                
+                // Limpiar y redibujar
+                tempCtx.fillStyle = '#ffffff';
+                tempCtx.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+                tempCtx.drawImage(canvas, 0, 0);
+
+                // Restaurar colores originales
+                chart.options.plugins.legend.labels.color = originalColors.legend;
+                chart.options.scales.x.title.color = originalColors.xTitle;
+                chart.options.scales.y.title.color = originalColors.yTitle;
+                chart.options.scales.x.ticks.color = originalColors.xTicks;
+                chart.options.scales.y.ticks.color = originalColors.yTicks;
+                chart.options.scales.x.grid.color = originalColors.xGrid;
+                chart.options.scales.y.grid.color = originalColors.yGrid;
+                
+                chart.update('none');
+            }
+
+            // Descargar la imagen
+            tempCanvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `model_comparison_${backgroundType}_${new Date().toISOString().slice(0, 10)}.png`;
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+    </script>
+</body>
+</html>

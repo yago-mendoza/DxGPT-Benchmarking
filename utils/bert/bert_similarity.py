@@ -9,7 +9,7 @@ Requirements:
 
 Configuration:
     Create a .env file with:
-        SAPBERT_API_URL=https://<your-endpoint-id>.huggingface.cloud
+        SAPBERT_ENDPOINT_URL=https://<your-endpoint-id>.huggingface.cloud
         HF_TOKEN=hf_<your_token_with_permissions>
 """
 
@@ -51,7 +51,7 @@ class ApiCredentials:
         """Load credentials from environment variables."""
         load_dotenv()
         
-        url = os.getenv("SAPBERT_API_URL")
+        url = os.getenv("SAPBERT_ENDPOINT_URL")
         token = os.getenv("HF_TOKEN")
         
         if not url or not token:
@@ -96,7 +96,7 @@ class EmbeddingClient:
         print("Warming up SapBERT endpoint...")
         test_text = ["test"]
         
-        max_attempts = 5
+        max_attempts = 6
         wait_time = 5.0
         
         for attempt in range(max_attempts):
@@ -432,6 +432,7 @@ def calculate_semantic_similarity(
     input_a: Union[str, List[str]],
     input_b: Union[str, List[str]]
 ) -> Dict[str, Dict[str, Optional[float]]]:
+    print(input_a, input_b)
     """
     Calculate semantic similarity between medical terms with cross-comparison.
     

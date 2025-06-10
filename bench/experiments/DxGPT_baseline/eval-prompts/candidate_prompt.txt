@@ -13,8 +13,3 @@ Important guidelines:
 
 Clinical Case:
 {case_description}
-
-Please respond with a JSON array containing exactly 5 diagnosis names:
-{
-  "diagnoses": ["Diagnosis 1", "Diagnosis 2", "Diagnosis 3", "Diagnosis 4", "Diagnosis 5"]
-}

@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Death in infancy\\n -Metabolic acidosis\\n -Decreased methylmalonyl-CoA mutase activity\\n -Death in childhood\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C9",
+    "diagnoses": [
+      {
+        "name": "Methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "Methylmalonic aciduria",
+        "severity": "S8"
+      },
+      {
+        "name": "Vitamin B12-unresponsive methylmalonic acidemia",
+        "severity": "S9"
+      },
+      {
+        "name": "methylmalonyl-coa mutase deficiency",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:251000",
+      "ORPHA:27",
+      "CCRD:71"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 2,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Motor delay\\n -Generalized hypotonia\\n -Death in infancy\\n -Pneumonia\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C8",
+    "diagnoses": [
+      {
+        "name": "Succinic semialdehyde dehydrogenase deficiency",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:271980",
+      "ORPHA:22"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 3,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Abnormality of prenatal development or birth\\n -Death in infancy\\n -Hypertyrosinemia\\n -Neonatal death\\n -Hyperphenylalaninemia\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C7",
+    "diagnoses": [
+      {
+        "name": "Phenylketonuria",
+        "severity": "S7"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:261600",
+      "ORPHA:716",
+      "CCRD:90"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 4,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Congenital diaphragmatic hernia\\n -Motor delay\\n -Cerebellar atrophy\\n -Failure to thrive\\n -Death in infancy\\n -Hiatus hernia\\n -Lipodystrophy\\n -Abnormal muscle physiology\\n -Cerebellar agenesis\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C10",
+    "diagnoses": [
+      {
+        "name": "Congenital disorder of glycosylation, type Ia",
+        "severity": "S8"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:212065",
+      "ORPHA:79318"
+    ],
+    "origin": "RAMEDIS"
+  },
+  {
+    "id": 5,
+    "case": "Motivo de consulta:\\nPaciente acude a consulta para ser diagnosticado\\n\\nAnamnesis:\\n\\nPaciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\n -Hydronephrosis\\n -Delayed speech and language development\\n -Abnormality of prenatal development or birth\\n -Intellectual disability\\n -Motor delay\\n -Generalized hypotonia\\n -Death in infancy\\n -Fever\\n -Opisthotonus\\n -Athetosis\\n -Kyphoscoliosis\\n -Neonatal death\\n -Death in childhood\\n -Hypervalinemia\\n -Hyperleucinemia\\n -Hyperisoleucinemia\\n -Death in adolescence\\n -Feeding difficulties\\n -Elevated urinary carboxylic acid\\n\\nAntecedentes:\\n\\nNo hay antecedentes\\n\\nExploracion:\\n\\nNo se realiza\\n\\nPruebas clinicas:\\n",
+    "complexity": "C10",
+    "diagnoses": [
+      {
+        "name": "Maple syrup urine disease",
+        "severity": "S9"
+      }
+    ],
+    "diagnostic_codes": [
+      "OMIM:248600",
+      "ORPHA:511",
+      "CCRD:67"
+    ],
+    "origin": "RAMEDIS"
+  }
+]

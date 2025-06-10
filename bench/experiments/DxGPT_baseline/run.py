@@ -29,9 +29,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 from collections import defaultdict
 import time
+from typing import Union
+
 
 # Importar utilidades del proyecto
-from utils.llm import Azure
+from utils.llm import *
 from utils.bert import calculate_semantic_similarity, warm_up_endpoint
 
 
@@ -134,7 +136,7 @@ def load_dataset(dataset_path: str, base_dir: Path) -> List[Dict[str, Any]]:
     Returns:
         Lista de casos clínicos con sus diagnósticos de referencia
     """
-    # Navegar desde experiments/ramedis_baseline hasta la raíz del proyecto
+    # Navegar desde experiments/DxGPT_baseline hasta la raíz del proyecto
     project_root = base_dir.parent.parent.parent
     full_path = project_root / dataset_path
     
@@ -182,7 +184,7 @@ def create_llm_from_config(llm_config: Dict[str, Any], base_dir: Path) -> Tuple[
             generation_params[key] = params[key]
     
     # Crear instancia LLM
-    llm = Azure(
+    llm = get_llm(
         llm_config['model'],
         **config_params
     )
@@ -913,7 +915,7 @@ def main():
                 "experiment_name": config["experiment_name"],
                 "llm_config_alias": "candidate_dx_gpt",
                 "model_used": config["llm_configs"]["candidate_dx_gpt"]["model"],
-                "prompt_path": f"experiments/ramedis_baseline/{config['llm_configs']['candidate_dx_gpt']['prompt']}",
+                "prompt_path": f"experiments/DxGPT_baseline/{config['llm_configs']['candidate_dx_gpt']['prompt']}",
                 "dataset_path": config["dataset_path"],
                 "timestamp": datetime.now().isoformat()
             },
@@ -968,7 +970,7 @@ def main():
                 "experiment_name": config["experiment_name"],
                 "llm_config_alias": "severity_assigner_llm",
                 "model_used": config["llm_configs"]["severity_assigner_llm"]["model"],
-                "prompt_path": f"experiments/ramedis_baseline/{config['llm_configs']['severity_assigner_llm']['prompt']}",
+                "prompt_path": f"experiments/DxGPT_baseline/{config['llm_configs']['severity_assigner_llm']['prompt']}",
                 "timestamp": datetime.now().isoformat()
             },
             "assigned_severities": severity_assignments

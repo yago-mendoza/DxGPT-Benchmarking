@@ -3,7 +3,7 @@
     "experiment_name": "Ramedis Baseline con GPT-4o",
     "llm_config_alias": "severity_assigner_llm",
     "model_used": "gpt-4o",
-    "prompt_path": "experiments/ramedis_baseline/eval-prompts/severity_assignment_batch_prompt.txt",
+    "prompt_path": "experiments/DxGPT_baseline/eval-prompts/severity_assignment_batch_prompt.txt",
     "timestamp": "2025-06-09T01:18:38.687888"
   },
   "assigned_severities": [

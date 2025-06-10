@@ -1,6 +1,6 @@
 """
+FILE : azure.py
 AzureLLM v4 - Clean, powerful wrapper for Azure OpenAI API
-Genius-level abstractions with maximum readability.
 """
 
 import os
@@ -11,6 +11,7 @@ from typing import Dict, Any, Optional, Union, Callable, List
 from dataclasses import dataclass, field
 from functools import cached_property
 from openai import AzureOpenAI
+from .base import BaseLLM
 
 
 # === Core Data Structures ===
@@ -275,7 +276,7 @@ class Template:
 
 # === Main LLM Interface ===
 
-class AzureLLM:
+class AzureLLM(BaseLLM):
     """
     Elegant Azure OpenAI wrapper with genius-level abstractions.
     
