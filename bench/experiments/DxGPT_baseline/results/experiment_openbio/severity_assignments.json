@@ -1,0 +1,5283 @@
+{
+  "metadata": {
+    "experiment_name": "Ramedis Baseline con GPT-4o",
+    "llm_config_alias": "severity_assigner_llm",
+    "model_used": "gpt-4o",
+    "prompt_path": "experiments/DxGPT_baseline/eval-prompts/severity_assignment_batch_prompt.txt",
+    "timestamp": "2025-06-10T15:54:42.440278"
+  },
+  "assigned_severities": [
+    {
+      "ddx_unique_name": "",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Sialidosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Chondrodysplasia punctata",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Howel-Evans syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "\"] }\",\"options\": [ \"Mucopolysaccharidosis type 3\",\"Mucolipidosis IV\",\"Niemann-Pick disease type C\",\"Gaucher disease type 2\",\"GM2 gangliosidosis, Tay-Sachs disease\" ] }",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis type 2/3",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "-Phenylalanine hydroxylase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Craniosynostosis-radial aplasia syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Elevated circulating creatine kinase concentration",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Hyperkalemia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hoyeraal-Hreidarsson syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Tyrosinemia type 1\",\"probability\":0.5}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Dicarboxylic aciduria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Thrombasthenia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Lipoid proteinosis",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Glucose-6-phosphate dehydrogenase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hirschsprung's disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Osteogenesis Imperfecta Type 1",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hypocomplementemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Neuronal ceroid lipofuscinoses",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Osteoporosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "3-Hydroxy-3-Methylglutaryl-CoA Lyase Deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Nijmegen breakage syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Combined methylmalonic acidemia and homocystinuria",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Hemochromatosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos Syndrome, Classical Type",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Citullinemia type II",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Reactive arthritis",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type II",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type IV",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "MODY2",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Muy probable",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mandibulofacial dysostosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type 5",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Achondroplasia\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Viral hepatitis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Chromosome 22q11.2 deletion syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Molybdenum cofactor deficiency",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Fibromuscular dysplasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Aminoaciduria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Porphyria variegata",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Beals syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Niemann-Pick disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos Syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "\"] }\"]",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pontocerebellar hypoplasia type 1",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Chromosome 18p deletion syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "CHARGE syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Methylmalonic acidemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Pahenylketonuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Sjögren syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Cohen syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Pierre Robin syndrome\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Meningitis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Huntington disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "MNGIE",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Citrus trisomy 18",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperthyroidism",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Spinal cord injury",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Carnitine transporter deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis type 2",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Klippel-Feil syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Maple syrup urine disease type 1A",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Diagnosis 1",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Tuberous sclerosis complex",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Usher syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Craniopharyngioma",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Guillain-Barré syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Myelodysplastic syndromes",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Short chain acyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Elevated 7-dehydrocholesterol",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "-Maple syrup urine disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Stargardt disease",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Kartagener syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Congenital Myasthenic Syndromes",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "\"]}\"]}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Best disease",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Immunodeficiency 23",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mandibuloacral dysplasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Spondylocostal dysostosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Pearson syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Duodenal atresia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spinal muscular atrophy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Tetrasomy 21",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Congenital hepatic fibrosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "G6PD deficiency",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Congenital disorder of glycosylation type 1c",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Pseudoachondroplasia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Sjogren-Larsson syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Four",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Pseudohypoaldosteronism",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Adrenomyeloneuropathy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hypercholesterolemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "\"] }\",\"patientData\":{ \"age\":\"\",\"sex\":\"\" } }",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Senior-Loken syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 1a",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"diagnosis\":\"Methylmalonic acidemia\"}",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Goltz syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Dihydropyrimidine dehydrogenase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- Multiple carboxylase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Methylenetetrahydrofolate reductase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hypothyroidism",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Sweet syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 4B",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "\"]}\",",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Melnick-Needles syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Optic neuritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Craniofacial-deafness-hand syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cyclopia",
+      "inferred_severity": "S10"
+    },
+    {
+      "ddx_unique_name": "L-2-hydroxyglutaric aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Cockayne Syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hurler syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "WAGR syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Dermatomyositis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Systemic lupus erythematosus",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Nestor-Guillermo progeria syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cutis laxa, autosomal recessive type 1",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ankylosing spondylitis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "GM2 gangliosidoses",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Krabbe disease",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Wolf-Hirschhorn syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Citrullinemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Aicardi-Goutières syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Botulism",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Hypertrophic cardiomyopathy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Corticobasal degeneration",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Tuberculosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Peripartum cardiomyopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Pseudodiastrophic dysplasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Chromosome 17, trisomy 17q12",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Argininosuccinate synthase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Leigh syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Toxoplasmosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Congenital rubella",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Cystic fibrosis\",\"probability\":0.3}",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "  ],",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "\"]}\"]",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 3",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Methylmalonic acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Weill-Marchesani Syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cushing syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Phenylketonuria type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gorlin-Chaudhary-Moss syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Primary lateral sclerosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hyperextensible skin",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Cholesteryl ester storage disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"id\":\"2\",\"diagnosis\":\"Cerebro-oculo-facio-skeletal syndrome\"}",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cerebral creatine deficiency syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"diagnosis\":\"Propionic acidemia\"}",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial encephalomyopathy L2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Phenylketonuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Fetal alcohol syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "]  }  ",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Coproporphyria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Nausea",
+      "inferred_severity": "S1"
+    },
+    {
+      "ddx_unique_name": "Global developmental delay",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Galactose-1-phosphate uridyltransferase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Patología 4",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Peutz-Jeghers syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Urea cycle disorders",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Alopecia contractures keratosis pilaris and cataract syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Multiple Sclerosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Arrhythmogenic right ventricular dysplasia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cobalamin J defect",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial 3-hydroxy-3-methylglutaryl-CoA lyase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Gordon syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Three",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Citullinemia type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Transient neonatal hypothyroidism",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Angelmann syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Panhypopituitarism",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spondyloepiphyseal dysplasia congenita",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": " ] }",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Primary myelofibrosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cobalamin D deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cystinosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Maple syrup urine disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Meningioma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spinocerebellar ataxia type 6",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Amino acid metabolism disorders",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Phenylketonuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- Pierre Robin syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Marian syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Lacticaciduria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Marfan Syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Sarcoidosis\",\"probability\":0.05}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "MERRF syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Aortitis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Zellweger syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 8B",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{\"id\":\"4\",\"diagnosis\":\"Cohen syndrome\"}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Carcinoid",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Progeria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "UDP-galactose-4-epimerase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Myelodysplastic syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{  \"motivo de consulta\": \"Paciente acude a consulta para ser diagnosticado\", \"anamnesis\": \"Paciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas: -Pierre-Robin sequence -High palate -Downslanted palpebral fissures -Carious teeth -11 pairs of ribs -Specific learning disability -Feeding difficulties -Hypoplastic L5 vertebral pedicle -Posterior rib gap\", \"antecedentes\": \"No hay antecedentes\", \"exploracion\": \"No se realiza\", \"pruebas clinicas\": \"{  \\\"diagnoses\\\": [  \\\"\\\",  ] }\" }",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos Syndrome, Kyphoscoliotic Type",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Fibochondrodysplasia ossificans progressiva",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cerebrohepatoreneal syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Iron deficiency anemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Kawasaki disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glutaric aciduria type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Renal tubular acidosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hermansky-Pudlak syndrome 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"id\":\"5\",\"diagnosis\":\"Joubert syndrome\"}",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Citrullinemia type 1",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Alkaptonuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Pitt-Hopkins syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hypogammaglobulinemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ocular albinism",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Hyperornithinemia-hyperammonemia homocitrullinuria syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Indian childhood cirrhosis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Autistic behavior",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Osteopetrosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pierre Robin sequence",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Pachyonychia congenita",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Klinefelter Syndrome",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Teratoma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Agenesis of corpus callosum",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Carbamoyl phosphate synthetase II deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Smith-Lemli-Opitz Syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Cholesterol synthesis defect",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Muscular dystrophy, limb-girdle, type 2A",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Staphylococcal scalded skin syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "%s",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Epiloia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Beta-hydroxyisobutyryl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Nephrotic syndrome of the newborn",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type 3",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Rett Syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Craniosynostosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Muscular dystrophy, Duchenne and Becker types",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Angelman syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Nephronophthisis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gluataric Aciduria Type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 8A (Liver isoform)",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "\",  ",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Progressive supranuclear palsy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Lesch-Nyhan syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 9",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pierre Robin syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis type IV",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Crohn's disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Choriocarcinoma",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Vitreoretinal degeneration",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Malonic acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "MADD",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hereditary tyrosinemia type I",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hereditary fructose intolerance",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Sarcoidosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Nevus anemicus",
+      "inferred_severity": "S1"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis type 3",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Arginase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "3-Methylglutaconic aciduria type 5",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Microcephalic osteodysplastic primordial dwarfism type 2",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Myocardial infarction",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Porphyrinuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Very long chain acyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"\",\"description\":\"\"}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Homocystinuria-megaloblastic anemia, cblE type",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Select a diagnosis",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Dental enamel pits",
+      "inferred_severity": "S1"
+    },
+    {
+      "ddx_unique_name": "Hereditary spherocytosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Ehlers-Danlos Syndrome\"}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Lysosomal acid lipase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Methylmalonyl-CoA decarboxylase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Multiple sclerosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hepatitis C infection",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "MEND syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Lowe syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Glycine encephalopathy, severe",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Maple syrup urine disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Intellectual disability",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Two",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "\"] }\",\"options\": [ \"MELAS syndrome\",\"Krabbe disease\",\"Mitochondrial encephalopathy\",\"Mucopolysaccharidosis\",\"Niemann-Pick disease\"] }",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Muscular dystrophy, Becker",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Multiple endocrine neoplasia type 2A",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Hypersensitivity pneumonitis\",\"probability\":\"\"}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Thalassemia major",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Tyrosinemia type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Treacher Collins syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glaucoma",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Porphyria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spinal cord compression",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Maple syrup urine disease type 1B",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "ASL deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Charcot-Marie-Tooth disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Crouzon syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Congenital lactase deficiency",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "MELAS syndrome\",\"Krabbe disease\",\"Mitochondrial encephalopathy\",\"Mucopolysaccharidosis\",\"Niemann-Pick disease\"] }",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Purpura thrombocytopenica trombastenia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type Ib",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Propionic acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Phenylketonuria type 3",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ependymoma",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Beta-ketothiolase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Waldenstrom's macroglobulinemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Unknown Diagnosis 4",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "-Adrenoleukodystrophy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "\"] }\",\"treatments\": [  \"-Tratamiento 1\",\"-Tratamiento 2\" ] }\",\"ddx\": [  \"-DDX 1\",\"-DDX 2\",\"-DDX 3\",\"-DDX 4\",\"-DDX 5\" ] }",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Sulfocysteinuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "DiGeorge syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Fragile X syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 8A",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{\"id\":\"3\",\"diagnosis\":\"Dyggve-Melchior-Clausen syndrome\"}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Aceruloplasminemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Copper deficiency",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "-Mucolipidosis type IV",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hereditary elliptocytosis",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Ceruloplasmin deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Epidermolytic palmoplantar keratoderma",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type 3",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hereditary hypophosphatemic rickets with hypercalciuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": ",  ],",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pterin-4 alpha-carbinolamine dehydratase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Sjogren syndrome\",\"probability\":0.1}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": " maple syrup urine disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "hyperphenylalanemia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hermansky-Pudlak syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cerebral palsy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Craniofrontonasal dysplasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pancreas divisum",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Peters plus syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 8B (Cerebral isoform)",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cronkhite-Canada syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Rheumatoid factor positivity",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Bardet-Biedl syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Dihydrobiopterin reductase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Chronic myeloid leukemia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Vascular Ehlers-Danlos syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Rhizomelic chondrodysplasia punctata",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "\"] }\",  \"Diagnosis\" : \"Smith-Lemli-Opitz syndrome\" }",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type 4",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 1",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Corticotrophinoma",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 0",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial encephalomyopathy, lactic acidosis, and stroke-like syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Trisomy 21",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hyperargininemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Alcoholic cardiomyopathy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Diagnosis 4",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Orotic aciduria type I",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Congenital cerebellar hypoplasia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Spina bifida",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hypertyrosinemia type 3",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Multiple Acyl-CoA Dehydrogenase Deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Peroxisomal disorder",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Glutaric Acidemia Type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Methionine synthase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Deficiency of UDP-galactose-4-epimerase",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "-Mucolipidosis type II",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Sialic acid storage disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hypokalemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cataracts",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Sarcoidosis\",\"probability\":\"Most likely\"}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Machado-Joseph disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Nager syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pallister-Hall syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Ehtylmalonic encephalopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Congenital diaphragmatic hernia",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Campomelic dysplasia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Congenital myasthenic syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Galactosemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Vitamin B12 deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "%",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Sjogren syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "- Stickler syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Primary biliary cholangitis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Lissencephaly",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "\"]}\"]},",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Methotrexate-induced pulmonary toxicity",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Behcet disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Granulomatosis with polyangiitis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pyoderma gangrenosum",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "-Fragile X syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Síndrome de Alport",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Autosomal recessive spastic paraplegia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glucagonoma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Vasculitic syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "GATA2 deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Limb-girdle muscular dystrophy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ophthalmoplegia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 5",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Guillain-Barre syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cross syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Muscular dystrophy, Duchenne",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "GM1 gangliosidoses",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Somatostatinoma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Hawkinsinuria\",\"probability\":0.05}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Malignant hyperthermia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Treacher-Collins syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Megalencephalic leukoencephalopathy with subcortical cysts",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "-Homocystinuria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyperoxaluria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Arthrogryposis multiplex congenita",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ruvalcaba-Myhre syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Mitochondrial DNA depletion syndrome 4\",\"probability\":0.05}",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic acidemia type 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Ornithine transcarbamylase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Creutzfeldt-Jakob disease",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Medium-chain acyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Rett syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "3-Methylglutaconic aciduria type 1",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Chronic granulomatous disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spondylolisthesis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Autosomal dominant polycystic kidney disease\",\"probability\":0.5}",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Alstrom syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Ectopia lentis",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Macular degeneration",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Citrullinemia type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "beta-Ketothiolase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Propionic aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{Pierre Robin syndrome}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Craniofacial dysostosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Dyspnea",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Tyrosinemia type II",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hypotrichosis",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Isovaleric acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Fibromuscular Dysplasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hyperlysinemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Retinitis pigmentosa",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ash leaf spots",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Abnormality of visual evoked potentials",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Obstructive uropathy",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Juvenile Huntington disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Deficiency of galactose 1-phosphate uridyltransferase",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Fanconi anemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Ocular Myasthenia Gravis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "-Cri du chat syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "ALA dehydratase deficiency porphyria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spastic paraplegia 11",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Seminoma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Type 2 Gaucher disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Neurofibromatosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "21-Hydroxylase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ataxia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Weight loss",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Congenital adrenal hyperplasia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Congenital chloride diarrhea",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Epilepsy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial encephalomyopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Thymidine uraciluria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Castleman disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Aspartylglucosaminuria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "HMG-CoA lyase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cerebellar atrophy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyperoxaluria type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Neonatal hemochromatosis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Non-alcoholic fatty liver disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Long chain 3-hydroxyacyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pontocerebellar hypoplasia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cleidocranial dysplasia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Lysosomal storage disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "classic homocystinuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Severe combined immunodeficiency with microcephaly",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Acute myeloid leukemia",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "]  }",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Tyrosinemia type 2\",\"probability\":0.3}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Thrombasthenia of Newfoundland",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Walker-Warburg syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Stickler syndrome type 2",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Turner syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Wolman disease",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Alzheimer's disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "MELAS",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": ",  ",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Autosomal dominant polycystic kidney disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Desmosterolosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Antiphospholipid antibody syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Arginase I deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Craniosynostosis-radial aplasia-holoprosencephaly",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Purine nucleoside phosphorylase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Stickler syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Growth delay, microcephaly, cataract, and cardiomegaly",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Carbamoyl phosphate synthetase I deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Congenital disorder of glycosylation type 1a",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- CPN II deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- Argininosuccinate lyase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ataxia telangiectasia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Lead poisoning",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis IV",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Williams syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Dyskeratosis congenita",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Tyrosinemia type 1",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis II",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Pseudoxanthoma elasticum",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Tetrahydrobiopterin deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Restrictive cardiomyopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Lipid storage disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Insulinoma",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Friedreich Ataxia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Lymphoplasmacytic lymphoma",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Smith-Lemli-Opitz syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cystic hygroma",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Citrullinemia type II",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Homozygous familial hypercholesterolemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Congenital cerebellar ataxia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Long QT syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "AIP - Acute intermittent porphyria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Rod-cone dystrophy",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Tetanus",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Uridine monophosphate synthase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- OTC deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Erythropoietic protoporphyria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cystathioninuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "L-2-Hydroxyglutaric Aciduria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Secondary biliary cirrhosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Down syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Aplastic anemia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Elevated hepatic transaminase",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Carnitine palmitoyltransferase I deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Tuberous sclerosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Wilson's disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis 3",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Methionine adenosyltransferase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Diagnosis 3",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Cryptococcal meningitis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{urinary urgency, sinusitis, tachycardia, fever, leukocytosis, hemoptysis, pleural effusion, abnormal EKG, atrial fibrillation, elevated circulating C-reactive protein concentration, cough, reduced haptoglobin level, nodular pattern on pulmonary HRCT, episcleritis, chest pain}",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Hyperparathyroidism\",\"probability\":0.05}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "-Glutaric acidemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Lathosterolosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 13",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type II",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Myoadenylate deaminase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Germ cell tumour",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Argininosuccinate synthetase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Polyarteritis nodosa",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "CPEO",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Citrus trisomy 13",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cogan syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Pulmonary alveolar proteinosis\",\"probability\":\"Least likely\"}",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 8",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type II",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hypertyrosinemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Vitamin D-dependent rickets type 2",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "-Down Syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Rothmund-Thomson syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type IV",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Craniosynostosis and mental retardation syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Wiskott-Aldrich syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hemochromatosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "3-Methylglutaconic aciduria type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Methotrexate toxicity",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Autoimmune polyglandular syndrome type 1",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "MERRF",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic acidemia type 3",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Leukoencephalopathy with vanishing white matter",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cystathionine beta-synthase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Eosinophilic granulomatosis with polyangiitis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Aarskog syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia due to defects in biopterin metabolism",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Argininosuccinate synthetase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Unknown Diagnosis 3",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Phenylalanine hydroxylase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Beckwith-Wiedemann syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Cerebellar ataxia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Porphyria variegata",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cryptophthalmos-syndactyly syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Multifocal motor neuropathy",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Rheumatoid arthritis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Type 3 Gaucher disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Valinemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Trisomy 18",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Takayasu arteritis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Tay-Sachs disease",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Adenosine kinase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Menkes disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA mutation",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hepatitis C virus infection",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Early-onset torsion dystonia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gaucher disease type 2",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "β-Ketothiolase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Neonatal lupus",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Huntington's disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperammonemia type II",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "3-Methylglutaric aciduria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Achondroplasia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial encephalomyopathy, lactic acidosis, and stroke-like episodes",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Thalassemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Neuraminidase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "AICA-riboside accumulation",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Refsum disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pheochromocytoma",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Achromatopsia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "S-adenosylhomocysteine hydrolase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Ehlers-Danlos syndrome, progeroid form\"}",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Propionic Acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Glycine encephalopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Homogentisic aciduria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pericarditis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Sialidosis type 1",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Loeys-Dietz syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Bloom syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Argininosuccinic aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos syndrome, hypermobility type",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Elevated carcinoembryonic antigen (CEA)",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "IgG4-related disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- CPN I deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Valvular cardiomyopathy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Mitochondrial DNA depletion syndrome 1\",\"probability\":0.05}",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Mandibulofacial dysostosis\"}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type 3\",\"Mucolipidosis IV\",\"Niemann-Pick disease type C\",\"Gaucher disease type 2\",\"GM2 gangliosidosis, Tay-Sachs disease\" ] }",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Sjogren's syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Acute lymphoblastic leukemia",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Cervical spinal stenosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Osteogenesis Imperfecta",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Dandy-Walker malformation",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Mucopolysaccharidosis\"}",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cerebro-costo-mandibular syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "tyrosinemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pemphigus vulgaris",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Facio scapulo humeral dystrophy",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Vasculitis, Behcet's disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Lipodystrophy, congenital generalized",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Watson syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Craniosynostosis Philadelphia type",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Chronic glomerulonephritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Thyroid ophthalmopathy",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Stickler syndrome\"}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Shwachman-Diamond syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 4C",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Ataxia-telangiectasia mutated",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Unna-Thost syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "NARP",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Nephrotic syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Isobutyryl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "-Hereditary spherocytosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Chromosome 18, monosomy 18p",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Methylmalonyl-CoA epimerase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Brugada syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Succinic Semialdehyde Dehydrogenase Deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Palmoplantar keratoderma of Howel-Evans",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Tyrosinemia type 3\",\"probability\":0.1}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cauda equina syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Exercise intolerance",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Organic aciduria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ethylmalonic encephalopathy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Weill-Marchesani syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Nephrotic syndrome, Finnish type",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gray platelet syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hypochondroplasia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Ventricular fibrillation",
+      "inferred_severity": "S10"
+    },
+    {
+      "ddx_unique_name": "Aldolase B Deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Churg-Strauss syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Galactokinase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Vipoma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Transient neonatal tyrosinemia\",\"probability\":0.05}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glutaric acidemia type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Punctate palmoplantar keratoderma",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Orotic aciduria type II",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 4B2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Patau syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Hyperammonemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Prueba 1",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Ichthyosis follicularis atrichia et photophobia\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pneumonia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Fructose-1,6-Bisphosphatase Deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Porencephaly",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "\",  ] }\\",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Cerebellar hypoplasia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hypotonia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "X-linked agammaglobulinemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Primary ciliary dyskinesia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Galactosialidosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pontocerebellar hypoplasia type 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Pyruvate carboxylase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Combined oxidative phosphorylation deficiency 1",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Argininemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ectodermal dysplasia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Diagnosis 5",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type 5",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Combined malonic and methylmalonic aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{Otopalatodigital syndrome type 2}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Growth delay and mental retardation, mandibular dysplasia, sensorineural deafness, and nephrocalcinosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Immunodeficiency 25",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "S-adenosylmethionine synthetase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "May-Hegglin anomaly",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Immunotactoid glomerulonephritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Vici syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Angelman Syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Sjögren-Larsson syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Chronic granulomatosis with polyangiitis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Neurofibromatosis type 1",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Aicardi syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Lujan-Fryns syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Sotos syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "- Homocystinuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pituitary adenoma",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Autosomal dominant intellectual disability 1",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic acidemia type 4",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Henoch-Schonlein purpura",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Primary biliary cirrhosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Argininosuccinate lyase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "NARP syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hutchinson-Gilford Progeria Syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Saethre-Chotzen syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Uridine diphosphate galactose-4-epimerase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Spinocerebellar ataxia type 7",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Testicular germ cell tumor",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Marfan syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Meningococcal meningitis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Patología 1",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Cerebral folate deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Classic homocystinuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Dural ectasia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Larsen syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Argininuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Immunodeficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spinocerebellar ataxia type 3",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Dandy-Walker syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "3-Methylglutaconic aciduria type 3",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Short-chain acyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ileal atresia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gingival overgrowth",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "-Mucolipidosis type III",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Oculocutaneous albinism",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage diseases",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Undescended testis",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Neurosyphilis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "CPT II deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- Down Syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Unknown Diagnosis 5",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Hawkinsinuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Craniofacial dysostosis\"}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Wagner syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hypophosphatemic rickets",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Amyotrophic lateral sclerosis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 4A",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Unknown Diagnosis 1",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Gout",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Autoimmune hepatitis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Klinefelter syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Infectious mononucleosis",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Alpha-1 antitrypsin deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Asthma",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Bartter syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Russell-Silver syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Central nervous system vasculitis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Waldenstrom macroglobulinemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Citullinemia type 1",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Fibular hemimelia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Post-streptococcal glomerulonephritis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cerebrovascular accident",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Combined carboxylase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type III",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Beta-Ketothiolase Deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Delayed speech and language development",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Pyridoxine-dependent epilepsy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Revesz syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Elevated calcitonin",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Hypertyrosinemia type 2",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Spondylolysis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Congenital muscular dystrophy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Renal dysplasia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Elevated circulating creatinine concentration",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Essential Thrombocythemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Arginase I deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{ \"diagnos  es\": [  \"Elevated 8-dehydrocholesterol\",  \"Elevated 7-dehydrocholesterol\", \"\" ] }\",  \"Diagnosis\" :  \"Smith-Lemli-Opitz syndrome\" }",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cornelia de Lange syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type I",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Meckel syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "-Wilson disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "-Isovaleric acidemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "{\"diagnosis\":\"Organic aciduria\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- Achondroplasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Combined methylmalonic aciduria and homocystinuria",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Craniosynostosis and dental anomalies",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Myasthenia gravis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial complex IV deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hallerman-Streiff syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Lipomatous tumor",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Primary Myelofibrosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Malignant hyperphenylalaninemia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "\",",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type VI",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Membranoproliferative glomerulonephritis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{  \"motivo de consulta\": \"Paciente acude a consulta para ser diagnosticado\", \"anamnesis\": \"Paciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas: -Pierre-Robin sequence -High palate -Downslanted palpebral fissures -Carious teeth -11 pairs of ribs -Specific learning disability -Feeding difficulties -Hypoplastic L5 vertebral pedicle -Posterior rib gap\", \"antecedentes\": \"No hay antecedentes\", \"exploracion\": \"No se realiza\", \"pruebas clinicas\": \"{  \\\"diagnos  Motivo de consulta:\"Paciente acude a consulta para ser diagnosticado\"\"Anamnesis:\\",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hallermann-Streiff syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Dilated cardiomyopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Bernard-Soulier syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos Syndrome, Classic Type",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Sickle cell anemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Giant cell myocarditis",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Pyrimidine nucleotidase 1 deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Neurocysticercosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Alpha-1 Antitrypsin Deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Nonketotic hyperglycinemia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "SAPHO syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Rhabdomyolysis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Renal cell carcinoma",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Prader-Willi Syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "\",  \"Sarcoidosis\",  \"Behcet's disease\",  \"Wegener's granulomatosis\",  \"Systemic lupus erythematosus\" ] }\"]",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cushing's syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Sjogren-Larsson Syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- Holocarboxylase synthetase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Vitamin D-dependent rickets type 1",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Postinfectious glomerulonephritis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Methioninemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "-Mucolipidosis type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Glutaric acidemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Carbamoyl phosphate synthetase I deficiency",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type 4",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Vasculitis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Adenosine deaminase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Friedreich ataxia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Vertigo",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Glutaric Aciduria Type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Patología 2",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Glioblastoma multiforme",
+      "inferred_severity": "S10"
+    },
+    {
+      "ddx_unique_name": "Joint hypermobility",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Hyperthyrosinemia type 2",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "L-2-Hydroxyglutaric aciduria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia due to 6-pyruvoyltetrahydrobiopterin synthase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": " Carnitine palmitoyltransferase II deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Trisomy 18",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia due to dihydrobiopterin reductase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos Syndrome, Hypermobility Type",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial acetoacetyl-CoA thiolase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Tyrosinemia type 2",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Medium chain acyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Focal segmental glomerulosclerosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Anti-MuSK antibody positive myasthenia gravis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Systemic primary carnitine deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Antinuclear antibody positivity",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Scurvy",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Chikungunya",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Wegener's granulomatosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Thymidine kinase 2 deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Malignancy",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Mowat-Wilson syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Werner syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Kabuki syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hypomelanotic macules",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Crigler-Najjar syndrome type 1",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Aspergilloma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Phenylalanine dehydroxylase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Prolactinoma",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type III",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Hermansky-Pudlak syndrome 4",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": " Bardet-Biedl syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Cystathionine beta-synthase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "6-Pyruvoyltetrahydropterin synthase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Chromosomal abnormalities",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pervasive developmental disorder",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Very long-chain acyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Lysinuric protein intolerance",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Tyrosinemia type 3",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Microcephaly",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gastrinoma",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Pulmonary Lymphangioleiomyomatosis\",\"probability\":\"\"}",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperlysinuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Neurofibromatosis type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Autistic disorder",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Globoid cell leukodystrophy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Amino aciduria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Autoimmune hemolytic anemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Multiple Carboxylase Deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Trombastenia de Glanzmann",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hypertensive cardiomyopathy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 4",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Lambert-Eaton myasthenic syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hepatitis B infection",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Metachromatic leukodystrophy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cytochrome c oxidase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperammonemia-hyperornithinemia homocitrullinuria syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pyruvate dehydrogenase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Carcinoid syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cytochrome C oxidase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Congenital myopathy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Polyneuropathy associated with anti-GM1 ganglioside antibodies",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Vogt-Koyanagi-Harada syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Primary hyperoxaluria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Beta-ureidopropionase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Cerebellar ataxia, mental retardation, and hypotonia, with hepatic cirrhosis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Folate-deficient breastfed infant",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Motor delay",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Osteogenesis imperfecta",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Noonan syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial disorders",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "  ",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Hallervorden-Spatz syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "SC5DL deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cobalamin C defect",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "}  The Answer is: {",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Nephrocalcinosis",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "-Primary biliary cholangitis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Abetalipoproteinemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitral valve prolapse",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Cerebrohepatorenal syndrome 1",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{Coffin-Lowry syndrome}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Type 1 Gaucher disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Porphyria cutanea tarda",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mandibulofacial dysostosis with microcephaly",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Microcephalic osteodysplastic primordial dwarfism type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Chronic lymphocytic leukemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cerebro-oculo-facio-skeletal syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Pyruvate dehydrogenase complex deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Fructokinase Deficiency",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Glutamic acidemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Alcoholic hepatitis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Prueba 1",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Scheuermann disease",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Alström syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cervical spondylotic myelopathy",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Immunodeficiency 27",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hyperthreoninemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Patología 5",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "- Alkaptonuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Turner Syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Glanzmann thrombasthenia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hyperornithinemia-hyperammonemia-homocitrullinuria syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Immunodeficiency 38",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Behcet's disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Short stature",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Homogentisic aciduria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Succinic semialdehyde dehydrogenase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ornithine transcarbamylase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Lysosomal acid alpha-glucosidase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Autosomal recessive polycystic kidney disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Glycine encephalopathy, neonatal",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Glutaric acidemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Methylmalonyl-CoA mutase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Alcoholic liver disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Dandy-Walker syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Frontotemporal dementia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Lupus erythematosus",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Non-ketotic hyperglycinemia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cerebral Autosomal Dominant Arteriopathy with Subcortical Infarcts and Leukoencephalopathy (CADASIL)",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "D-2-Hydroxyglutaric Aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Berylliosis\",\"probability\":\"\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Schinzel-Giedion syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Nephrolithiasis",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "-Prueba 2",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Short chain 3-hydroxyacyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Isovaleric acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Congenital Rubella Syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Nefropatía por IgA",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "CPEO with ragged red fibers",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Nemaline myopathy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Rippling muscle disease",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Legius syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": " ] }\"]",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Herpes simplex encephalitis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Valine transaminase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Orotic aciduria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Charcot-Marie-Tooth disease type 2A",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Niemann-Pick disease type A",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cobalamin C disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Bacterial endocarditis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Giant Cell Arteritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type III",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "CPT I deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia due to pterin-4-alpha-carbinolamine dehydratase deficiency",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Alcoholic liver disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Liddle syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "CPS1 deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Palmoplantar keratoderma",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis type II",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Tangier disease",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Lambert-Eaton Myasthenic Syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Growth delay",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Left ventricular hypertrophy",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hyperoxaluria type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Chorea-acanthocytosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Crigler Najjar syndrome type 1",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "]",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type 7",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Atypical phenylketonuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Arthralgia",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 1",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "\",  \"",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Amyloidosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 3",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Adrenoleukodystrophy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Mitochondrial DNA depletion syndrome 3\",\"probability\":0.3}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Tuberculous pyelonephritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gingival fibromatosis",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Wernicke-Korsakoff syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Perlman syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Generalized Myasthenia Gravis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "KSS",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Waldenstrom hyperglobulinemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "C3 glomerulopathy",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cobalamin D defect",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Coffin-Lowry syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Multiple system atrophy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "\\",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Multiple carboxylase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"id\":\"1\",\"diagnosis\":\"Lissencephaly\"}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Seizure",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Albinism",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Aicardi-Goutières syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Waardenburg syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Phenylalanine dehydrogenase deficiency",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Epidermolysis bullosa",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Wegener granulomatosis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Alport syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ceroid lipofuscinosis neuronal 2",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "SLE",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Wilson disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type VII",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type Ib",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Primary sclerosing cholangitis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Congenital cerebellar hypoplasia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Treacher Collins syndrome\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Elevated urinary 5-hydroxyindoleacetic acid (5-HIAA)",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Mental retardation X-linked syndromic Fratzke",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Chediak-Higashi syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyper-IgM syndrome type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "McCune-Albright syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Waardenburg syndrome type 2",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "\"] }\",  \"treatments\": [ \"Tratamiento 1\", \"Tratamiento 2\" ] }\",  \"treatments\": [ \"Tratamiento 1\", \"Tratamiento 2\" ] }\",  \"treatments\": [ \"Tratamiento 1\", \"Tratamiento 2\" ] }",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hunter syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "3-Methylglutaconic aciduria type 4",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hyperalaninemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Ataxia-telangiectasia-like disorder",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Costello syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Pseudoprogeria syndrome\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "],",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "-Tetrahydrobiopterin deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial complex I deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "3-methylglutaconic aciduria type 1",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type V",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Pantothenate kinase-associated neurodegeneration",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Immunodeficiency 24",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pallister-Killian syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Nefropatía membranosa",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Cystathioninuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Dyschondrosteosis",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Phenylketonuria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Vitiligo",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Canavan disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Non-alcoholic fatty liver disease",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Gaucher disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "VACTERL association",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Mitochondrial DNA depletion syndrome 11\",\"probability\":0.5}",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Laurence-Moon syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "-Tyrosinemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pseudogout",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "-Hyperphenylalanemia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Prader-Willi syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Griscelli syndrome type 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Syndactyly",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Spastic paraplegia 2",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia due to phenylalanine hydroxylase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "-",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia type 2",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "SLE (Systemic Lupus Erythematosus)",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cobalamin C deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cockayne syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Aorto-ventricular tunnel",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Type 1 diabetes mellitus",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyper-IgM syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Nevus of Ota",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "tyrosinemia type 2",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mental retardation",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Eczema herpeticum",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type 4",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cobalamin G disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "-Pierre-Robin sequence\\n -High palate\\n -Downslanted palpebral fissures\\n -Carious teeth\\n -11 pairs of ribs\\n -Specific learning disability\\n -Feeding difficulties\\n -Hypoplastic L5 vertebral pedicle\\n -Posterior rib gap\\",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Cobalamin-deficient breastfed infant",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- CPS1 deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Mitochondrial DNA depletion syndrome 2\",\"probability\":0.1}",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Holoprosencephaly",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Bannayan-Riley-Ruvalcaba syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Nocher's syndrome",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "3-Methylcrotonyl-CoA carboxylase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis type 4",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Thanatophoric dysplasia",
+      "inferred_severity": "S10"
+    },
+    {
+      "ddx_unique_name": "Galactosemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hereditary coproporphyria",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type 6",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "  ] }\\",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Cobalamin E disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mitocondrial myopathy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Combined methylmalonic acidemia and homocystinuria, cbl-C type",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Pontocerebellar hypoplasia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "22q11.2 deletion syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ataxia-telangiectasia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Microscopic polyangiitis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Alagille syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Lissencephaly",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Cri du chat syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "-Glucose-6-phosphate dehydrogenase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Ctrulio type 2 disease",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Myotonic dystrophy",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Gerodermia osteodysplastica",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Celiac disease",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Elevated 8-dehydrocholesterol",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Unknown Diagnosis 2",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "-Prader-Willi syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Canavan Disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Spinocerebellar ataxia type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Glutaric acidemia type II",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Polycystic kidney disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Síndrome de Goodpasture",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mucopolysaccharidosis type I",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hepatic veno-occlusive disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Cerebellar hypoplasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hyperglycinuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 4",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cobalamin F defect",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Rubinstein-Taybi syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Five",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Cryoglobulinemia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Lactic acidosis and stroke-like episodes",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis I",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Paroxysmal nocturnal hemoglobinuria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type 2",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Kearns-Sayre syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Failure to thrive",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "\"]}\\",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Gaucher disease type 1",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Down Syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Methemoglobinemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "- Canavan disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Machado-Joseph Disease (Spinocerebellar Ataxia Type 3)",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cobalamin A deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Werner syndrome\"}",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Carnitine-acylcarnitine translocase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Glucose-galactose malabsorption",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "- Mucolipidosis IV",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cleft palate",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Minimal change disease",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Hereditary Fructose Intolerance",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "IgA nephropathy",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Death in infancy",
+      "inferred_severity": "S10"
+    },
+    {
+      "ddx_unique_name": "Ketotic glycinemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Prueba 2",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic acidemia type 5",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "-Type 2 diabetes mellitus",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Thrombocytopenia with absent radii",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "{\"diagnosis\":\"Pyruvate dehydrogenase deficiency\"}",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Congenital dyserythropoietic anemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Cobalamin biosynthesis deficiency, B12-responsive",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Spinocerebellar ataxia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Classic galactosemia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "HMGCL deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Baraitser-Winter syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Leukopenia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Cytoplasmic antineutrophil antibody-associated vasculitides",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial complex III deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Tyrosinemia type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Methymalonic aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "VIPoma",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Carnitine deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Orotate phosphoribosyltransferase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "3-hydroxy-3-methylglutaryl-CoA lyase deficiency",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Fanconi syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Trisomy 21",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Oxalosis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Autism spectrum disorder",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Atransferrinemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Multiple myeloma",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Congenital central hypoventilation syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Craniofacial anomalies, skeletal abnormalities, and cardiovascular malformations",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Fibrodysplasia ossificans progressiva",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis III",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Sturge-Weber syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Septo-optic dysplasia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Waardenburg syndrome type 1",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "- Ataxia telangiectasia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Mevalonate kinase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Pulmonary-renal syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cystic fibrosis",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos Syndrome, Vascular Type",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Homocystinuria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": ",",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "-Mucolipidosis type V",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Dyssegmental dysplasia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Adenylosuccinate lyase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "]}  The Answer is: {",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "{",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Cleft palate-lateral synechiae syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Steven-Johnson syndrome",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Vascular dementia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Tay-Sachs Disease",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Renal tubular dysplasia",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cystinuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "One",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Spinocerebellar ataxia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Angelman syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Methylmalonic Acidemia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Otopalatodigital syndrome type 2",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Marfan Syndrome\"}",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Feeding difficulties",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Hyperornithinemia-hyperammonemia syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Albinismo",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Nephrotic syndrome, congenital",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Creatine kinase elevation",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 9",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Pompe disease",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "- Tyrosinemia type 1",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Osteitis deformans",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Moon-Shamir syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Muscular dystrophy, facioscapulohumeral",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Glutaric acidemia type 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Cerebrohepatorenal syndrome",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Congenital rubella syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Chronic kidney disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Fabry disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Multiple Endocrine Neoplasia Type 2A (MEN2A)",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "X-linked adrenoleukodystrophy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type IV",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Cobalamin F deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pallister-Hall Syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Relapsing polychondritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cerebral creatine deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Ectopic growth hormone-secreting tumor",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Stickler Syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Carnitine palmitoyltransferase II deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Polycythemia vera",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Orbital pseudotumor",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Scleroderma",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Ischemic cardiomyopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Citullinemia type 2",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Rapidly progressive glomerulonephritis",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Hypertryptophanemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Hyperglycinemia, non-ketotic",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hypercalcemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Wolfram syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "\"] }\",  \"treatments\": [ \"Tratamiento 1\", \"Tratamiento 2\" ] }\",  \"treatments\": [ \"Tratamiento 1\", \"Tratamiento 2\" ] }",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Malonic aciduria",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "- Propionic acidemia",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Autosomal Recessive Spastic Ataxia of Charlevoix-Saguenay (ARSACS)",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "{ \"diagnoses\": [  \"Elevated 8-dehydrocholesterol\",  \"Elevated 7-dehydrocholesterol\", \"\" ] }\",  \"Diagnosis\" :  \"Smith-Lemli-Opitz syndrome\" }",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Nephrotic syndrome, steroid-resistant",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"diagnosis\":\"Mitochondrial DNA depletion syndrome\"}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Variegate porphyria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Mucolipidosis 4",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{Fragile X syndrome}",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Rhabdomyoma",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Joubert syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hepatocellular carcinoma",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Glycogen storage disease type 6",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Diagnosis 2",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Lipoid nephrosis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cowden syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mulibrey nanism syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Elevated chromogranin A",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Osteogenesis imperfecta type 1",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Premature thelarche",
+      "inferred_severity": "S1"
+    },
+    {
+      "ddx_unique_name": "Hypophosphatasia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Síndrome de Fanconi",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Arginosuccinate synthetase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Cobalamin F disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Osteogenesis Imperfecta\"}",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Toxic epidermal necrolysis",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Malrotation of the gut",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Atypical phenylketonuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Spinal muscular atrophy with respiratory distress 1",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 11",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Citrus trisomy 21",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial DNA depletion syndrome 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Niemann-Pick disease type C",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": ", ",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Congenital cytomegalovirus infection",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Giant cell arteritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "- Tay-Sachs disease",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Anti-glomerular basement membrane disease",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "3-Hydroxy-3-methylglutaryl-CoA lyase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Corticobasal ganglionic degeneration",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Trisomy 13",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Nephritic syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalaninemia due to dihydrobiopterin reductase deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Multiple acyl-CoA dehydrogenase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Hereditary hyperphenylalaninemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Hypergammaglobulinemia",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Paciente de sexo desconocido de desconocidos años. El paciente presenta los siguientes síntomas:\\",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Hodgkin's lymphoma",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Congenital disorders of glycosylation",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "BH4-deficient hyperphenylalaninemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "classic phenylketonuria",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Valine dehydrogenase (NADP+) deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Spondylometaphyseal dysplasia",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Neonatal alloimmune thrombocytopenia",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Ornithinuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Simpson-Golabi-Behmel syndrome type 1",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Goodpasture syndrome",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Osteogenesis imperfecta type 2",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "{\"name\":\"Progeria\"}",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Lupus nephritis",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Fructose-1-phosphate aldolase deficiency",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Cryptorchidism",
+      "inferred_severity": "S2"
+    },
+    {
+      "ddx_unique_name": "Hyperphenylalanemia type 3",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Methylmalonyl-CoA carboxyltransferase deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Patología 3",
+      "inferred_severity": "S0"
+    },
+    {
+      "ddx_unique_name": "Alpha 1 antitrypsin deficiency",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Somatotropinoma",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Poststreptococcal glomerulonephritis",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "carnitine palmitoyltransferase I deficiency",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Pfeiffer syndrome",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Abetalipoproteinemia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Acute intermittent porphyria",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Duchenne muscular dystrophy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "-Cystathioninuria",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Mitochondrial encephalopathy",
+      "inferred_severity": "S8"
+    },
+    {
+      "ddx_unique_name": "Ehlers-Danlos syndrome",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Hereditary spastic paraplegia",
+      "inferred_severity": "S5"
+    },
+    {
+      "ddx_unique_name": "Palmoplantar keratoderma of Unna",
+      "inferred_severity": "S3"
+    },
+    {
+      "ddx_unique_name": "Sandhoff disease",
+      "inferred_severity": "S9"
+    },
+    {
+      "ddx_unique_name": "Glycosylation defects",
+      "inferred_severity": "S7"
+    },
+    {
+      "ddx_unique_name": "Parkinson's disease",
+      "inferred_severity": "S6"
+    },
+    {
+      "ddx_unique_name": "Thiamine-responsive megaloblastic syndrome",
+      "inferred_severity": "S4"
+    },
+    {
+      "ddx_unique_name": "Loeys-Dietz Syndrome",
+      "inferred_severity": "S7"
+    }
+  ]
+}

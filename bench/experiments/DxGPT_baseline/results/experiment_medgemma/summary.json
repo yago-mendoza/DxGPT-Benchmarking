@@ -3,7 +3,7 @@
         "experiment_name": "Ramedis Baseline con GPT-4o",
         "llm_configs": {
             "candidate_dx_gpt": {
-                "model": "gpt-4o",
+                "model": "medgemma",
                 "prompt": "eval-prompts/candidate_prompt.txt"
             },
             "severity_assigner_llm": {
@@ -13,19 +13,19 @@
         }
     },
     "semantic_evaluation": {
-        "mean_score": 0.8582,
-        "standard_deviation": 0.1989,
+        "mean_score": 0.5782,
+        "standard_deviation": 0.2294,
         "range": {
-            "min": 0.3755,
-            "max": 1.0000
+            "min": 0.1952,
+            "max": 1.0
         }
     },
     "severity_evaluation": {
-        "mean_score": 0.1670,
-        "standard_deviation": 0.0779,
+        "mean_score": 0.4318,
+        "standard_deviation": 0.2118,
         "range": {
-            "min": 0.0500,
-            "max": 0.4000
+            "min": 0.0,
+            "max": 1.0
         }
     }
 }

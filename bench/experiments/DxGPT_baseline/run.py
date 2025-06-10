@@ -1005,6 +1005,18 @@ def main():
         
         # 6. Final Summary
         logger.info("=" * 80)
+        logger.info("STEP 6: Summary Generation")
+        logger.info("=" * 80)
+        
+        generate_summary_json(
+            semantic_output, 
+            severity_eval_output, 
+            config, 
+            results_dir, 
+            logger
+        )
+        
+        logger.info("=" * 80)
         logger.info("EXPERIMENT COMPLETED SUCCESSFULLY")
         logger.info("=" * 80)
         logger.info(f"All results saved to: {results_dir}")

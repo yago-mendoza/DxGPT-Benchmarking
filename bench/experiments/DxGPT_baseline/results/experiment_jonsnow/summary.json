@@ -1,0 +1,32 @@
+{
+    "metadata": {
+        "experiment_name": "Ramedis Baseline con GPT-4o",
+        "llm_configs": {
+            "candidate_dx_gpt": {
+                "model": "jonsnow",
+                "prompt": "eval-prompts/candidate_prompt.txt"
+            },
+            "severity_assigner_llm": {
+                "model": "gpt-4o",
+                "prompt": "eval-prompts/severity_assignment_batch_prompt.txt"
+            }
+        },
+        "summary_generated_at": "2025-06-10T13:02:26.789536"
+    },
+    "semantic_evaluation": {
+        "mean_score": 0.5971,
+        "standard_deviation": 0.245,
+        "range": {
+            "min": 0.2461,
+            "max": 1.0
+        }
+    },
+    "severity_evaluation": {
+        "mean_score": 0.5052,
+        "standard_deviation": 0.364,
+        "range": {
+            "min": 0.025,
+            "max": 1.0
+        }
+    }
+}
