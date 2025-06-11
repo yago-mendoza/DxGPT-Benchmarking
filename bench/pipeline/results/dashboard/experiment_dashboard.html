@@ -55,12 +55,66 @@
             border-right: 1px solid var(--border-primary);
             overflow-y: auto;
             flex-shrink: 0;
+            transition: width 0.3s ease;
+            position: relative;
+        }
+
+        .sidebar.collapsed {
+            width: 48px;
+            overflow: hidden;
+        }
+
+        .sidebar.collapsed .experiments-list,
+        .sidebar.collapsed .sidebar-header h2 {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Toggle Button */
+        .sidebar-toggle {
+            position: absolute;
+            top: 12px;
+            right: 8px;
+            width: 32px;
+            height: 32px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .sidebar.collapsed .sidebar-toggle {
+            right: 40px;
+            left: 8px;
+            margin: 0 auto;
+        }
+
+        .sidebar-toggle:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--accent-primary);
+        }
+
+        .sidebar-toggle svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--text-secondary);
             transition: transform 0.3s ease;
+        }
+
+        .sidebar.collapsed .sidebar-toggle svg {
+            transform: rotate(180deg);
         }
 
         .sidebar-header {
             padding: 24px;
+            padding-right: 56px;
             border-bottom: 1px solid var(--border-primary);
+            position: relative;
         }
 
         .sidebar-header h2 {
@@ -473,6 +527,11 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <h2>Experiments</h2>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
             </div>
             <div class="experiments-list" id="experimentsList">
                 <div class="loading">Loading experiments...</div>
@@ -781,6 +840,27 @@
                 `;
                 
                 const checkbox = item.querySelector('input[type="checkbox"]');
+                
+                // Make entire item clickable
+                item.addEventListener('click', (e) => {
+                    // If clicking on checkbox directly, let it handle its own event
+                    if (e.target.type === 'checkbox') return;
+                    
+                    // Toggle checkbox
+                    checkbox.checked = !checkbox.checked;
+                    
+                    // Update selection
+                    if (checkbox.checked) {
+                        selectedExperiments.add(id);
+                        item.classList.add('selected');
+                    } else {
+                        selectedExperiments.delete(id);
+                        item.classList.remove('selected');
+                    }
+                    updateViews();
+                });
+                
+                // Keep checkbox change handler for direct clicks
                 checkbox.addEventListener('change', (e) => {
                     if (e.target.checked) {
                         selectedExperiments.add(id);
@@ -798,6 +878,12 @@
 
         // Setup event listeners
         function setupEventListeners() {
+            // Sidebar toggle
+            document.getElementById('sidebarToggle').addEventListener('click', () => {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('collapsed');
+            });
+            
             // View tabs
             document.querySelectorAll('.view-tab').forEach(tab => {
                 tab.addEventListener('click', (e) => {
@@ -2563,8 +2649,756 @@
     </script>
 
     <!-- Data loader fixes -->
-    <script src="data_loader_fix.js"></script>
-    <script src="patch_dashboard.js"></script>
+    <script>// Fixed data loading functions for experiment dashboard
+        // These functions replace the simulated data with real experiment data
+        
+        // Extract real semantic scores from experiment data
+        function extractSemanticScores(exp) {
+            if (!exp.semantic || !exp.semantic.evaluations) {
+                console.warn('No semantic evaluation data found');
+                return [];
+            }
+            
+            return exp.semantic.evaluations.map(eval => {
+                return eval.best_match?.score || 0;
+            });
+        }
+        
+        // Extract real severity scores from experiment data
+        function extractSeverityScores(exp) {
+            if (!exp.severity || !exp.severity.evaluations) {
+                console.warn('No severity evaluation data found');
+                return [];
+            }
+            
+            return exp.severity.evaluations.map(eval => {
+                return eval.final_score || 0;
+            });
+        }
+        
+        // Fixed createStatsSummary - uses real data
+        function createStatsSummaryFixed(ctx, exp) {
+            // Extract real semantic and severity scores
+            const semanticScores = extractSemanticScores(exp);
+            const severityScores = extractSeverityScores(exp);
+            
+            if (semanticScores.length === 0 || severityScores.length === 0) {
+                console.warn('No data available for stats summary');
+                return createPlaceholderChart(ctx, 'No data available');
+            }
+            
+            const semanticMean = semanticScores.reduce((a, b) => a + b, 0) / semanticScores.length;
+            const severityMean = severityScores.reduce((a, b) => a + b, 0) / severityScores.length;
+            
+            // Calculate additional statistics
+            const semanticStd = Math.sqrt(semanticScores.reduce((sum, score) => sum + Math.pow(score - semanticMean, 2), 0) / semanticScores.length);
+            const severityStd = Math.sqrt(severityScores.reduce((sum, score) => sum + Math.pow(score - severityMean, 2), 0) / severityScores.length);
+            
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Semantic Mean', 'Severity Mean', 'Semantic Std', 'Severity Std'],
+                    datasets: [{
+                        label: 'Statistics',
+                        data: [semanticMean, severityMean, semanticStd, severityStd],
+                        backgroundColor: [
+                            'rgba(99, 102, 241, 0.6)', 'rgba(239, 68, 68, 0.6)',
+                            'rgba(99, 102, 241, 0.3)', 'rgba(239, 68, 68, 0.3)'
+                        ],
+                        borderColor: [
+                            'rgba(99, 102, 241, 1)', 'rgba(239, 68, 68, 1)',
+                            'rgba(99, 102, 241, 1)', 'rgba(239, 68, 68, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `Real Data (${semanticScores.length} semantic, ${severityScores.length} severity evaluations)`,
+                            color: '#ffffff'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 1
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Fixed createSemanticHistogram - uses real data
+        function createSemanticHistogramFixed(ctx, exp) {
+            const allSemanticScores = extractSemanticScores(exp);
+            
+            if (allSemanticScores.length === 0) {
+                console.warn('No semantic scores available');
+                return createPlaceholderChart(ctx, 'No semantic data available');
+            }
+            
+            // Create histogram bins
+            const bins = 25;
+            const binWidth = 1.0 / bins;
+            const histogram = new Array(bins).fill(0);
+            
+            allSemanticScores.forEach(score => {
+                const binIndex = Math.min(Math.floor(score / binWidth), bins - 1);
+                histogram[binIndex]++;
+            });
+            
+            // Create bin labels
+            const binLabels = [];
+            const histogramData = [];
+            for (let i = 0; i < bins; i++) {
+                const binStart = i * binWidth;
+                const binEnd = (i + 1) * binWidth;
+                binLabels.push(`${binStart.toFixed(2)}-${binEnd.toFixed(2)}`);
+                histogramData.push(histogram[i]);
+            }
+            
+            // Calculate KDE using real data
+            const kde = calculateKDE(allSemanticScores, 0.05, 0, 1, bins);
+            const maxHistCount = Math.max(...histogram);
+            const maxKDE = Math.max(...kde.map(d => d.y));
+            
+            // Scale KDE to match histogram height
+            const kdeScaled = kde.map((point, i) => ({
+                x: binLabels[Math.floor(i * bins / kde.length)] || binLabels[binLabels.length - 1],
+                y: (point.y / maxKDE) * maxHistCount * 1.1
+            }));
+        
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: binLabels,
+                    datasets: [{
+                        label: `Semantic Score Count (n=${allSemanticScores.length})`,
+                        data: histogramData,
+                        backgroundColor: 'rgba(99, 102, 241, 0.6)',
+                        borderColor: 'rgba(99, 102, 241, 1)',
+                        borderWidth: 1,
+                        order: 2,
+                        barPercentage: 0.95,
+                        categoryPercentage: 1.0
+                    }, {
+                        label: 'KDE Curve (Real Data)',
+                        data: kdeScaled,
+                        type: 'line',
+                        borderColor: 'rgba(245, 158, 11, 0.9)',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderWidth: 3,
+                        fill: false,
+                        pointRadius: 0,
+                        tension: 0.4,
+                        borderCapStyle: 'round',
+                        borderJoinStyle: 'round',
+                        order: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `Real Semantic Score Distribution (μ=${(allSemanticScores.reduce((a,b) => a+b, 0)/allSemanticScores.length).toFixed(3)})`,
+                            color: '#ffffff'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Semantic Similarity Score Range'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Count / Density'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Fixed severity levels chart - uses real data
+        function createSeverityLevelsChartFixed(ctx, exp) {
+            if (!exp.severity || !exp.severity.evaluations) {
+                console.warn('No severity evaluation data found');
+                return createPlaceholderChart(ctx, 'No severity data available');
+            }
+            
+            const gdxCounts = {};
+            const ddxCounts = {};
+            
+            // Initialize counts
+            for (let i = 3; i <= 10; i++) {
+                gdxCounts[`S${i}`] = 0;
+                ddxCounts[`S${i}`] = 0;
+            }
+            
+            // Count real severity levels
+            exp.severity.evaluations.forEach(evaluation => {
+                // Count GDX severity
+                const gdxSeverity = evaluation.gdx?.severity;
+                if (gdxSeverity && gdxCounts[gdxSeverity] !== undefined) {
+                    gdxCounts[gdxSeverity]++;
+                }
+                
+                // Count DDX severities
+                if (evaluation.ddx_list) {
+                    evaluation.ddx_list.forEach(ddx => {
+                        const ddxSeverity = ddx.severity;
+                        if (ddxSeverity && ddxCounts[ddxSeverity] !== undefined) {
+                            ddxCounts[ddxSeverity]++;
+                        }
+                    });
+                }
+            });
+            
+            // Prepare data for chart
+            const severityLabels = [];
+            const gdxData = [];
+            const ddxData = [];
+            
+            for (let i = 3; i <= 10; i++) {
+                const severity = `S${i}`;
+                severityLabels.push(severity);
+                gdxData.push(gdxCounts[severity]);
+                ddxData.push(ddxCounts[severity]);
+            }
+            
+            const totalGdx = gdxData.reduce((a, b) => a + b, 0);
+            const totalDdx = ddxData.reduce((a, b) => a + b, 0);
+        
+            return new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: severityLabels,
+                    datasets: [{
+                        label: `GDX (n=${totalGdx})`,
+                        data: gdxData,
+                        backgroundColor: 'rgba(16, 185, 129, 0.6)',
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        borderWidth: 1,
+                        order: 3,
+                        barPercentage: 0.8,
+                        categoryPercentage: 0.9
+                    }, {
+                        label: `DDX (n=${totalDdx})`,
+                        data: ddxData,
+                        backgroundColor: 'rgba(249, 115, 22, 0.6)',
+                        borderColor: 'rgba(249, 115, 22, 1)',
+                        borderWidth: 1,
+                        order: 3,
+                        barPercentage: 0.8,
+                        categoryPercentage: 0.9
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `Real Severity Level Distribution (${exp.severity.evaluations.length} cases)`,
+                            color: '#ffffff'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Severity Level'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Count'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Fixed optimist vs pessimist chart - uses real data
+        function createOptimistPessimistChartFixed(ctx, exp) {
+            if (!exp.severity || !exp.severity.evaluations) {
+                console.warn('No severity evaluation data found');
+                return createPlaceholderChart(ctx, 'No severity data available');
+            }
+            
+            let optimistCases = 0;
+            let pessimistCases = 0;
+            let neutralCases = 0;
+            
+            // Count by n value for each type
+            const optimistByN = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0};
+            const pessimistByN = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0};
+            
+            // Use real evaluation data
+            exp.severity.evaluations.forEach(evaluation => {
+                const optimistN = evaluation.optimist?.n || 0;
+                const pessimistN = evaluation.pessimist?.n || 0;
+                
+                if (optimistN > pessimistN) {
+                    optimistCases++;
+                    const n = Math.min(5, Math.max(1, optimistN));
+                    optimistByN[n]++;
+                } else if (pessimistN > optimistN) {
+                    pessimistCases++;
+                    const n = Math.min(5, Math.max(1, pessimistN));
+                    pessimistByN[n]++;
+                } else {
+                    neutralCases++;
+                }
+            });
+        
+            // Create plugin to draw center text with real data
+            const centerTextPlugin = {
+                id: 'centerTextReal',
+                beforeDraw: function(chart) {
+                    const ctx = chart.ctx;
+                    const centerX = (chart.chartArea.left + chart.chartArea.right) / 2;
+                    const centerY = (chart.chartArea.top + chart.chartArea.bottom) / 2;
+                    ctx.save();
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.font = '300 24px Inter';
+                    ctx.fillStyle = '#e5e7eb';
+                    ctx.fillText(optimistCases + ' | ' + pessimistCases, centerX, centerY - 15);
+                    ctx.font = '300 12px Inter';
+                    ctx.fillStyle = '#9ca3af';
+                    ctx.fillText('Optimist | Pessimist', centerX, centerY);
+                    ctx.fillText(`(${neutralCases} neutral)`, centerX, centerY + 15);
+                    ctx.restore();
+                }
+            };
+        
+            return new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Opt n=1', 'Opt n=2', 'Opt n=3', 'Opt n=4', 'Opt n=5',
+                        'Pes n=1', 'Pes n=2', 'Pes n=3', 'Pes n=4', 'Pes n=5'
+                    ],
+                    datasets: [{
+                        data: [
+                            optimistByN[1], optimistByN[2], optimistByN[3], optimistByN[4], optimistByN[5],
+                            pessimistByN[1], pessimistByN[2], pessimistByN[3], pessimistByN[4], pessimistByN[5]
+                        ],
+                        backgroundColor: [
+                            // Optimist shades (blue gradient)
+                            'rgba(59, 130, 246, 0.9)',
+                            'rgba(59, 130, 246, 0.75)',
+                            'rgba(59, 130, 246, 0.6)',
+                            'rgba(59, 130, 246, 0.45)',
+                            'rgba(59, 130, 246, 0.3)',
+                            // Pessimist shades (red gradient)
+                            'rgba(239, 68, 68, 0.9)',
+                            'rgba(239, 68, 68, 0.75)',
+                            'rgba(239, 68, 68, 0.6)',
+                            'rgba(239, 68, 68, 0.45)',
+                            'rgba(239, 68, 68, 0.3)'
+                        ],
+                        borderColor: '#1f2937',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: `Real Optimist/Pessimist Balance (${exp.severity.evaluations.length} cases)`,
+                            color: '#ffffff'
+                        },
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#ffffff',
+                                font: { size: 12 },
+                                padding: 15,
+                                boxWidth: 15,
+                                boxHeight: 15,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    return label + ': ' + value + ' cases';
+                                }
+                            }
+                        }
+                    }
+                },
+                plugins: [centerTextPlugin]
+            });
+        } </script>
+    <script>// Patch to fix dashboard data loading
+        // This script replaces the problematic chart functions with ones that use real data
+        
+        // Apply this patch by including it after the main dashboard script loads
+        
+        (function() {
+            'use strict';
+            
+            console.log('🔧 Applying dashboard data fix patch...');
+            
+            // Override the renderDetailChart function to use fixed versions
+            window.renderDetailChart = function(cellIndex, expId, chartType) {
+                const canvas = document.getElementById(`detailChart${cellIndex}`);
+                const ctx = canvas.getContext('2d');
+        
+                // Destroy existing chart
+                if (detailCharts.has(cellIndex)) {
+                    detailCharts.get(cellIndex).destroy();
+                }
+        
+                // Get experiment data
+                const exp = experiments.get(expId);
+                if (!exp) {
+                    const chart = createPlaceholderChart(ctx, 'No data available');
+                    detailCharts.set(cellIndex, chart);
+                    return;
+                }
+        
+                console.log(`📊 Creating ${chartType} chart with real data for ${exp.name}`);
+                console.log('Available data:', {
+                    semantic: !!exp.semantic,
+                    severity: !!exp.severity,
+                    summary: !!exp.summary
+                });
+        
+                let chart;
+                
+                switch (chartType) {
+                    case 'stats-summary':
+                        chart = createStatsSummaryFixed(ctx, exp);
+                        break;
+                    case 'semantic-histogram':
+                        chart = createSemanticHistogramFixed(ctx, exp);
+                        break;
+                    case 'severity-levels':
+                        chart = createSeverityLevelsChartFixed(ctx, exp);
+                        break;
+                    case 'optimist-pessimist':
+                        chart = createOptimistPessimistChartFixed(ctx, exp);
+                        break;
+                    case 'semantic-bias':
+                        chart = createSemanticBiasChart(ctx, exp); // This one already uses real data
+                        break;
+                    case 'ridge-plot':
+                        chart = createRidgePlotFixed(ctx, exp);
+                        break;
+                    case 'gdx-ddx-severity':
+                        chart = createGDXvsDDXChartFixed(ctx, exp);
+                        break;
+                    default:
+                        chart = createPlaceholderChart(ctx, `Chart type: ${chartType}`);
+                }
+        
+                detailCharts.set(cellIndex, chart);
+            };
+            
+            // Fixed ridge plot using real data
+            window.createRidgePlotFixed = function(ctx, exp) {
+                if (!exp.semantic || !exp.severity) {
+                    console.warn('Missing semantic or severity data for ridge plot');
+                    return createPlaceholderChart(ctx, 'Missing data for ridge plot');
+                }
+                
+                const scoresByGDXSeverity = {};
+                for (let i = 3; i <= 10; i++) {
+                    scoresByGDXSeverity[`S${i}`] = [];
+                }
+                
+                // Use real data: group semantic scores by GDX severity
+                const semanticEvals = exp.semantic.evaluations || [];
+                const severityEvals = exp.severity.evaluations || [];
+                
+                // Create lookup map
+                const severityMap = new Map();
+                severityEvals.forEach(sev => {
+                    severityMap.set(sev.id, sev);
+                });
+                
+                semanticEvals.forEach((semEval, idx) => {
+                    const caseId = semEval.case_id || idx + 1;
+                    const severityEval = severityMap.get(caseId);
+                    
+                    if (severityEval && severityEval.gdx) {
+                        const gdxSeverity = severityEval.gdx.severity;
+                        const semanticScore = semEval.best_match?.score || 0;
+                        
+                        if (scoresByGDXSeverity[gdxSeverity]) {
+                            scoresByGDXSeverity[gdxSeverity].push(semanticScore);
+                        }
+                    }
+                });
+                
+                // Calculate KDE for each severity level
+                const ridgeData = [];
+                const severityLevels = Object.keys(scoresByGDXSeverity).reverse();
+                
+                severityLevels.forEach((severity, idx) => {
+                    const scores = scoresByGDXSeverity[severity];
+                    if (scores.length > 0) {
+                        const kde = calculateKDE(scores, 0.05, 0, 1, 100);
+                        const maxDensity = Math.max(...kde.map(d => d.y));
+                        
+                        const normalizedKDE = kde.map(point => ({
+                            x: point.x,
+                            y: (point.y / maxDensity) * 0.8 + idx
+                        }));
+                        
+                        ridgeData.push({
+                            severity: severity,
+                            kde: normalizedKDE,
+                            baseline: idx,
+                            color: `hsl(${260 - idx * 20}, 70%, 60%)`,
+                            count: scores.length
+                        });
+                    }
+                });
+                
+                // Ridge plot plugin (same as before but with real data)
+                const ridgePlugin = {
+                    id: 'ridgeReal',
+                    beforeDraw: (chart) => {
+                        const ctx = chart.ctx;
+                        const chartArea = chart.chartArea;
+                        const xScale = chart.scales.x;
+                        const yScale = chart.scales.y;
+                        
+                        ridgeData.forEach((ridge, idx) => {
+                            // Draw filled area
+                            ctx.save();
+                            ctx.beginPath();
+                            
+                            // Start from baseline
+                            ctx.moveTo(
+                                xScale.getPixelForValue(0),
+                                yScale.getPixelForValue(ridge.baseline)
+                            );
+                            
+                            // Draw KDE curve
+                            ridge.kde.forEach(point => {
+                                const x = xScale.getPixelForValue(point.x);
+                                const y = yScale.getPixelForValue(point.y);
+                                ctx.lineTo(x, y);
+                            });
+                            
+                            // Close path at baseline
+                            ctx.lineTo(
+                                xScale.getPixelForValue(1),
+                                yScale.getPixelForValue(ridge.baseline)
+                            );
+                            ctx.closePath();
+                            
+                            // Fill with gradient
+                            const gradient = ctx.createLinearGradient(
+                                0, yScale.getPixelForValue(ridge.baseline + 0.8),
+                                0, yScale.getPixelForValue(ridge.baseline)
+                            );
+                            gradient.addColorStop(0, ridge.color);
+                            gradient.addColorStop(1, ridge.color.replace('60%', '30%'));
+                            
+                            ctx.fillStyle = gradient;
+                            ctx.globalAlpha = 0.7;
+                            ctx.fill();
+                            
+                            // Draw outline
+                            ctx.strokeStyle = ridge.color;
+                            ctx.globalAlpha = 1;
+                            ctx.lineWidth = 2;
+                            ctx.stroke();
+                            
+                            // Add severity label with count
+                            ctx.fillStyle = '#ffffff';
+                            ctx.font = 'bold 12px Inter';
+                            ctx.textAlign = 'right';
+                            ctx.textBaseline = 'middle';
+                            ctx.fillText(
+                                `${ridge.severity} (n=${ridge.count})`,
+                                chartArea.left - 10,
+                                yScale.getPixelForValue(ridge.baseline + 0.4)
+                            );
+                            
+                            ctx.restore();
+                        });
+                    }
+                };
+                
+                return new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        datasets: [{
+                            data: [] // Empty dataset for Chart.js structure
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        clip: false,
+                        layout: {
+                            padding: {
+                                top: 20,
+                                bottom: 20,
+                                left: 80,
+                                right: 20
+                            }
+                        },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Real Semantic Score Ridge Plot by GDX Severity`,
+                                color: '#ffffff'
+                            },
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                type: 'linear',
+                                title: {
+                                    display: true,
+                                    text: 'Semantic Score',
+                                    color: '#ffffff'
+                                },
+                                min: 0,
+                                max: 1,
+                                ticks: {
+                                    color: '#9ca3af'
+                                },
+                                grid: {
+                                    color: '#1f2937'
+                                }
+                            },
+                            y: {
+                                type: 'linear',
+                                min: -0.5,
+                                max: severityLevels.length - 0.5,
+                                display: false
+                            }
+                        }
+                    },
+                    plugins: [ridgePlugin]
+                });
+            };
+            
+            // Fixed GDX vs DDX chart using real data
+            window.createGDXvsDDXChartFixed = function(ctx, exp) {
+                if (!exp.severity) {
+                    console.warn('No severity data for GDX vs DDX chart');
+                    return createPlaceholderChart(ctx, 'No severity data available');
+                }
+                
+                const gdxDdxData = [];
+                const gdxCounts = {};
+                
+                // Process real severity evaluations
+                exp.severity.evaluations.forEach(evaluation => {
+                    if (evaluation.gdx && evaluation.ddx_list) {
+                        const gdxSeverity = parseInt(evaluation.gdx.severity.replace('S', ''));
+                        
+                        if (!gdxCounts[gdxSeverity]) {
+                            gdxCounts[gdxSeverity] = 0;
+                        }
+                        gdxCounts[gdxSeverity]++;
+                        
+                        evaluation.ddx_list.forEach(ddx => {
+                            const ddxSeverity = parseInt(ddx.severity.replace('S', ''));
+                            gdxDdxData.push({
+                                gdx: gdxSeverity,
+                                ddx: ddxSeverity,
+                                distance: ddx.distance || Math.abs(gdxSeverity - ddxSeverity)
+                            });
+                        });
+                    }
+                });
+                
+                // Create perfect match line
+                const perfectMatch = [];
+                for (let i = 0; i <= 10; i++) {
+                    perfectMatch.push({x: i, y: i});
+                }
+                
+                return new Chart(ctx, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [{
+                            label: 'Perfect Match',
+                            data: perfectMatch,
+                            type: 'line',
+                            borderColor: 'rgba(156, 163, 175, 0.8)',
+                            borderDash: [5, 5],
+                            fill: false,
+                            pointRadius: 0,
+                            borderWidth: 2,
+                            order: 0
+                        }, {
+                            label: `Real GDX vs DDX (n=${gdxDdxData.length})`,
+                            data: gdxDdxData.map(d => ({x: d.gdx, y: d.ddx})),
+                            backgroundColor: 'rgba(59, 130, 246, 0.6)',
+                            borderColor: 'rgba(59, 130, 246, 1)',
+                            pointRadius: 3,
+                            pointHoverRadius: 5,
+                            order: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: `Real GDX vs DDX Severity Comparison (${exp.severity.evaluations.length} cases)`,
+                                color: '#ffffff'
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'GDX Severity',
+                                    color: '#ffffff'
+                                },
+                                min: 0,
+                                max: 10
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'DDX Severity',
+                                    color: '#ffffff'
+                                },
+                                min: 0,
+                                max: 10
+                            }
+                        }
+                    }
+                });
+            };
+            
+            console.log('✅ Dashboard data fix patch applied successfully!');
+            console.log('📊 Charts will now use real experiment data instead of simulated data');
+            
+        })(); </script>
 
 </body>
 </html>
