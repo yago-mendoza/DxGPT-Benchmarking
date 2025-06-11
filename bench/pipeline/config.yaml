@@ -5,7 +5,7 @@ dataset_path: "bench/datasets/RAMEDIS.json" # en bench/datasets tiene que estar
 llm_configs:
   # Alias para el LLM que genera diagnósticos candidatos
   candidate_dx_gpt:
-    model: "o1" # o1 , gpt-4o, medgemma, jonsnow, sakura, openbio
+    model: "o1-mini" # o1 , gpt-4o, medgemma, jonsnow, sakura, openbio
     prompt: "eval-prompts/candidate_prompt.txt"
     output_schema: "eval-prompts/candidate_output_schema.json"
 
