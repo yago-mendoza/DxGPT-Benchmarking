@@ -8,6 +8,7 @@
     let comparisonChart = null;
     let detailCharts = new Map(); // Stores chart instances for detail view: Map<cellIndex, ChartInstance>
     let currentView = 'comparison';
+    let customModelNames = new Map(); // Store custom names for models
 
     // DOM Elements
     const DOM = {
@@ -16,9 +17,15 @@
         experimentsList: document.getElementById('experimentsList'),
         comparisonView: document.getElementById('comparisonView'),
         detailView: document.getElementById('detailView'),
+        namesView: document.getElementById('namesView'),
         comparisonChartCanvas: document.getElementById('comparisonChart'),
         gridLayoutSelector: document.getElementById('gridLayout'),
         gridContainer: document.getElementById('gridContainer'),
+        namesEditor: document.getElementById('namesEditor'),
+        resetNamesBtn: document.getElementById('resetNamesBtn'),
+        exportNamesBtn: document.getElementById('exportNamesBtn'),
+        importNamesBtn: document.getElementById('importNamesBtn'),
+        importFileInput: document.getElementById('importFileInput'),
         viewTabs: document.querySelectorAll('.view-tab'),
         exportViewBtn: document.getElementById('exportViewBtn'),
         openJsonExplorerBtn: document.getElementById('openJsonExplorerBtn'),
@@ -241,14 +248,20 @@
     }
 
     function updateViews() {
+        // Hide all views first
+        DOM.comparisonView.style.display = 'none';
+        DOM.detailView.style.display = 'none';
+        DOM.namesView.style.display = 'none';
+        
         if (currentView === 'comparison') {
             DOM.comparisonView.style.display = 'flex';
-            DOM.detailView.style.display = 'none';
             updateComparisonView();
-        } else {
-            DOM.comparisonView.style.display = 'none';
+        } else if (currentView === 'detail') {
             DOM.detailView.style.display = 'block';
             updateDetailViewGrid(); // Renamed for clarity
+        } else if (currentView === 'names') {
+            DOM.namesView.style.display = 'block';
+            updateNamesView();
         }
     }
 
@@ -268,15 +281,19 @@
                 const semanticScore = exp.summary.semantic_evaluation?.mean_score || 0;
                 const severityScore = exp.summary.severity_evaluation?.mean_score || 0;
                 
+                // Use custom name if available, otherwise use default
+                const displayName = customModelNames.get(expId) || exp.name;
+                
                 datasets.push({
-                    label: exp.name,
+                    label: displayName,
                     data: [{ x: severityScore, y: semanticScore }],
                     backgroundColor: colors[colorIndex % colors.length],
                     borderColor: colors[colorIndex % colors.length],
                     borderWidth: 2,
                     pointStyle: markers[colorIndex % markers.length],
                     pointRadius: 10,
-                    pointHoverRadius: 12
+                    pointHoverRadius: 12,
+                    experimentId: expId // Store expId for later reference
                 });
                 colorIndex++;
             }
@@ -289,7 +306,21 @@
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'right', labels: { usePointStyle: true, padding: 20 } },
+                    legend: { 
+                        position: 'right', 
+                        labels: { 
+                            usePointStyle: true, 
+                            padding: 20
+                        },
+                        onClick: function(e, legendItem, legend) {
+                            // Default behavior: toggle visibility
+                            const index = legendItem.datasetIndex;
+                            const chart = legend.chart;
+                            const meta = chart.getDatasetMeta(index);
+                            meta.hidden = meta.hidden === null ? !chart.data.datasets[index].hidden : null;
+                            chart.update();
+                        }
+                    },
                     tooltip: {
                         callbacks: {
                             label: ctx => `${ctx.dataset.label}: Semantic=${ctx.parsed.y.toFixed(4)}, Severity=${ctx.parsed.x.toFixed(4)}`
@@ -340,6 +371,43 @@
                     } 
                 }
             }
+        });
+    }
+
+    function updateNamesView() {
+        DOM.namesEditor.innerHTML = '';
+        
+        if (selectedExperiments.size === 0) {
+            DOM.namesEditor.innerHTML = '<p class="empty-message">No experiments selected. Please select experiments from the sidebar.</p>';
+            return;
+        }
+        
+        // Create name editor for each selected experiment
+        selectedExperiments.forEach(expId => {
+            const exp = experiments.get(expId);
+            if (!exp) return;
+            
+            const currentName = customModelNames.get(expId) || exp.name;
+            const originalName = exp.name;
+            
+            const editorItem = document.createElement('div');
+            editorItem.className = 'name-editor-item';
+            editorItem.innerHTML = `
+                <div class="name-info">
+                    <label class="name-label">
+                        <span class="original-name">Original: ${originalName}</span>
+                        <span class="exp-id">${expId}</span>
+                    </label>
+                    <input type="text" 
+                           class="name-input" 
+                           data-exp-id="${expId}" 
+                           value="${currentName}" 
+                           placeholder="Enter custom name..."
+                           autocomplete="off">
+                </div>
+            `;
+            
+            DOM.namesEditor.appendChild(editorItem);
         });
     }
 
@@ -565,6 +633,84 @@
                 loadAndDisplayJson(expId, file);
             } else {
                 DOM.jsonViewer.textContent = '';
+            }
+        });
+
+        // Names view event listeners
+        DOM.resetNamesBtn.addEventListener('click', () => {
+            customModelNames.clear();
+            updateNamesView();
+            updateComparisonView(); // Refresh the chart with default names
+        });
+
+        DOM.exportNamesBtn.addEventListener('click', () => {
+            const namesData = {};
+            customModelNames.forEach((name, expId) => {
+                namesData[expId] = name;
+            });
+            const blob = new Blob([JSON.stringify(namesData, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'model_names.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        DOM.importNamesBtn.addEventListener('click', () => {
+            DOM.importFileInput.click();
+        });
+
+        DOM.importFileInput.addEventListener('change', async (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            try {
+                const text = await file.text();
+                const namesData = JSON.parse(text);
+                
+                // Clear existing custom names
+                customModelNames.clear();
+                
+                // Import the names
+                Object.entries(namesData).forEach(([expId, name]) => {
+                    if (typeof name === 'string' && name.trim()) {
+                        customModelNames.set(expId, name.trim());
+                    }
+                });
+                
+                // Update views
+                updateNamesView();
+                if (currentView === 'comparison' || comparisonChart) {
+                    updateComparisonView();
+                }
+                
+                // Reset file input
+                e.target.value = '';
+                
+                alert(`Successfully imported ${customModelNames.size} custom model names.`);
+            } catch (error) {
+                alert('Error importing names file. Please ensure it is a valid JSON file.');
+                console.error('Import error:', error);
+            }
+        });
+
+        // Delegate event for name inputs (since they're dynamically created)
+        DOM.namesEditor.addEventListener('input', (e) => {
+            if (e.target.classList.contains('name-input')) {
+                const expId = e.target.dataset.expId;
+                const newName = e.target.value.trim();
+                
+                if (newName) {
+                    customModelNames.set(expId, newName);
+                } else {
+                    customModelNames.delete(expId); // Remove custom name if empty
+                }
+                
+                // Update the comparison chart immediately
+                if (currentView === 'comparison' || comparisonChart) {
+                    updateComparisonView();
+                }
             }
         });
     }

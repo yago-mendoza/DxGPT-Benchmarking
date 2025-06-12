@@ -557,3 +557,135 @@ canvas {
         font-size: 0.7rem;
     }
 }
+
+/* Names View */
+.names-view {
+    display: none;
+    padding: 32px;
+}
+
+.names-header {
+    margin-bottom: 32px;
+}
+
+.names-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.names-header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.names-editor {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.name-editor-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.name-editor-item:hover {
+    border-color: var(--accent-primary);
+}
+
+.name-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.name-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.original-name {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.exp-id {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    font-family: monospace;
+    background: var(--bg-secondary);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.name-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-secondary);
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.name-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    background: var(--bg-tertiary);
+}
+
+.name-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.names-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-secondary {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-secondary);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--accent-primary);
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 40px;
+    font-size: 14px;
+}

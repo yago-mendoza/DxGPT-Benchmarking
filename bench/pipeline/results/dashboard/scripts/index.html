@@ -39,6 +39,7 @@
             <div class="view-tabs">
                 <button class="view-tab active" data-view="comparison">Comparison</button>
                 <button class="view-tab" data-view="detail">Detailed Analysis</button>
+                <button class="view-tab" data-view="names">Model Names</button>
             </div>
 
             <!-- Content Area -->
@@ -63,6 +64,23 @@
                         </div>
                     </div>
                     <div class="grid-container grid-1x1" id="gridContainer"></div>
+                </div>
+
+                <!-- Model Names View -->
+                <div class="names-view" id="namesView">
+                    <div class="names-header">
+                        <h2>Customize Model Display Names</h2>
+                        <p>Edit the display names for each model in the comparison chart. Changes are applied immediately.</p>
+                    </div>
+                    <div class="names-editor" id="namesEditor">
+                        <!-- Model name editors will be inserted here dynamically -->
+                    </div>
+                    <div class="names-actions">
+                        <button class="btn btn-primary" id="resetNamesBtn">Reset All Names</button>
+                        <button class="btn btn-secondary" id="exportNamesBtn">Export Names</button>
+                        <button class="btn btn-secondary" id="importNamesBtn">Import Names</button>
+                        <input type="file" id="importFileInput" accept=".json" style="display: none;">
+                    </div>
                 </div>
             </div>
         </main>
