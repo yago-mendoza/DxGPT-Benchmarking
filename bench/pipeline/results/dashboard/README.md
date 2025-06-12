@@ -1,48 +1,130 @@
 # Dashboard de Visualización - DxGPT Benchmark 📊
 
-Este dashboard interactivo permite visualizar, comparar y analizar los resultados de múltiples experimentos de evaluación de modelos de diagnóstico médico. Proporciona insights visuales sobre el rendimiento en las dos dimensiones clave: precisión semántica y estimación de severidad.
+Este dashboard interactivo permite visualizar, comparar y analizar los resultados de múltiples experimentos de evaluación de modelos de diagnóstico médico.
 
-## 🎯 ¿Qué muestra el Dashboard?
+## 🚀 Cómo Ejecutar
 
-### Vista Principal: Gráfico de Dispersión 2D
-
-El gráfico principal posiciona cada modelo en un espacio bidimensional:
-
-- **Eje X (Severity Score)**: Qué tan bien estima la gravedad (0 = perfecto, 1 = pésimo)
-- **Eje Y (Semantic Score)**: Qué tan bien identifica diagnósticos (0 = pésimo, 1 = perfecto)
-
-**Interpretación visual**:
+```bash
+cd bench/pipeline/results/dashboard/
+python serve_dashboard.py
 ```
-          Semantic Score ↑
+
+Luego abrir http://localhost:8000 en el navegador.
+
+## 📊 Vista Principal: Comparación de Modelos
+
+### Gráfico de Dispersión 2D
+
+El gráfico principal posiciona cada modelo en un espacio bidimensional donde puedes ver de un vistazo qué modelos funcionan mejor:
+
+```
+          Score Semántico ↑
                 1.0 ┌─────────────────────┐
-                    │ ◆ Ideal             │
-                    │   (Alta precisión,  │
-                    │    baja distancia)  │
+                    │ ◆ IDEAL             │  ← Aquí quieres estar
+                    │   (Acierta diagnós- │    (Alto semántico,
+                    │    ticos y estima   │     Bajo severidad)
+                    │    bien gravedad)   │
                 0.5 ├─────────────────────┤
                     │         ◇           │
                     │     Moderado        │
                     │                     │
-                0.0 └─────────────────────┘
+                0.0 └─────────────────────┘ ← Evitar esta zona
                     0.0       0.5        1.0
-                         Severity Score →
+                         Score Severidad →
 ```
 
-**Cuadrantes**:
-- **Superior Izquierda** (ideal): Alta precisión diagnóstica + buena estimación de severidad
-- **Superior Derecha**: Identifica bien pero estima mal la gravedad
-- **Inferior Izquierda**: Estima bien gravedad pero falla en diagnósticos
-- **Inferior Derecha** (peor): Falla en ambas dimensiones
+- **Eje Y (Score Semántico)**: 0-1, mayor es mejor. Mide qué tan bien el modelo identifica el diagnóstico correcto.
+- **Eje X (Score Severidad)**: 0-1, menor es mejor. Mide el error en la estimación de gravedad.
 
-### Visualizaciones Disponibles
+## 📈 Gráficos Detallados
 
-1. **Comparison View**: Todos los modelos en un solo gráfico
-2. **Detailed Analysis**: Gráficos individuales por modelo
-3. **JSON Explorer**: Datos crudos para análisis profundo
-4. **Experiment Panel**: Lista interactiva de experimentos
+En la vista "Detailed Analysis" puedes explorar diferentes aspectos del rendimiento:
 
-## 🚀 Cómo Ejecutar el Dashboard
+### 1. Statistical Summary
+**¿Qué muestra?** Resumen estadístico completo del experimento.
+- Barras para scores promedio (semántico y severidad)
+- Líneas de error mostrando desviación estándar
+- Útil para ver consistencia del modelo
 
-### Opción 1: Script Python Incluido (Recomendado)
+### 2. Combined Bias Evaluation
+**¿Qué muestra?** Análisis combinado de sesgo optimista vs pesimista.
+- Visualiza si el modelo tiende a subestimar (optimista) o sobreestimar (pesimista) la gravedad
+- Muestra la distribución de casos en cada categoría
+
+### 3. Score Distribution with KDE
+**¿Qué muestra?** Histograma de distribución de scores semánticos.
+- Curva KDE (Kernel Density Estimation) muestra la tendencia general
+- Permite ver si los scores se agrupan en rangos específicos
+- Ideal para identificar modelos consistentes vs erráticos
+
+### 4. Ridge Plot by Severity
+**¿Qué muestra?** Distribución de scores semánticos agrupados por nivel de severidad del GDX.
+- Cada "cresta" representa un nivel de severidad (S0-S10)
+- Muestra si el modelo funciona mejor con casos leves vs graves
+
+### 5. GDX vs DDX Severity
+**¿Qué muestra?** Comparación directa entre severidad real (GDX) y predicha (DDX).
+- Gráfico de barras agrupadas por nivel de severidad
+- Permite ver patrones de sobre/subestimación
+
+### 6. Severity Levels Distribution
+**¿Qué muestra?** Distribución de frecuencias de severidades asignadas.
+- Histograma que muestra qué severidades predice más el modelo
+- Útil para detectar sesgos hacia ciertos niveles
+
+### 7. Optimist vs Pessimist Balance ⭐
+**¿Qué muestra?** El balance entre predicciones optimistas y pesimistas.
+
+**Conceptos clave**:
+- **Optimista**: Cuando el modelo predice menor severidad que la real (subestima gravedad)
+- **Pesimista**: Cuando el modelo predice mayor severidad que la real (sobreestima gravedad)
+
+**¿Cómo se calculan?**
+1. Para cada diagnóstico, comparamos severidad predicha vs real
+2. Si `Severidad_DDX < Severidad_GDX` → Optimista (peligroso en medicina)
+3. Si `Severidad_DDX > Severidad_GDX` → Pesimista (causa ansiedad innecesaria)
+4. El gráfico muestra:
+   - Número de casos en cada categoría
+   - Score promedio de error para cada tipo
+   - Balance general del modelo
+
+**Interpretación**:
+- Un modelo balanceado tendrá valores similares en ambos lados
+- Sesgo optimista es más peligroso (puede pasar por alto casos graves)
+- Sesgo pesimista es menos grave pero puede causar ansiedad
+
+## 🎯 Interpretación Rápida
+
+### ¿Qué es un buen modelo?
+
+1. **Score Semántico Alto** (>0.85): Identifica correctamente los diagnósticos
+2. **Score Severidad Bajo** (<0.20): Estima bien la gravedad
+3. **Balance Optimista/Pesimista**: Sin sesgo marcado hacia ningún lado
+4. **Consistencia**: Poca variación en los scores (baja desviación estándar)
+
+### Señales de Alerta 🚨
+
+- Score semántico <0.70: El modelo falla en identificar diagnósticos
+- Score severidad >0.35: Mala estimación de gravedad
+- Sesgo optimista fuerte: Peligroso, subestima casos graves
+- Alta variabilidad: Modelo inconsistente, poco confiable
+
+## 📋 Flujo de Trabajo Típico
+
+1. **Iniciar**: Seleccionar experimentos en la barra lateral
+2. **Comparar**: Ver todos los modelos en el gráfico principal
+3. **Analizar**: Usar vista detallada para profundizar en modelos específicos
+4. **Identificar**: Buscar patrones de sesgo con el gráfico optimista/pesimista
+5. **Exportar**: Guardar visualizaciones o datos para reportes
+
+## 💡 Tips de Uso
+
+- **Zoom**: Usa la rueda del mouse para hacer zoom en los gráficos
+- **Pan**: Arrastra para moverte por el gráfico
+- **Toggle**: Click en la leyenda para mostrar/ocultar modelos
+- **Grids**: Usa 2x2 para comparar 4 aspectos simultáneamente
+- **Export**: Botón "Export View" guarda el gráfico actual como PNG
+
 
 ```bash
 cd bench/pipeline/results/dashboard/
