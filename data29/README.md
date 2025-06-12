@@ -17,9 +17,6 @@ data29/
 ├── README.md              # Este archivo
 ├── health-checker/        # Validador de calidad de datos (en desarrollo)
 └── data-repos/           # Repositorio principal de datos
-    ├── raw/              # Datos crudos sin procesar
-    │   ├── more.txt
-    │   └── ukranian.csv
     └── urg_torre & ramedis_bench/
         ├── current-data/  # Datos procesados y listos para usar
         │   ├── RAMEDIS.json      # Dataset principal para bench
