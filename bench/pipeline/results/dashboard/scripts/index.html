@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Dashboard - DxGPT Diagnostic Benchmarking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-statistics@7.8.0/dist/simple-statistics.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Experiments</h2>
+                <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="experiments-list" id="experimentsList">
+                <div class="loading">Loading experiments...</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>DxGPT Diagnostic Benchmarking Dashboard</h1>
+                <p class="subtitle">Unified analysis platform for experiment comparison and detailed evaluation</p>
+            </header>
+
+            <!-- View Tabs -->
+            <div class="view-tabs">
+                <button class="view-tab active" data-view="comparison">Comparison</button>
+                <button class="view-tab" data-view="detail">Detailed Analysis</button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Comparison View -->
+                <div class="comparison-view" id="comparisonView">
+                    <div class="chart-container">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Detail View -->
+                <div class="detail-view" id="detailView">
+                    <div class="detail-controls">
+                        <div class="grid-selector">
+                            <label for="gridLayout">Grid Layout:</label>
+                            <select id="gridLayout">
+                                <option value="1x1">1x1</option>
+                                <option value="1x2">1x2</option>
+                                <option value="2x2">2x2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid-container grid-1x1" id="gridContainer"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Floating Control Panel -->
+    <div class="floating-panel">
+        <button class="panel-btn" id="exportViewBtn">Export View</button>
+        <button class="panel-btn" id="openJsonExplorerBtn">JSON Explorer</button>
+        <button class="panel-btn" id="savePlotsBtn">Save Plots</button>
+    </div>
+
+    <!-- JSON Explorer Modal -->
+    <div class="modal" id="jsonModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>JSON Explorer</h3>
+                <button class="close-btn" id="closeJsonExplorerBtn">×</button>
+            </div>
+            <div class="modal-body">
+                <select id="jsonFileSelector" style="width: 100%; margin-bottom: 16px; background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-secondary); padding: 8px; border-radius: 6px;">
+                    <option value="">Select experiment and file...</option>
+                </select>
+                <div class="json-viewer" id="jsonViewer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

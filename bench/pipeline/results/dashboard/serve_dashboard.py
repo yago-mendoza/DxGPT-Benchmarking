@@ -66,7 +66,7 @@ def main():
     print(f"Dashboard script location: {script_dir}")
     
     # Verify dashboard file exists
-    dashboard_file = os.path.join('dashboard', 'experiment_dashboard.html')
+    dashboard_file = os.path.join('scripts', 'index.html')
     if os.path.exists(dashboard_file):
         print(f"Dashboard file found: {dashboard_file}")
     else:
@@ -82,7 +82,7 @@ def main():
             with socketserver.TCPServer(("", port), CORSRequestHandler) as httpd:
                 print(f"\n{'='*60}")
                 print(f"🚀 Server running at http://localhost:{port}/")
-                print(f"📊 Open http://localhost:{port}/dashboard/experiment_dashboard.html")
+                print(f"📊 Open http://localhost:{port}/dashboard/scripts/index.html")
                 print(f"{'='*60}")
                 print("\nPress Ctrl+C to stop the server")
                 try:
