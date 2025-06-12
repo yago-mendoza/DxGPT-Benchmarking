@@ -6,8 +6,8 @@ llm_configs:
   # Alias para el LLM que genera diagnósticos candidatos
   candidate_dx_gpt:
     model: "o1" # o1 , gpt-4o, medgemma, jonsnow, sakura, openbio
-    prompt: "eval-prompts/candidate_prompt.txt"
-    output_schema: "eval-prompts/candidate_output_schema.json"
+    prompt: "../candidate-prompts/candidate_prompt.txt"
+    output_schema: "../candidate-prompts/candidate_output_schema.json"
 
   # Alias para el LLM que asigna severidad a los DDX únicos
   severity_assigner_llm:

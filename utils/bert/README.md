@@ -1,6 +1,22 @@
-# BERT Similarity Service
+# BERT Similarity Service - Juez Semántico 🧠
 
-Módulo para calcular similaridad semántica entre términos médicos usando embeddings SapBERT.
+Este módulo implementa el **juez semántico** del sistema de evaluación DxGPT. Su función principal es determinar qué tan cerca están los diagnósticos generados por un modelo (DDX) de los diagnósticos correctos de referencia (GDX), utilizando embeddings especializados en terminología médica (SapBERT).
+
+## 🎯 Rol en el Pipeline de Evaluación
+
+En el contexto del proyecto DxGPT Latitude Bench, este módulo actúa como uno de los dos jueces principales:
+
+1. **Juez Semántico (este módulo)**: Evalúa si el modelo "acertó" el diagnóstico basándose en similitud de significado
+2. **Juez de Severidad (LLM)**: Evalúa si el modelo predijo correctamente la gravedad de las condiciones
+
+### ¿Por qué es importante?
+
+Los modelos médicos pueden expresar el mismo diagnóstico de formas diferentes:
+- "Heart attack" vs "Myocardial infarction" (mismo diagnóstico, diferente terminología)
+- "Type 2 diabetes" vs "Diabetes mellitus type 2" (mismo concepto, diferente orden)
+- "COVID-19" vs "SARS-CoV-2 infection" (mismo padecimiento, diferente enfoque)
+
+SapBERT entiende estas equivalencias porque fue entrenado específicamente con terminología médica multilingüe.
 
 ## 🚀 Instalación
 
