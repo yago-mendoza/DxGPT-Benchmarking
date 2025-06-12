@@ -1,5 +1,0 @@
-+ Added diagnosis severity assessment pipeline using GPT-4o batch processing:
-  - run1.py: Extracts unique diagnoses from both datasets, evaluates severity/rarity (S0-S10 scale) using LLM batching (N=100)
-  - run2.py: Transforms CSV files to JSON format with nested diagnosis-severity mappings and diagnostic codes
-  - Generated diagnosis_severity_mapping.csv with comprehensive severity assessment for all unique medical conditions
-  - Created ramedis.json and urg_torre.json with structured diagnosis data including severity scores and diagnostic code nesting 

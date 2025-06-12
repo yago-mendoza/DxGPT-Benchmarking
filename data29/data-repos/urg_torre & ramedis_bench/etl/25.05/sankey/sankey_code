@@ -1,0 +1,43 @@
+https://sankeymatic.com/build/
+
+// ────────── URG_TORRE_DIC_IAGEN ──────────
+URG_TORRE_DIC_IAGEN [50]  test_critical.csv
+URG_TORRE_DIC_IAGEN [82]  test_severe.csv
+URG_TORRE_DIC_IAGEN [1654] test_pediatrics.csv
+URG_TORRE_DIC_IAGEN [4486] moderate
+
+// Desglose interno: “critical” contiene “death”
+test_critical.csv [7]  test_death.csv
+test_critical.csv [*] test_all.csv
+test_death.csv   [7]  test_all.csv
+
+// Flujo del resto de categorías
+test_severe.csv     [82]   test_all.csv
+test_pediatrics.csv [1654] test_all.csv
+moderate            [4486] test_all.csv
+
+
+// ────────── Ramebench (paper) ──────────
+Ramebench_Paper [40]  test_MME.csv
+Ramebench_Paper [369] test_LIRICAL.csv
+Ramebench_Paper [87]  test_HMS.csv
+Ramebench_Paper [624] test_RAMEDIS.csv
+Ramebench_Paper [75]  PUMCHADAM
+
+// Reconstrucción de PUMCHADAM
+PUMCHADAM [75] test_PUMCHADAM.csv
+
+// Convergencia en test_ramebench.csv
+test_MME.csv                    [40]  test_ramebench.csv
+test_LIRICAL.csv                [369] test_ramebench.csv
+test_HMS.csv                    [87]  test_ramebench.csv
+test_RAMEDIS.csv                [*]   test_ramebench.csv
+test_PUMCHADAM.csv[75]  test_ramebench.csv
+
+test_all.csv [*] datalake
+test_ramebench.csv [*] datalake
+
+
+// ────────── Datos eliminados automáticamente ──────────
+SJD            [60] Discarded
+SJD_Augmented  [20] Discarded

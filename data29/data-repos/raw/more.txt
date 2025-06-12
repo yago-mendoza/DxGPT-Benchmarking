@@ -1,0 +1,54 @@
+[MIS HALLAZGOS]
+
+https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/cMedQA.md
+	2018-12 QA, 108K Cases QA Pair
+
+https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/MedQA.md
+QA, 61,097 Cases QA Pair	Github	2020-09
+
+https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/Huatuo-26M.md
+	QA, 26M Cases QA Pair	Github	2023-05
+
+https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/MedBench.md
+Med-Exam
+CMB-Clin
+DDx-basic
+DDx-advanced
+MedTreat
+
+https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/MedMCQA.md
+tratamientosy
+ 
+[JULIAN] 30.05.2025
+
+Datos Clínicos Generales
+
+MIMIC-III (https://mimic.mit.edu/)
+58,976 ingresos hospitalarios en UCI con 2.1 millones de notas clínicas
+Incluye datos demográficos, signos vitales, medicaciones y resultados de laboratorio
+Ideal para entrenar modelos de procesamiento de lenguaje natural (NLP) en informes médicos45
+eICU Collaborative Research Database
+200,859 pacientes de 335 UCI estadounidenses
+Contiene datos de monitorización continua y decisiones terapéuticas
+Útil para modelar flujos de trabajo clínicos5
+Imágenes Médicas
+
+CheXpert (https://stanfordmlgroup.github.io/competitions/chexpert/)
+224,316 radiografías de tórax con 14 patologías etiquetadas
+Incluye incertidumbres en las anotaciones para entrenar modelos de confianza45
+Cancer Imaging Archive (TCIA)
+100,000 estudios de imagen oncológicos (TC, RM, PET)
+Datos vinculados a información clínica y molecular5
+Datos Multimodales
+
+TrialBench (https://huggingface.co/datasets/ML2Healthcare/ClinicalTrialDataset)
+23 conjuntos para 8 retos predictivos en ensayos clínicos
+Combina datos tabulares, texto libre (criterios de elegibilidad) y gráficos moleculares3
+UK Biobank
+Datos de 500,000 participantes: imágenes cerebrales, genómica, biomarcadores
+Permite estudios longitudinales de progresión de enfermedades5
+Señales Fisiológicas
+
+PhysioNet (https://physionet.org/	)
+90+ bases de datos con señales ECG, EEG y parámetros ventilatorios
+Incluye desafíos anuales para validación comparativa	

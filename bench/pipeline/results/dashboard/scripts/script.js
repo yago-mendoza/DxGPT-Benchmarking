@@ -211,12 +211,15 @@
             const semanticScore = exp.summary?.semantic_evaluation?.mean_score;
             const severityScore = exp.summary?.severity_evaluation?.mean_score;
             
+            // Add to selected experiments by default
+            selectedExperiments.add(exp.id);
+            
             const item = document.createElement('div');
-            item.className = 'experiment-item';
+            item.className = 'experiment-item selected'; // Add selected class by default
             item.dataset.experimentId = exp.id; // For event delegation
             item.innerHTML = `
                 <div class="experiment-checkbox">
-                    <input type="checkbox" id="exp-checkbox-${exp.id}" data-experiment-id="${exp.id}" />
+                    <input type="checkbox" id="exp-checkbox-${exp.id}" data-experiment-id="${exp.id}" checked />
                     <label class="experiment-info" for="exp-checkbox-${exp.id}">
                         <div class="experiment-name">${exp.name}</div>
                         <div class="experiment-timestamp">${exp.timestamp}</div>
@@ -341,7 +344,22 @@
     }
 
     function updateDetailViewGrid() {
+        const previousLayout = DOM.gridContainer.className.match(/grid-(\d+x\d+)/)?.[1];
         const layout = DOM.gridLayoutSelector.value;
+        
+        // Save current selections
+        const currentSelections = [];
+        DOM.gridContainer.querySelectorAll('.grid-cell').forEach((cell, idx) => {
+            const expSelector = cell.querySelector('.experiment-selector');
+            const chartSelector = cell.querySelector('.chart-selector');
+            if (expSelector && chartSelector && expSelector.value && chartSelector.value) {
+                currentSelections.push({
+                    experiment: expSelector.value,
+                    chart: chartSelector.value
+                });
+            }
+        });
+        
         DOM.gridContainer.className = `grid-container grid-${layout}`;
         DOM.gridContainer.innerHTML = ''; // Clear existing cells
         detailCharts.forEach(chart => chart.destroy()); // Destroy old chart instances
@@ -350,21 +368,56 @@
         let cellCount = 1;
         if (layout === '1x2') cellCount = 2;
         else if (layout === '2x2') cellCount = 4;
+        
+        // Available chart types for random selection
+        const chartTypes = ['stats-summary', 'semantic-bias', 'semantic-histogram', 'severity-levels', 'optimist-pessimist'];
+        const expArray = Array.from(selectedExperiments);
+        
+        // Track used combinations to avoid duplicates
+        const usedCombinations = new Set();
+        currentSelections.forEach(sel => {
+            usedCombinations.add(`${sel.experiment}|${sel.chart}`);
+        });
 
         for (let i = 0; i < cellCount; i++) {
             const cell = document.createElement('div');
             cell.className = 'grid-cell';
             const canvasId = `detailChart${i}`;
+            
+            // Determine default values
+            let defaultExp = '';
+            let defaultChart = '';
+            
+            if (i < currentSelections.length) {
+                // Preserve existing selection
+                defaultExp = currentSelections[i].experiment;
+                defaultChart = currentSelections[i].chart;
+            } else if (expArray.length > 0) {
+                // Find a non-duplicate combination
+                let attempts = 0;
+                const maxAttempts = expArray.length * chartTypes.length;
+                
+                do {
+                    defaultExp = expArray[Math.floor(Math.random() * expArray.length)];
+                    defaultChart = chartTypes[Math.floor(Math.random() * chartTypes.length)];
+                    attempts++;
+                } while (usedCombinations.has(`${defaultExp}|${defaultChart}`) && attempts < maxAttempts);
+                
+                if (attempts < maxAttempts) {
+                    usedCombinations.add(`${defaultExp}|${defaultChart}`);
+                }
+            }
+            
             cell.innerHTML = `
                 <div class="cell-controls">
                     <select class="experiment-selector" data-cell-index="${i}">
                         <option value="">Select experiment...</option>
-                        ${Array.from(selectedExperiments).map(expId => {
+                        ${expArray.map(expId => {
                             const exp = experiments.get(expId);
-                            return `<option value="${expId}">${exp.name}</option>`;
+                            return `<option value="${expId}"${expId === defaultExp ? ' selected' : ''}>${exp.name}</option>`;
                         }).join('')}
                     </select>
-                    <select class="chart-selector" data-cell-index="${i}" disabled>
+                    <select class="chart-selector" data-cell-index="${i}"${defaultExp ? '' : ' disabled'}>
                         <option value="">Select chart...</option>
                     </select>
                 </div>
@@ -373,6 +426,16 @@
                 </div>
             `;
             DOM.gridContainer.appendChild(cell);
+            
+            // If we have defaults, populate chart options and render
+            if (defaultExp) {
+                const chartSelector = cell.querySelector('.chart-selector');
+                populateChartOptions(chartSelector, defaultExp);
+                if (defaultChart) {
+                    chartSelector.value = defaultChart;
+                    renderDetailChart(i, defaultExp, defaultChart);
+                }
+            }
         }
     }
 
@@ -461,13 +524,17 @@
 
         DOM.gridContainer.addEventListener('change', (e) => {
             const target = e.target;
-            const cellIndex = target.dataset.cellIndex;
+            const cellIndex = parseInt(target.dataset.cellIndex);
 
             if (target.classList.contains('experiment-selector')) {
                 const chartSelector = DOM.gridContainer.querySelector(`.chart-selector[data-cell-index="${cellIndex}"]`);
                 if (target.value) {
                     chartSelector.disabled = false;
                     populateChartOptions(chartSelector, target.value);
+                    // If chart was already selected, re-render with new experiment
+                    if (chartSelector.value) {
+                        renderDetailChart(cellIndex, target.value, chartSelector.value);
+                    }
                 } else {
                     chartSelector.disabled = true;
                     chartSelector.innerHTML = '<option value="">Select chart...</option>';
@@ -833,18 +900,37 @@
         const scores = extractSemanticScores(exp);
         if (scores.length === 0) return createPlaceholderChart(ctx, 'No semantic scores for histogram.');
 
-        const bins = ss.histogram(scores, {min:0, max:1, binSize: 0.04}); // simple-statistics for binning
-        const labels = bins.map(bin => `${bin.x0.toFixed(2)}-${bin.x1.toFixed(2)}`);
-        const data = bins.map(bin => bin.length);
+        // Create histogram manually since ss.histogram might not be working properly
+        const binSize = 0.02;
+        const numBins = Math.ceil(1 / binSize);
+        const bins = Array(numBins).fill(0);
+        const labels = [];
+        
+        // Count scores in each bin
+        scores.forEach(score => {
+            const binIndex = Math.min(Math.floor(score / binSize), numBins - 1);
+            bins[binIndex]++;
+        });
+        
+        // Create labels
+        for (let i = 0; i < numBins; i++) {
+            const start = (i * binSize).toFixed(2);
+            const end = ((i + 1) * binSize).toFixed(2);
+            labels.push(`${start}-${end}`);
+        }
+        
+        const data = bins;
 
-        const kdeValues = calculateKDE(scores, 0.05, 0, 1, labels.length);
+        const kdeValues = calculateKDE(scores, 0.03, 0, 1, 100); // More points for smoother curve
         const maxHistCount = Math.max(...data, 0);
         const maxKDEVal = Math.max(...kdeValues.map(d => d.y), 0);
         
-        const kdeScaled = kdeValues.map(point => ({
-            x: labels[Math.floor(point.x / 0.04)] || labels[labels.length-1], // Align with bin labels
-            y: maxKDEVal > 0 ? (point.y / maxKDEVal) * maxHistCount * 1.1 : 0
-        }));
+        // Scale KDE to match histogram height
+        const kdeData = labels.map((label, idx) => {
+            const binCenter = idx * 0.02 + 0.01; // Center of each bin
+            const kdePoint = kdeValues.find(p => Math.abs(p.x - binCenter) < 0.01);
+            return kdePoint ? (kdePoint.y / maxKDEVal) * maxHistCount * 0.9 : 0;
+        });
 
         return new Chart(ctx, {
             type: 'bar',
@@ -854,27 +940,52 @@
                     {
                         label: `Score Count (n=${scores.length})`,
                         data: data,
-                        backgroundColor: 'rgba(99, 102, 241, 0.7)',
+                        backgroundColor: 'rgba(99, 102, 241, 0.6)',
+                        borderColor: 'rgba(99, 102, 241, 0.8)',
+                        borderWidth: 1,
+                        barPercentage: 0.8, // Narrower bars
+                        categoryPercentage: 0.9,
                         order: 2
                     },
                     {
                         label: 'KDE',
-                        data: kdeScaled,
+                        data: kdeData,
                         type: 'line',
-                        borderColor: 'rgba(245, 158, 11, 0.9)',
+                        borderColor: 'rgba(245, 158, 11, 1)',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        borderWidth: 2.5,
                         tension: 0.4,
-                        fill: false,
+                        fill: true,
                         pointRadius: 0,
                         order: 1
                     }
                 ]
             },
             options: {
-                responsive: true, maintainAspectRatio: false,
-                plugins: { title: { display: true, text: `Semantic Score Distribution (μ=${ss.mean(scores).toFixed(3)})` } },
+                responsive: true, 
+                maintainAspectRatio: false,
+                plugins: { 
+                    title: { 
+                        display: true, 
+                        text: `Semantic Score Distribution (μ=${ss.mean(scores).toFixed(3)}, σ=${ss.standardDeviation(scores).toFixed(3)})`,
+                        color: '#ffffff'
+                    },
+                    legend: {
+                        labels: { color: '#ffffff' }
+                    }
+                },
                 scales: {
-                    x: { title: { display: true, text: 'Semantic Score Range' } },
-                    y: { title: { display: true, text: 'Count / Density' } }
+                    x: { 
+                        title: { display: true, text: 'Semantic Score Range', color: '#ffffff' },
+                        ticks: { color: '#ffffff' },
+                        grid: { color: 'rgba(255, 255, 255, 0.2)' }
+                    },
+                    y: { 
+                        title: { display: true, text: 'Count / Density', color: '#ffffff' },
+                        ticks: { color: '#ffffff' },
+                        grid: { color: 'rgba(255, 255, 255, 0.2)' },
+                        beginAtZero: true
+                    }
                 }
             }
         });
@@ -993,12 +1104,12 @@
             datasets.push({
                 label: 'Global Mean',
                 data: [{ x: globalMean.x, y: globalMean.y }],
-                backgroundColor: 'rgba(255, 255, 255, 0.95)', // Más opaco
-                borderColor: 'rgba(0, 0, 0, 0.9)', // Más opaco
-                borderWidth: 3, // Más grueso: 2 → 3
-                pointStyle: 'star',
-                pointRadius: 14, // Más grande: 12 → 14
-                pointHoverRadius: 16,
+                backgroundColor: 'rgba(255, 215, 0, 0.95)', // Yellow
+                borderColor: 'rgba(255, 165, 0, 1)', // Orange border
+                borderWidth: 3,
+                pointStyle: 'rectRot', // Diamond shape
+                pointRadius: 7,
+                pointHoverRadius: 8,
                 order: 1 // Por delante
             });
         }
@@ -1010,8 +1121,8 @@
                 borderColor: 'rgba(29, 78, 216, 1)',
                 borderWidth: 3, // Más grueso: 2 → 3
                 pointStyle: 'triangle',
-                pointRadius: 12, // Más grande: 10 → 12
-                pointHoverRadius: 14,
+                pointRadius: 6,
+                pointHoverRadius: 7,
                 order: 1 // Por delante
             });
         }
@@ -1023,8 +1134,8 @@
                 borderColor: 'rgba(185, 28, 28, 1)',
                 borderWidth: 3, // Más grueso: 2 → 3
                 pointStyle: 'triangle',
-                pointRadius: 12, // Más grande: 10 → 12
-                pointHoverRadius: 14,
+                pointRadius: 6,
+                pointHoverRadius: 7,
                 order: 1 // Por delante
             });
         }
@@ -1036,8 +1147,8 @@
                 borderColor: 'rgba(64, 64, 64, 1)',
                 borderWidth: 3, // Más grueso: 2 → 3
                 pointStyle: 'rect',
-                pointRadius: 12, // Más grande: 10 → 12
-                pointHoverRadius: 14,
+                pointRadius: 6,
+                pointHoverRadius: 7,
                 order: 1 // Por delante
             });
         }
@@ -1481,12 +1592,13 @@
                 plugins: {
                     title: {
                         display: true,
-                        text: 'GDX vs DDX Severity Comparison'
+                        text: 'GDX vs DDX Severity Comparison',
+                        color: '#ffffff'
                     },
                     legend: {
                         position: 'top',
                         labels: {
-                            color: 'var(--text-primary)',
+                            color: '#ffffff',
                             font: {
                                 size: 12
                             },
@@ -1505,14 +1617,14 @@
                         title: {
                             display: true,
                             text: 'GDX Severity',
-                            color: 'var(--text-primary)'
+                            color: '#ffffff'
                         },
                         ticks: {
-                            color: 'var(--text-secondary)',
+                            color: '#ffffff',
                             stepSize: 1
                         },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.3)'
+                            color: 'rgba(255, 255, 255, 0.2)'
                         },
                         min: 0,
                         max: 10
@@ -1521,14 +1633,14 @@
                         title: {
                             display: true,
                             text: 'Mean DDX Severity',
-                            color: 'var(--text-primary)'
+                            color: '#ffffff'
                         },
                         ticks: {
-                            color: 'var(--text-secondary)',
+                            color: '#ffffff',
                             stepSize: 1
                         },
                         grid: {
-                            color: 'rgba(255, 255, 255, 0.3)'
+                            color: 'rgba(255, 255, 255, 0.2)'
                         },
                         min: -0.4,
                         max: 10
@@ -1570,27 +1682,113 @@
             }
         });
         
-        // Filter out S0-S2 as they are usually not relevant for clinical severity
-        const labels = Array.from({length: 8}, (_, i) => `S${i+3}`); // S3 to S10
-        const gdxData = gdxCounts.slice(3);
-        const ddxData = ddxCounts.slice(3);
+        // Include all severity levels S0-S10
+        const labels = Array.from({length: 11}, (_, i) => `S${i}`); // S0 to S10
+        const gdxData = gdxCounts.map(count => count * 5); // Multiply GDX by 5
+        const ddxData = ddxCounts;
 
+        // Calculate KDE for GDX and DDX
+        const gdxValues = [];
+        const ddxValues = [];
+        
+        exp.severity.evaluations.forEach(evaluation => {
+            if (evaluation.gdx && evaluation.gdx.severity) {
+                const gdxSev = parseInt(evaluation.gdx.severity.replace('S', ''));
+                if (gdxSev >= 0 && gdxSev <= 10) {
+                    gdxValues.push(gdxSev);
+                }
+            }
+            if (evaluation.ddx_list) {
+                evaluation.ddx_list.forEach(ddx => {
+                    if (ddx.severity) {
+                        const ddxSev = parseInt(ddx.severity.replace('S', ''));
+                        if (ddxSev >= 0 && ddxSev <= 10) {
+                            ddxValues.push(ddxSev);
+                        }
+                    }
+                });
+            }
+        });
+        
+        const gdxKDE = calculateKDE(gdxValues, 0.5, 0, 10, 11);
+        const ddxKDE = calculateKDE(ddxValues, 0.5, 0, 10, 11);
+        
+        const maxGdxCount = Math.max(...gdxData, 0);
+        const maxDdxCount = Math.max(...ddxData, 0);
+        const maxCount = Math.max(maxGdxCount, maxDdxCount);
+        
+        // Scale KDE to match bar heights
+        const gdxKDEScaled = gdxKDE.map(p => p.y * maxCount * 0.8);
+        const ddxKDEScaled = ddxKDE.map(p => p.y * maxCount * 0.8);
 
         return new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [
-                    { label: `GDX (n=${totalGdx})`, data: gdxData, backgroundColor: 'rgba(16, 185, 129, 0.7)' },
-                    { label: `DDX (n=${totalDdx})`, data: ddxData, backgroundColor: 'rgba(249, 115, 22, 0.7)' }
+                    { 
+                        label: `GDX × 5 (n=${totalGdx})`, 
+                        data: gdxData, 
+                        backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                        order: 2
+                    },
+                    { 
+                        label: `DDX (n=${totalDdx})`, 
+                        data: ddxData, 
+                        backgroundColor: 'rgba(249, 115, 22, 0.7)',
+                        order: 2
+                    },
+                    {
+                        label: 'GDX KDE',
+                        data: gdxKDEScaled,
+                        type: 'line',
+                        borderColor: 'rgba(16, 185, 129, 1)',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        borderWidth: 2.5,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 0,
+                        order: 1
+                    },
+                    {
+                        label: 'DDX KDE',
+                        data: ddxKDEScaled,
+                        type: 'line',
+                        borderColor: 'rgba(249, 115, 22, 1)',
+                        backgroundColor: 'rgba(249, 115, 22, 0.1)',
+                        borderWidth: 2.5,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 0,
+                        order: 1
+                    }
                 ]
             },
             options: {
-                responsive: true, maintainAspectRatio: false,
-                plugins: { title: { display: true, text: `Severity Level Distribution (S3-S10)` } },
+                responsive: true, 
+                maintainAspectRatio: false,
+                plugins: { 
+                    title: { 
+                        display: true, 
+                        text: `Severity Level Distribution with KDE (S0-S10)`,
+                        color: '#ffffff'
+                    },
+                    legend: {
+                        labels: { color: '#ffffff' }
+                    }
+                },
                 scales: {
-                    x: { title: { display: true, text: 'Severity Level' } },
-                    y: { title: { display: true, text: 'Count' }, beginAtZero: true }
+                    x: { 
+                        title: { display: true, text: 'Severity Level', color: '#ffffff' },
+                        ticks: { color: '#ffffff' },
+                        grid: { color: 'rgba(255, 255, 255, 0.2)' }
+                    },
+                    y: { 
+                        title: { display: true, text: 'Count', color: '#ffffff' }, 
+                        beginAtZero: true,
+                        ticks: { color: '#ffffff' },
+                        grid: { color: 'rgba(255, 255, 255, 0.2)' }
+                    }
                 }
             }
         });
@@ -1650,9 +1848,51 @@
             }
         };
 
+        // Plugin to draw 'n' labels on pie segments
+        const segmentLabelsPlugin = {
+            id: 'segmentLabelsPlugin',
+            afterDatasetsDraw: chart => {
+                const {ctx, chartArea: {top, right, bottom, left, width, height}} = chart;
+                const meta = chart.getDatasetMeta(0);
+                const centerX = width / 2 + left;
+                const centerY = height / 2 + top;
+                const radius = Math.min(width, height) / 2 * 1.1; // 110% of radius for label placement (outside the pie)
+                
+                ctx.save();
+                ctx.font = 'bold 0.6em Inter';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                
+                meta.data.forEach((element, index) => {
+                    const value = data[index];
+                    if (value > 0) { // Only show label if segment has data
+                        const startAngle = element.startAngle;
+                        const endAngle = element.endAngle;
+                        const middleAngle = (startAngle + endAngle) / 2;
+                        
+                        // Calculate label position
+                        const labelX = centerX + Math.cos(middleAngle) * radius;
+                        const labelY = centerY + Math.sin(middleAngle) * radius;
+                        
+                        // Draw background for better readability
+                        ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+                        const labelText = `${value}`;
+                        const textWidth = ctx.measureText(labelText).width;
+                        ctx.fillRect(labelX - textWidth/2 - 3, labelY - 8, textWidth + 6, 16);
+                        
+                        // Draw text
+                        ctx.fillStyle = '#ffffff';
+                        ctx.fillText(labelText, labelX, labelY);
+                    }
+                });
+                
+                ctx.restore();
+            }
+        };
+
         return new Chart(ctx, {
             type: 'doughnut',
-            data: { labels, datasets: [{ data, backgroundColor: backgroundColors, borderWidth: 1, borderColor: 'var(--bg-secondary)' }] },
+            data: { labels, datasets: [{ data, backgroundColor: backgroundColors, borderWidth: 0.5, borderColor: 'rgba(128, 128, 128, 0.5)' }] },
             options: {
                 responsive: true, maintainAspectRatio: false, cutout: '60%',
                 plugins: {
