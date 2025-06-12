@@ -62,22 +62,6 @@ OPENBIO_ENDPOINT_URL=https://openbio-deployment.hf.space
 
 > 📝 **Nota**: El archivo `.env` es automáticamente cargado por `python-dotenv`. Nunca subas este archivo a control de versiones.
 
-## 📦 pyproject.toml: El Corazón de la Configuración
-
-A diferencia del antiguo `setup.py`, `pyproject.toml` es el estándar moderno para configurar proyectos Python. Este archivo define:
-
-- **Metadatos del proyecto**: nombre, versión, descripción
-- **Dependencias**: librerías necesarias para ejecutar el proyecto
-- **Dependencias opcionales**: herramientas de desarrollo (pytest, black, flake8)
-- **Configuración de herramientas**: reglas para formateo, linting y tests
-
-### Ventajas sobre setup.py:
-
-1. **Formato declarativo**: TOML es más legible que código Python
-2. **Estándar PEP 518**: Adoptado oficialmente por la comunidad Python
-3. **Configuración unificada**: Un solo archivo para proyecto y herramientas
-4. **Mejor rendimiento**: pip puede resolver dependencias más eficientemente
-
 ## 🏗️ Estructura del Proyecto
 
 ```
@@ -141,40 +125,6 @@ from utils.llm import quick_generate
 response = quick_generate("Explica qué es la hipertensión")
 ```
 
-## 🧰 Desarrollo
-
-### Instalar herramientas de desarrollo
-
-```bash
-pip install -e .[dev]
-```
-
-### Ejecutar tests
-
-```bash
-# Todos los tests
-pytest
-
-# Con cobertura
-pytest --cov=utils
-
-# Test específico
-pytest tests/test_utils/test_bert/
-```
-
-### Formateo y calidad de código
-
-```bash
-# Formatear código automáticamente
-black .
-
-# Verificar estilo
-flake8
-
-# Verificar tipos
-mypy .
-```
-
 ## 📚 Documentación Detallada
 
 - [Utils - Módulos reutilizables](utils/README.md)
@@ -186,14 +136,6 @@ mypy .
   - [Dashboard - Visualizaciones](bench/pipeline/results/dashboard/README.md)
 - [Data29 - Gestión de datos](data29/README.md)
 - [Tests - Pruebas del sistema](tests/README.md)
-
-## 🤝 Contribuir
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
 
 ## 📄 Licencia
 
