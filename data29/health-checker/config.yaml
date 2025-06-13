@@ -1,0 +1,7 @@
+# Health Checker - Simple Configuration
+
+# Dataset to analyze
+dataset: "datasets/urg_torre.json"
+
+# Output directory
+output_dir: "outputs"
